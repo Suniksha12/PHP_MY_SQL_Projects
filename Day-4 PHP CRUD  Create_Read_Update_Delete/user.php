@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $sql = "INSERT INTO `crud`(`name`, `email`, `mobile`, `password`) VALUES ('$name','$email','$mobile','$password')";
     $result = mysqli_query($con, $sql);
     if($result){
-        echo "Data insert succefully";
+        header('location:display.php');
     }else {
         die(mysqli_error($con));
     }
