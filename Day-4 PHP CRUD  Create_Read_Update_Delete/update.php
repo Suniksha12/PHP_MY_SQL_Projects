@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $mobile=$_POST['mobile'];
     $password=$_POST['password'];
 
-    $sql = "UPDATE `crud` SET id='$id',name='$name' , email='$email',mobile='$mobile', passowrd='$password'";
+    $sql = "UPDATE `crud` SET id='$id',name='$name' , email='$email',mobile='$mobile', password='$password' WHERE id=$id";
     $result = mysqli_query($con, $sql);
     if($result){
         header('location:display.php');
