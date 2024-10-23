@@ -32,7 +32,41 @@
     </div>
 
     <!-- Cards -->
-     <div class="conatiner"></div>
+     <div class="container">
+        <h1 class="text-center featureTitle mb-5">Featured Stories</h1>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="images/img-1.webp" class="card-img-top" style="width: 287px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Continue Reading</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="images/img-2.avif" class="card-img-top" style="width: 230px; height: 200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Continue Reading</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="images/img-3.webp" class="card-img-top" style="width: 280px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Continue Reading</a>
+                </div>
+              </div>
+          </div>
+        </div>
+     </div>
     <?php include './partials/footer.php';?>
 </body>
 </html>
