@@ -8,10 +8,12 @@
     background-image: linear-gradient(to right,blue,white , blue);
     margin-bottom: 120px;
 }
-.carousel-item{
-    object-fit: cover; 
-    margin-left: auto;  
-    margin-right: auto;  
-    border: 8px ridge blue;  
-    padding: 60px;  
+.carousel-item img{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.navbar-brand{
+    font-family: 'Dancing Script',cursive;
 }
