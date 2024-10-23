@@ -9,7 +9,8 @@
     <title>Stories website</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid slider">
+        <?php include './partials/header.php';?>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -18,13 +19,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="images/img-7.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="images/img-2.avif" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="images/img-3.webp" class="d-block w-100" alt="...">
               </div>
             </div>
           </div>

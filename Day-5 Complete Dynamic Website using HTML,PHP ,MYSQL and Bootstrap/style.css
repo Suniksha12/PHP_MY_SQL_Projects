@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.slider{
+    height: 90vh;
+    background-image: linear-gradient(to right,blue,white , blue);
+    margin-bottom: 120px;
+}
+.carousel-item{
+    object-fit: cover; 
+    margin-left: auto;  
+    margin-right: auto;  
+    border: 8px ridge blue;  
+    padding: 60px;  
+}
