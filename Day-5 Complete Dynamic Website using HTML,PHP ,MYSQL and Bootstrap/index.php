@@ -30,5 +30,9 @@
             </div>
           </div>
     </div>
+
+    <!-- Cards -->
+     <div class="conatiner"></div>
+    <?php include './partials/footer.php';?>
 </body>
 </html>

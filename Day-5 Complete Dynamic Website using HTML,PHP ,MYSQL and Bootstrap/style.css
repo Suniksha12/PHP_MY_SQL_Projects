@@ -7,7 +7,7 @@
 }
 .slider{
     height: 90vh;
-    background-image: linear-gradient(to right,blue,white , blue);
+    background-image: linear-gradient(to right,rgba(0,174,255,0.7),white , rgba(0,174,255,0.7));
     margin-bottom: 120px;
 }
 .carousel-item img{
