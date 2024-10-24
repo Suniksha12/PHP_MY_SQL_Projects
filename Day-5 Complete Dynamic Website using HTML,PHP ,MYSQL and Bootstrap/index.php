@@ -37,18 +37,27 @@
         <h1 class="text-center featureTitle mb-5">Featured Stories</h1>
         <div class="row">
           <?php
-
-          
-          <div class="col-md-4 col-sm-6 mb-5">
-            <div class="card" style="width: 18rem;">
-                <img src="images/img-1.webp" class="card-img-top" style="width: 287px;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Continue Reading</a>
-                </div>
-              </div>
-          </div>
+             $sql = "SELECT * FROM `topics`";
+             $result = mysqli_query($con,$sql);
+             if($result){
+              while($row = mysqli_fetch_assoc($result)){
+               $id = $row['topic_id'];
+               $topic_image = $row['topic_image'];
+               $topic_name = $row['topic_name'];
+               $topic_desc = $row['topic_desc'];
+               echo '<div class="col-md-4 col-sm-6 mb-5">
+                  <div class="card" style="width: 18rem;">
+                      <img src="images/img-1.webp" class="card-img-top" style="width: 287px;">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>
+                        <a href="#" class="btn btn-primary">Continue Reading</a>
+                      </div>
+                    </div>
+                </div>';
+              }
+             }
+          ?>
           <div class="col-md-4 col-sm-6 mb-5">
             <div class="card" style="width: 18rem;">
                 <img src="images/img-2.avif" class="card-img-top" style="width: 230px; height: 200px;">
