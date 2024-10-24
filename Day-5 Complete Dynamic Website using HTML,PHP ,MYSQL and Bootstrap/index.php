@@ -9,6 +9,7 @@
     <title>Stories website</title>
 </head>
 <body>
+<?php include './partials/connect.php';?>
     <div class="container-fluid slider">
         <?php include './partials/header.php';?>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -35,6 +36,9 @@
      <div class="container">
         <h1 class="text-center featureTitle mb-5">Featured Stories</h1>
         <div class="row">
+          <?php
+
+          
           <div class="col-md-4 col-sm-6 mb-5">
             <div class="card" style="width: 18rem;">
                 <img src="images/img-1.webp" class="card-img-top" style="width: 287px;">
@@ -65,6 +69,7 @@
                 </div>
               </div>
           </div>
+
         </div>
      </div>
     <?php include './partials/footer.php';?>
