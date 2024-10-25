@@ -31,7 +31,7 @@
         <div class="container">
         <h1 class="display-4"><?php echo $topic_name?></h1>
         <p class="lead"><?php echo $topic_desc?></p>
-            <button class="btn btn-dark"><a class="text-light" href="#" role="button">Continue Reading</a></button>
+            <button class="btn btn-dark"><a class="text-light" href="#reading" role="button">Continue Reading</a></button>
         </div>
       </div>
     </div>
@@ -58,12 +58,12 @@
     </div>
 
     <!--Reading-->
-    <div class="container">
+    <div class="container" id="reading">
     <div class="jumbotron jumbotron-fluid bg-warning rounded p-0">
         <div class="container">
         <h1 class="display-4 text-center">Enjoy Reading!</h1>
-        <img src="">
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus esse nisi incidunt doloremque delectus nesciunt nostrum eaque debitis, 
+        <img src=<?php echo $topic_image; ?> class="img-fluid img-center">
+        <p class="lead" pb-3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus esse nisi incidunt doloremque delectus nesciunt nostrum eaque debitis, 
             architecto nam a molestias veniam, ullam dolor ducimus maiores. Architecto, nostrum maiores?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis vero veniam cumque quaerat amet facere vel commodi! Quod dicta quam inventore veniam dolorem iure quidem natus, quaerat nihil nostrum, aut minus libero sequi non necessitatibus eius fugit, error fugiat veritatis placeat cumque consequuntur. Error harum voluptatibus, inventore illo aliquam incidunt nostrum eius consectetur, quae neque exercitationem explicabo dolor sit repellat quo architecto? Praesentium impedit commodi tempore nulla, animi voluptatibus amet magnam necessitatibus! Tenetur hic dolorem veniam? Dolorem nulla natus nisi rem, eligendi illum nobis sapiente eveniet laborum consectetur? Animi, vitae ullam debitis ab doloribus dolor accusamus voluptates neque atque modi libero iusto vero voluptas repudiandae facilis nostrum molestias labore! Voluptates eum iste id, ducimus ipsum quod minima suscipit! Molestias, necessitatibus ullam accusantium similique harum culpa ipsam quas pariatur nisi dignissimos ex reiciendis alias id architecto aliquam eligendi esse ad odio et? Amet eius facilis laborum nemo! Quibusdam eum, quaerat ex facere ab libero voluptates iusto reprehenderit minus cum enim. Esse adipisci provident, omnis officiis voluptates accusantium ipsa quam hic doloribus voluptatibus debitis, commodi vero tempore laudantium deleniti sint quae ullam ex? Quaerat tempore quas rem architecto soluta! Aut eveniet sint iure dolores doloremque non vitae placeat nemo officia. Quod, soluta.</p>
         
         </div>
