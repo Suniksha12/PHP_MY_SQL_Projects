@@ -14,7 +14,14 @@
 
    <!--php code-->
    <?php
-      $id = $_GET[]
+      $id = $_GET['story_id'];
+      $sql = "SELECT * FROM `topics` WHERE topic_id=$id";
+      $result = mysqli_query($con, $sql);
+      while($row=mysqli_fetch_assoc($result)){
+        $topic_name = $row['topic_name'];
+        $topic_desc = $row['topic_desc'];
+        $topic_image = $row['topic_image'];
+      }
    ?>
 
    <!--jumbotron-->
