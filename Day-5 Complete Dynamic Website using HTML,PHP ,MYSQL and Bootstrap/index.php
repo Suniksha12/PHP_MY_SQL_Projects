@@ -51,7 +51,7 @@
                       <div class="card-body">
                         <h5 class="card-title">'.$topic_name.'</h5>
                         <p class="card-text">'.substr($topic_desc,0,50).'........</p>
-                        <a href="#" class="btn btn-primary">Continue Reading</a>
+                        <a href="stories.php" class="btn btn-primary">Continue Reading</a>
                       </div>
                     </div>
                 </div>';
@@ -60,6 +60,12 @@
           ?>
         </div>
      </div>
+
+     <!--Reading-->
+      <div class="container">
+        
+      </div>
+
     <?php include './partials/footer.php';?>
 </body>
 </html>
