@@ -60,12 +60,6 @@
           ?>
         </div>
      </div>
-
-     <!--Reading-->
-      <div class="container">
-        
-      </div>
-
     <?php include './partials/footer.php';?>
 </body>
 </html>
