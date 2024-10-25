@@ -11,6 +11,12 @@
 <body>
    <?php include './partials/connect.php';?>
    <?php include './partials/header.php';?>
+
+   <!--php code-->
+   <?php
+      $id = $_GET[]
+   ?>
+
    <!--jumbotron-->
     <div class="container-fluid">
       <div class="jumbotron bg-warning rounded">

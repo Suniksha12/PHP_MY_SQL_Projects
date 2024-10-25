@@ -51,7 +51,7 @@
                       <div class="card-body">
                         <h5 class="card-title">'.$topic_name.'</h5>
                         <p class="card-text">'.substr($topic_desc,0,50).'........</p>
-                        <a href="stories.php?storu_id='.$id.'" class="btn btn-primary">Continue Reading</a>
+                        <a href="stories.php?story_id='.$id.'" class="btn btn-primary">Continue Reading</a>
                       </div>
                     </div>
                 </div>';
