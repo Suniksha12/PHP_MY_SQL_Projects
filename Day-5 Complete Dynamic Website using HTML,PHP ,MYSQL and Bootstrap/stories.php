@@ -46,7 +46,7 @@
 
     <!--Reading-->
     <div class="container">
-    <div class="jumbotron jumbotron-fluid bg-warning rounded">
+    <div class="jumbotron jumbotron-fluid bg-warning rounded p-0">
         <div class="container">
         <h1 class="display-4 text-center">Enjoy Reading!</h1>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus esse nisi incidunt doloremque delectus nesciunt nostrum eaque debitis, 
@@ -54,6 +54,11 @@
         
         </div>
       </div>
+    </div>
+
+    <!-- Thank you Text-->
+    <div class="container-fluid mb-4">
+    <h2 class="text-center display-4">Thank you for your time 😊</h2>
     </div>
   
    <?php include './partials/footer.php';?>
