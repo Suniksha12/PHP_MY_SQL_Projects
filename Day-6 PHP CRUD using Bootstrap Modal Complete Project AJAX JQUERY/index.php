@@ -26,24 +26,24 @@
           <div class="modal-body">
             <div class="mb-3 form-group">
               <label for="completename" class="form-label">Name</label>
-              <input type="text" class="form-control" id="completename" placeholder="Enter your name">
+              <input type="text" class="form-control" id="completename" placeholder="Enter your name" autocomplete="off">
             </div>
             <div class="mb-3 form-group">
               <label for="completemail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="completemail" placeholder="Enter your email">
+              <input type="email" class="form-control" id="completemail" placeholder="Enter your email" autocomplete="off">
             </div>
             <div class="mb-3 form-group">
               <label for="completemobile" class="form-label">Mobile</label>
-              <input type="text" class="form-control" id="completemobile" placeholder="Enter your mobile Number">
+              <input type="text" class="form-control" id="completemobile" placeholder="Enter your mobile Number" autocomplete="off">
             </div>
             <div class="mb-3 form-group">
               <label for="completeplace" class="form-label">Place</label>
-              <input type="text" class="form-control" id="completeplace" placeholder="Enter your Place">
+              <input type="text" class="form-control" id="completeplace" placeholder="Enter your Place" autocomplete="off">
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-danger">Close</button>
           </div>
         </div>
       </div>
