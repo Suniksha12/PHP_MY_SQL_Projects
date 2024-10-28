@@ -60,6 +60,21 @@
             var amailAdd = $('#completemail').val();
             var mobileAdd = $('#completemobile').val();
             var placeAdd = $('#completeplace').val();
+
+            $.ajax({
+                url:"insert.php",
+                type:'post',
+                data:{
+                    nameSend:nameAdd,
+                    emailSend:emailAdd,
+                    mobileSend:mobileAdd,
+                    placeSend:placeAdd
+                },
+                success:function(data,status){
+                    //function to display data
+                    console.log(status);
+                }
+            });
         }
     </script>
 </body>
