@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="adduser()">Submit</button>
             <button type="button" class="btn btn-danger">Close</button>
           </div>
         </div>
