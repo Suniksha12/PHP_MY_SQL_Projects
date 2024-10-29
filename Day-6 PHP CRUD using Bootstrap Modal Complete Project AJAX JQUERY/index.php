@@ -57,7 +57,7 @@
     <script>
         function adduser(){
             var nameAdd = $('#completename').val();
-            var amailAdd = $('#completemail').val();
+            var emailAdd = $('#completemail').val();
             var mobileAdd = $('#completemobile').val();
             var placeAdd = $('#completeplace').val();
 
