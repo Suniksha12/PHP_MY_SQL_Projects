@@ -8,7 +8,7 @@
            <th scope="col">Name</th>
            <th scope="col">Email</th>
            <th scope="col">Mobile</th>
-           <th scope="col">Operations</th>
+           <th scope="col">Place</th>
         </tr>
         </thead>';
 
@@ -24,10 +24,13 @@
             $place=$row['place'];
             $table.= '<tr>
                <td scope="row">'.$id.'</td>
-               <td></td>
-               <td></td>
-               <td></td>
+               <td>'.$name.'</td>
+               <td>'.$email.'</td>
+               <td>'.$mobile.'</td>
+               <td>'.$place.'</td>
             </tr>';
         }
+        $table.='<table>';
+        echo $table;
    }
 ?>
