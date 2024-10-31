@@ -55,6 +55,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> 
 
     <script>
+        //display function
+
+        function displayData(){
+
+        }
+        
         function adduser(){
             var nameAdd = $('#completename').val();
             var emailAdd = $('#completemail').val();
@@ -72,8 +78,10 @@
                 },
                 success:function(data,status){
                     //function to display data
-                    console.log(status);
+                    //console.log(status);
+                    displayData();
                 }
+
             });
         }
     </script>
