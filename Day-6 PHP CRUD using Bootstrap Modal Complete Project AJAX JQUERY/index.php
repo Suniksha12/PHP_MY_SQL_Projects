@@ -13,9 +13,7 @@
         <button type="button" class="btn btn-dark my-4" data-bs-toggle="modal" data-bs-target="#completeModal">
             Add New Users
         </button>
-        <div class="displayDataTable">
-
-        </div>
+        <div class="displayDataTable"></div>
     </div>
 
     <!-- Modal -->
