@@ -13,6 +13,9 @@
         <button type="button" class="btn btn-dark my-4" data-bs-toggle="modal" data-bs-target="#completeModal">
             Add New Users
         </button>
+        <div class="displayDataTable">
+
+        </div>
     </div>
 
     <!-- Modal -->
@@ -58,9 +61,19 @@
         //display function
 
         function displayData(){
-
+            var displayData = "true";
+             $.ajax({
+                 url: "display.php",
+                 type: 'post',
+                 data:{
+                    displaySend: displayData
+                 },
+                 success:function(data,status){
+                    $('#displayDataTable').html(data);
+                 }
+             });
         }
-        
+
         function adduser(){
             var nameAdd = $('#completename').val();
             var emailAdd = $('#completemail').val();
