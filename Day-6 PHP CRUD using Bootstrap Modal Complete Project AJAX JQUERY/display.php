@@ -18,8 +18,12 @@
 
         while($row=mysqli_fetch_assoc($result)){
             $id=$row['id'];
+            $name=$row['name'];
+            $email=$row['email'];
+            $mobile=$row['mobile'];
+            $place=$row['place'];
             $table.= '<tr>
-               <td scope="row">1</td>
+               <td scope="row">'.$id.'</td>
                <td></td>
                <td></td>
                <td></td>
