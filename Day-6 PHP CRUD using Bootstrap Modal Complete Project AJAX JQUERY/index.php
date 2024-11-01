@@ -59,6 +59,10 @@
     <script>
         //display function
 
+        $(document).ready(function(){
+            displayData();
+        });
+
         function displayData(){
             var displayData = "true";
              $.ajax({
@@ -68,7 +72,7 @@
                     displaySend: displayData
                  },
                  success:function(data,status){
-                    $('#displayDataTable').html(data);
+                    $('.displayDataTable').html(data);
                  }
              });
         }

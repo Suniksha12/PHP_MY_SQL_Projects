@@ -5,6 +5,5 @@
     $sql = "INSERT into `crud` (name,email,mobile,place) values('$nameSend','$emailSend','$mobileSend','$placeSend')";
 
     $result = mysqli_query($con,$sql);
-    
   }
 ?>
