@@ -16,7 +16,7 @@ if (isset($_POST['displaySend'])) {
 
     $sql = "SELECT * FROM `crud`";
     $result = mysqli_query($con, $sql);
-
+    $number=1;
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -26,7 +26,7 @@ if (isset($_POST['displaySend'])) {
                 $mobile = $row['mobile'];
                 $place = $row['place'];
                 $table .= '<tr>
-                    <td scope="row">' . $id . '</td>
+                    <td scope="row">' . $number . '</td>
                     <td>' . $name . '</td>
                     <td>' . $email . '</td>
                     <td>' . $mobile . '</td>
@@ -36,6 +36,7 @@ if (isset($_POST['displaySend'])) {
                       <button class="btn btn-danger" onclick="DeleteUser('.$id.')">Delete</button>
                     </td>
                 </tr>';
+                $number++;
             }
         } else {
             $table .= '<tr><td colspan="5">No records found</td></tr>';
