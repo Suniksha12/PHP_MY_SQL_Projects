@@ -77,8 +77,19 @@
              });
         }
 
-        function DeleteUser(){
-            
+        //Delete Record
+
+        function DeleteUser(deleteid){
+            $.ajax({
+                url:"delete.php",
+                type:"post",
+                data:{
+                    deletesend : deleteid
+                },
+                success:function(data,status){
+                    displayData();
+                }
+            });
         }
 
         function adduser(){
