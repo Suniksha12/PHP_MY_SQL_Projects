@@ -33,7 +33,7 @@ if (isset($_POST['displaySend'])) {
                     <td>' . $place . '</td>
                     <td>
                       <button class="btn btn-dark">Update</button>
-                      <button class="btn btn-danger">Delete</button>
+                      <button class="btn btn-danger" onclick="DeleteUser('.$id.')">Delete</button>
                     </td>
                 </tr>';
             }

@@ -77,6 +77,10 @@
              });
         }
 
+        function DeleteUser(){
+            
+        }
+
         function adduser(){
             var nameAdd = $('#completename').val();
             var emailAdd = $('#completemail').val();
