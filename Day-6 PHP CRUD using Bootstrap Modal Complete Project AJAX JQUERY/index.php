@@ -74,6 +74,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="">Update</button>
                     <button type="button" class="btn btn-danger">Close</button>
+                    <input type="hidden" id="hiddendata">
                 </div>
             </div>
         </div>
@@ -154,7 +155,11 @@
 
         //update function 
         function GetDetails(updateid) {
-           ('#updateModal')
+            $('#hiddendata').val(updateid);
+            $.post("update.php",{updateid:updateid},function(data,status){
+
+            });
+           ('#updateModal').modal("show");
         }
     </script>
 </body>
