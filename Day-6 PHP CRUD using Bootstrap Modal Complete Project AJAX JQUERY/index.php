@@ -157,9 +157,13 @@
         function GetDetails(updateid) {
             $('#hiddendata').val(updateid);
             $.post("update.php",{updateid:updateid},function(data,status){
-
+               var userid = JSON.parse(data);
+               $('#updatename').val(userid.name);
+               $('#updateemail').val(userid.email);
+               $('#updatemobile').val(userid.mobile);
+               $('#updateplace').val(userid.place);
             });
-           ('#updateModal').modal("show");
+           $('#updateModal').modal("show");
         }
     </script>
 </body>
