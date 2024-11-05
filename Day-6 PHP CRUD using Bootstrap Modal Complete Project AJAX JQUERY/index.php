@@ -147,6 +147,7 @@
                 success: function(data, status) {
                     //function to display data
                     //console.log(status);
+                    $('#completeModal').modal('hide');
                     displayData();
                 }
 
@@ -172,7 +173,17 @@
             var updateemail = $('#updateemail').val();
             var updatemobile = $('#updatemobile').val();
             var updateplace = $('#updateplace').val();
+            var hiddendata = $('#hiddendata').val();
 
+            $.post("update.php",{
+                updatename: updatename,
+                updateemail: updateemail,
+                updatemobile:updatemobile,
+                updateplace:updateplace
+            },function(data,status){
+                $('#updateModal').modal('hide');
+                displayData();
+            });
         }
     </script>
 </body>

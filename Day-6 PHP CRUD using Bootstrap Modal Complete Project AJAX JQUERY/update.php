@@ -15,4 +15,12 @@
       $response['status']=200;
       $response['message']='Invalid Request';
    }
+
+
+   //update query
+   if(isset($_POST['hiddendata'])){
+      $uniqueid = $_POST['hiddendata'];
+      
+   }
+
 ?>
