@@ -11,5 +11,8 @@
         $response = $row;
        }
       echo json_encode($response);
+   } else {
+      $response['status']=200;
+      $response['message']='Invalid Request';
    }
 ?>
