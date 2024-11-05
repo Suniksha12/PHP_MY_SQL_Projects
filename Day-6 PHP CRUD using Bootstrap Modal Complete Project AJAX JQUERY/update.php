@@ -20,7 +20,15 @@
    //update query
    if(isset($_POST['hiddendata'])){
       $uniqueid = $_POST['hiddendata'];
+      $name = $_POST['updatename'];
+      $email = $_POST['updateemail'];
+      $mobile = $_POST['updatemobile'];
+      $place = $_POST['updateplace'];
+
+      $sql = "UPDATE `crud` SET name='$name',email='$email',mobile='$mobile',place='$place' WHERE 
+              id=$uniqueid";
       
+      $result = mysqli_query($con,$sql);
    }
 
 ?>
