@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="">Update</button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="updateDetails()">Update</button>
                     <button type="button" class="btn btn-danger">Close</button>
                     <input type="hidden" id="hiddendata">
                 </div>
@@ -164,6 +164,15 @@
                $('#updateplace').val(userid.place);
             });
            $('#updateModal').modal("show");
+        }
+
+        //update button
+        function updateDetails(){
+            var updatename = $('#updatename').val();
+            var updateemail = $('#updateemail').val();
+            var updatemobile = $('#updatemobile').val();
+            var updateplace = $('#updateplace').val();
+
         }
     </script>
 </body>
