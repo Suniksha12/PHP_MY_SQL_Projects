@@ -21,12 +21,14 @@
         if($num>0){
             echo "User already exist";
         } else {
+            if($password === $cpassword){
             $sql = "INSERT INTO `data` (username,password) values('$username','$password')";
             $result = mysqli_query($con,$sql);
             if($result){
                 echo "Signup successfully";
-            } else {
-                die(mysqli_error($con));
+            } 
+             }else {
+                echo "Password did'nt match";
             }
         }
        }
