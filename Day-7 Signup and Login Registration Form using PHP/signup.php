@@ -1,5 +1,7 @@
 <?php 
   $user =0;
+  $success =0;
+  $match = 0;
   if($_SERVER['REQUEST_METHOD']=='POST'){
     include 'connect.php';
 
@@ -28,10 +30,12 @@
             $sql = "INSERT INTO `data` (username,password) values('$username','$password')";
             $result = mysqli_query($con,$sql);
             if($result){
-                echo "Signup successfully";
+                // echo "Signup successfully";
+                $success=1;
             } 
              }else {
-                echo "Password did'nt match";
+                // echo "Password did'nt match";
+                $match = 1;
             }
         }
        }
@@ -53,6 +57,13 @@
     <?php 
       if($user){
         echo "<div class='alert alert-danger' role='alert'> User Already Exist!! </div>";  
+      } else {
+        if($success){
+            echo "<div class='alert alert-success' role='alert'> Signup Successfully!! </div>";
+        }
+        if($match){
+            echo "<div class='alert alert-info' role='alert'> Password did'nt match!! </div>";
+        }
       }
     ?>
 </body>
