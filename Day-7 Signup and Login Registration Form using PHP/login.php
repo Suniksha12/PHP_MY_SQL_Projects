@@ -1,5 +1,6 @@
 <?php
     $login = 0; 
+    $invalid = 0;
    if($_SERVER['REQUEST_METHOD']=='POST'){
     include 'connect.php';
     if(isset($_POST['login'])){
@@ -14,7 +15,8 @@
                 // echo "login Successfull";
                 $login = 1;
             } else {
-                echo " invalid credentials ";
+                // echo " invalid credentials ";
+                $invalid = 1;
             }
         }
     }
@@ -36,11 +38,8 @@
       if($login){
         echo "<div class='alert alert-success' role='alert'> Login Successfull </div>";  
       } else {
-        if($success){
-            echo "<div class='alert alert-success' role='alert'> Signup Successfully!! </div>";
-        }
-        if($match){
-            echo "<div class='alert alert-info' role='alert'> Password did'nt match!! </div>";
+        if($invalid){
+            echo "<div class='alert alert-danger' role='alert'> Invalid Credentials </div>";
         }
       }
     ?>
