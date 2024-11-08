@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $login = 0; 
     $invalid = 0;
    if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -14,6 +15,8 @@
             if($num>0){
                 // echo "login Successfull";
                 $login = 1;
+                $_SESSION['username'] = $username;
+                header('location: welcome.php');
             } else {
                 // echo " invalid credentials ";
                 $invalid = 1;
