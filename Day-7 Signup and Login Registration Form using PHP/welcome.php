@@ -18,10 +18,10 @@
 <body>
     <div class="conatainer">
         <div class="jumbotron">
-            <h1 class="display-4">Welcome <?php echo $_SESSION['username'] ?> </h1>
+            <h1 class="display-4 text-center text-success">Welcome <?php echo $_SESSION['username'] ?> </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, excepturi.</p>
             <p class="lead">
-                <a class="btn btn-danger btn-lg" href="#" role="button">Log Out</a>
+                <a class="btn btn-danger btn-lg" href="logout.php" role="button">Log Out</a>
             </p>
         </div>
     </div>

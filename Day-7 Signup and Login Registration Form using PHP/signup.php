@@ -60,10 +60,11 @@
       } else {
         if($success){
             echo "<div class='alert alert-success' role='alert'> Signup Successfully!! </div>";
-        }
+        } else {
         if($match){
             echo "<div class='alert alert-info' role='alert'> Password did'nt match!! </div>";
         }
+    }  
       }
     ?>
 </body>
