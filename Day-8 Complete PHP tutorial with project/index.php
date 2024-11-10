@@ -8,6 +8,20 @@
    
    //variables
    $name = "John";
+   echo $name;
+
+   //variable scope 
+   //local, golbal, static
+
+   //local variables which are declared insidethe function will work good if you do something outside of it, the varaible maybe die.
+   function local_variable(){
+    $name = "John";
+    echo $name;
+    }
+    local_variable();
+
+    //global scope - access outside the function
+    
 ?>
 <!doctype html>
 <html lang="en">
