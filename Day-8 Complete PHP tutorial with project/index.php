@@ -1,14 +1,14 @@
 <?php
    
    //syntax
-   echo "hello world";
+   echo "hello world" . "<br>";
 
    //comments 
    /* Multi Line comment */
    
    //variables
    $name = "John";
-   echo $name;
+   echo $name . "<br>";
 
    //variable scope 
    //local, golbal, static
@@ -16,12 +16,28 @@
    //local variables which are declared insidethe function will work good if you do something outside of it, the varaible maybe die.
    function local_variable(){
     $name = "John";
-    echo $name;
+    echo $name . "<br>";
     }
     local_variable();
 
     //global scope - access outside the function
-    
+    $number1 = 30;
+    function testing(){
+        $number2=10;
+        echo $number2 . "<br>";
+    }
+    echo $number1 . "<br>";
+    testing();
+
+    //static function
+    function static_function(){
+        static $number = 10;
+        $number++;
+        echo $number . "<br>";
+        }
+        static_function();
+        static_function();
+
 ?>
 <!doctype html>
 <html lang="en">
