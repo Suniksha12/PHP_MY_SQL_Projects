@@ -23,4 +23,11 @@
   echo "<br>";
 
   //casting
+  $x = 10.33;
+  echo $x;
+  echo "<br>";
+  var_dump($x);
+  echo "<br>";
+  $intnumber = (int)$x;
+  echo $intnumber;
 ?>
