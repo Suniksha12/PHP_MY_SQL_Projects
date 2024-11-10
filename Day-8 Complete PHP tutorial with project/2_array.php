@@ -42,7 +42,36 @@
   $fruits=array("apple","mango","pineapple","banana");
   sort($fruits);
   print_r($fruits);
+  echo "<br>";
 
   //asort
-  
+  $subject = array("suniksha"=>"cse","riya"=>"mtech");
+  asort($subject);
+  print_r($subject);
+  echo "<br>";
+
+  //arsort() values sorted in descending order
+  $subject = array("suniksha"=>"cse","riya"=>"mtech");
+  arsort($subject);
+  print_r($subject);
+  echo "<br>";
+
+  //rsort()
+  $fruits=array("apple","mango","pineapple","banana");
+  rsort($fruits);
+  print_r($fruits);
+  echo "<br>";
+
+  //ksort ascending order
+  $subject = array("suniksha"=>"cse","riya"=>"mtech");
+  ksort($subject);
+  print_r($subject);
+  echo "<br>";
+
+  //krsort descending order
+  $subject = array("suniksha"=>"cse","riya"=>"mtech");
+  krsort($subject);
+  print_r($subject);
+  echo "<br>";
+
 ?>
