@@ -13,8 +13,16 @@
 
   for($x=0;$x<$colorlength;$x++){
     echo $colors[$x] . "<br>";
-
-    $subject = array("suniksha"=>"cse","riya"=>"mtech");
-    echo $subject["suniksha"];
   }
+
+  //2)Associative array
+  $subject = array("suniksha"=>"cse","riya"=>"mtech");
+  echo $subject["suniksha"]. "<br>";
+  echo $subject["riya"] . "<br>";
+
+  foreach($subject as $x=>$value){
+     echo "key=".$x.",value=".$value;
+     echo "<br>";
+  }
+  
 ?>
