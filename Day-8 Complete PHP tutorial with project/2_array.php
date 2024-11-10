@@ -24,5 +24,25 @@
      echo "key=".$x.",value=".$value;
      echo "<br>";
   }
+
+  //multidimensional Array
+  $color=array(array("red",11),array("blue",10),array("orange",80));
+  echo $color[0][1] . "<br>";
+
+  for($row=0;$row<3;$row++){
+    echo "Row".$row . "<br>";
+    for($col=0;$col<2;$col++){
+        echo $colors[$row][$col] . "<br>";
+    }
+  }
+
+  //functions in array
+
+  //sort
+  $fruits=array("apple","mango","pineapple","banana");
+  sort($fruits);
+  print_r($fruits);
+
+  //asort
   
 ?>
