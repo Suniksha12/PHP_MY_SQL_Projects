@@ -38,6 +38,43 @@
         static_function();
         static_function();
 
+    //data types
+
+    //string
+    $language = "PHP";
+    $langugage2 = 'HTML';
+    echo $language . "<br>";
+    echo $langugage2 . "<br>";
+    echo var_dump($langugage2);
+
+    //int 
+    $age = 30;
+    echo $age . "<br>";
+    echo var_dump($age);
+
+    //float
+    $price = 30.50;
+    echo $price . "<br>";
+    echo var_dump($price) . "<br>";
+
+    //boolean 
+    $is_admin = true;
+    echo $is_admin . "<br>";
+
+    //arrays
+    $colors = array("red", "green", "blue");
+    echo $colors[0] . "<br>";
+
+    //objects
+    class person{
+        public $name;
+        public $age;
+    }
+
+    //null
+    $null = null;
+    echo var_dump($null);
+
 ?>
 <!doctype html>
 <html lang="en">
