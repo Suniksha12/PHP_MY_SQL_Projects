@@ -65,7 +65,7 @@
     $colors = array("red", "green", "blue");
     echo $colors[0] . "<br>";
 
-    //objects
+    //objects - real instance of class 
     class person{
         public $name;
         public $age;
@@ -76,6 +76,7 @@
     echo var_dump($null);
 
 ?>
+<!-- Copied from bootstrap-->
 <!doctype html>
 <html lang="en">
   <head>
