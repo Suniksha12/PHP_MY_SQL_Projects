@@ -14,6 +14,7 @@
     echo "<br>";
 
     function myColor(){
-        
+        echo colors[0];
     }
+    myColor();
 ?>
