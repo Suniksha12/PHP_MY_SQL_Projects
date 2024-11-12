@@ -26,8 +26,30 @@
     echo "<br>";
    }
    echo "I am optional and always printed<br>";
-   echo "<br>";
 
    //if else ladder
-   
+   $time = 8;
+   if($time<12){
+    echo "Good morning<br>";
+   } else if($time <17){
+    echo "Good afternoon<br>";
+   } else {
+    echo "Good evenging";
+   }
+
+   //switch 
+   $color="yellow";
+   switch($color){
+    case "red":
+        echo "This is red";
+        break;
+    case "purple":
+        echo "this is purple";
+        break;
+    case "yellow":
+        echo "this is yellow";
+        break;
+    default:
+        echo "this is default";
+   }
 ?>
