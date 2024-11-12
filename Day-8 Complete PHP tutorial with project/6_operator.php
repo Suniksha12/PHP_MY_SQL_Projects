@@ -183,4 +183,36 @@
   echo "I am outside the loop";
   echo "<br>";
 
+  //array operators
+  $color1=array("blue"=>"2","green"=>"5");
+  $color2=array("black"=>"2","yellow"=>"5");
+
+  //+ union operator
+  print_r($color1+$color2);
+
+  // == 
+  var_dump(($color1==$color2));
+  echo "<br>";
+
+  //=== identity
+  var_dump(($color1===$color2));
+  echo "<br>";
+
+  //not equals
+  var_dump(($color1!=$color2));
+  echo "<br>";
+
+  //conditional assignment
+  //?: ternary operator
+
+  //expression?true:false;
+
+  $x = 0;
+  echo $x?"True":"false";
+  echo "<br>";
+
+  $x="Hello";
+  echo $x=="hey"?"Iam true":"Iam false";
+  echo "<br>";
+
 ?>
