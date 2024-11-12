@@ -30,4 +30,36 @@
   echo "<br>";
   $intnumber = (int)$x;
   echo $intnumber;
+  echo "<br>";
+  var_dump($intnumber);
+
+  $x = "Hello World";
+  echo $x;
+  echo "<br>";
+  var_dump($x);
+  echo "<br>";
+  $intnumber = (int)$x;
+  echo $intnumber;
+  echo "<br>";
+  var_dump($intnumber);
+  echo "<br>";
+
+  //math function
+  echo pi();
+  echo "<br>";
+
+  //min function
+  echo (min(1,3,0,4,6));
+  echo "<br>";
+  echo (max(1,2,6,4,9,0));
+  echo "<br>";
+  echo (abs(100));
+  echo "<br>";
+  echo (sqrt(64));
+  echo "<br>";
+  echo (round(1.2));
+  echo "<br>";
+  echo (rand(20,200));
+  echo "<br>";
+  
 ?>
