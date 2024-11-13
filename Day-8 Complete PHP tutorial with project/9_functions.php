@@ -9,6 +9,7 @@
 //    }
 //    functionName();
 
+
     function message(){
         echo 'Thank you <br>';
     }
@@ -24,11 +25,20 @@
     message_key("Priti");
     message_key("Dipti");
 
-
     function numbers(int $x,int $b){
         return $x+$b;
     }
     echo numbers(10,"100");
+    echo "<br>";
 
-    
+    //declare(strict_types=1);
+
+    function numbers_key(int $x,int $b):int{
+        return $x+$b;
+    }
+    echo numbers_key(10,"100");
+    echo "<br>";
+
+
+
 ?>
