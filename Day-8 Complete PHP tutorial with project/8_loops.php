@@ -34,7 +34,7 @@
   }while($x<6);
 
   //break
-  for($x=0;$x<10;$x++){
+  for($x=0;$x<5;$x++){
     echo $x;
     echo "<br>";
     if($x==6){
@@ -43,7 +43,7 @@
   }
 
   //continue
-  for($x=0;$x<10;$x++){
+  for($x=0;$x<5;$x++){
     if($x==6){
        continue;
     }
@@ -51,5 +51,5 @@
     echo "<br>";
   }
 
-  
+
 ?>
