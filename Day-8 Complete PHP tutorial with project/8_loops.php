@@ -31,5 +31,25 @@
     echo $x;
     echo "<br>";
     $x++;
-  }while($x<6)
+  }while($x<6);
+
+  //break
+  for($x=0;$x<10;$x++){
+    echo $x;
+    echo "<br>";
+    if($x==6){
+        break;
+    }
+  }
+
+  //continue
+  for($x=0;$x<10;$x++){
+    if($x==6){
+       continue;
+    }
+    echo $x;
+    echo "<br>";
+  }
+
+  
 ?>
