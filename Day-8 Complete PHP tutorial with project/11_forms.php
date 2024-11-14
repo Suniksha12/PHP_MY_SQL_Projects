@@ -34,5 +34,22 @@
 
      <!-- when to use get and post -->
 
+     <form action="welcome.php" method = "post">
+        <input type="text" name="fname" autocomplete="off">
+        <br>
+        <br>
+        <input type="text" name="lname" autocomplete="off">
+        <br>
+        <br>
+        <button type = "submit">Submit</button>
+     </form>
+
+      <?php
+        // if($_SERVER["REQUEST_METHOD"]=="POST"){
+            // $fname = $_POST['fname'];
+            // $lname = $_POST['lname'];
+// 
+        // }
+     ?>
 </body>
 </html>
