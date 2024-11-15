@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,7 @@
     <title>Ecommerce Website</title>
 </head>
 <body>
-    <h1>Ecommerce Website</h1>
+    <?php include './partials/connect.php' ?>
+    <?php include './partials/header.php' ?>
 </body>
 </html>
