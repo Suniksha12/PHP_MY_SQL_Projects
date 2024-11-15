@@ -34,11 +34,12 @@
 
                      echo '<div class="col-md-4 col-sm-6-col-xm-12 mb-5">
                              <div class="card" style="width: 18rem;">
-                                 <img src="./images/Cloth1.avif" class="card-img-top" alt="...">
+                                 <img src='.$category_image.' class="card-img-top" alt="...">
                                  <div class="card-body">
-                                     <h5 class="card-title">Card title</h5>
-                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                                     <h5 class="card-title">'.$category_name.'</h5>
+                                     <p class="card-text">'.substr($category_description,0,55).'....</p>
+                                     <p>Rs'.$category_price.'/-</p>
+                                     <a href="details.php?details_id='.$category_id.'" class="btn btn-primary">Add to cart</a>
                                  </div>
                              </div>
                          </div>';
