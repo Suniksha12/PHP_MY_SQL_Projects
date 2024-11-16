@@ -25,7 +25,7 @@
         <div class="container">
         <h1 class="display-4 text-center"><?php echo $category_name ?></h1>
         <p class="lead"><?php echo $category_description ?></p>
-        <button class="btn btn-dark"><a class="btn btn-dark" href="index.php" role="button">Continue Shopping</a></button>
+        <button class="btn btn-dark"><a class="btn btn-dark" href="index1.php" role="button">Continue Shopping</a></button>
         </div>
     </div>
 
@@ -33,13 +33,14 @@
         <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <img src=<?php echo $category_image ?> class="img-fluid" alt="">
-                <div class="col-lg-6 col-sm-12">
+            </div>
+            <div class="col-lg-6 col-sm-12">
                     <h2 class="text-center text-danger">
                         <?php echo $category_name ?>
                     </h2>
                     <p><?php echo $category_description ?></p>
-                    <p><strong <?php echo $category_price ?></p>
-                </div>
+                    <p><strong>Price: </strong><?php echo $category_price ?>/-</p>
+                    <button class="btn btn-success">Add to cart</button>
             </div>
         </div>
      </div>
