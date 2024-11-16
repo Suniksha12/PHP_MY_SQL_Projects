@@ -12,7 +12,37 @@
    <?php
      $id = $_GET['details_id'];
      $sql = "SELECT * FROM `clothes` WHERE category_id = $id";
-     $row
+     $result = mysqli_query($con,$sql);
+     $row = mysqli_fetch_assoc($result);
+     $category_id = $row['category_id'];
+     $category_name = $row['category_name'];
+     $category_description = $row['category_desc'];
+     $category_image = $row['category_image'];
+     $category_price = $row['category_price'];
+
     ?>
+    <div class="jumbotron">
+        <div class="container">
+        <h1 class="display-4 text-center"><?php echo $category_name ?></h1>
+        <p class="lead"><?php echo $category_description ?></p>
+        <button class="btn btn-dark"><a class="btn btn-dark" href="index.php" role="button">Continue Shopping</a></button>
+        </div>
+    </div>
+
+     <div class="conatiner">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <img src=<?php echo $category_image ?> class="img-fluid" alt="">
+                <div class="col-lg-6 col-sm-12">
+                    <h2 class="text-center text-danger">
+                        <?php echo $category_name ?>
+                    </h2>
+                    <p><?php echo $category_description ?></p>
+                    <p><strong <?php echo $category_price ?></p>
+                </div>
+            </div>
+        </div>
+     </div>
+
 </body>
 </html>
