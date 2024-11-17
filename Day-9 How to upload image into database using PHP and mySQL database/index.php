@@ -7,6 +7,16 @@
     <title>Image Upload</title>
 </head>
 <body>
-    
+    <h1 class="text-center my-3">Registration form</h1>
+    <div class="container d-flex justify-content-center">
+        <form action="" class="w-50">
+            <div class="form-group my-4">
+                <input type = "text" name="username" placeholder="Username" autocomplete="off" class="form-control">
+            </div>
+            <div class="form-group my-4">
+                <input type = "text" name="mobile" placeholder="Mobile" autocomplete="off" class="form-control">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
