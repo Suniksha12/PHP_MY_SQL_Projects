@@ -14,7 +14,7 @@
 <body>
     <h1 class="text-center my-3">Registration form</h1>
     <div class="container d-flex justify-content-center">
-        <form action="" class="w-50">
+        <form action="display.php" method="post" class="w-50">
             <!-- <div class="form-group my-4">
                 <input type = "text" name="username" placeholder="Username" autocomplete="off" class="form-control">
             </div>
@@ -24,7 +24,9 @@
             <?php inputFields("Username","username","","text") ?>
             <?php inputFields("Mobile","mobile","","text") ?>
             <?php inputFields("","File","","file") ?>
-
+            <button class="btn btn-dark" type="submit" name="submit">
+                Submit
+            </button>
         </form>
     </div>
 </body>
