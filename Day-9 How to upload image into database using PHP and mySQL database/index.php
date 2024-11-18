@@ -14,7 +14,7 @@
 <body>
     <h1 class="text-center my-3">Registration form</h1>
     <div class="container d-flex justify-content-center">
-        <form action="display.php" method="post" class="w-50">
+        <form action="display.php" method="post" class="w-50" enctype="multipart/form-data">
             <!-- <div class="form-group my-4">
                 <input type = "text" name="username" placeholder="Username" autocomplete="off" class="form-control">
             </div>

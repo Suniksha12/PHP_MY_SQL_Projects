@@ -1,7 +1,14 @@
 <?php
    include ('./connect.php');
    if(isset($_POST['submit'])){
-     $username = $_POST['']
+     $username = $_POST['username'];
+     $mobile = $_POST['mobile'];
+     $image = $_FILES['file'];
+     echo $username;
+     echo "<br>";
+     echo $mobile;
+     echo "<br>";
+     print_r($image);
    }
 ?>
 
