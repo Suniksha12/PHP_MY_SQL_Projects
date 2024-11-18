@@ -33,7 +33,9 @@
         $sql = "INSERT into `registrations` (name,mobile,image) values ('$username','$mobile','$upload_image')";
         $result = mysqli_query($con,$sql);
         if($result){
-            echo "Data inserted successfully";
+            echo '<div class="alert alert-success" role="alert">
+                <strong>Success</strong> Data inserted successfully
+                </div>';
         } else {
             die(mysqli_error($con));
         }
