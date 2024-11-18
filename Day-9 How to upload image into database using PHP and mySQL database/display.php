@@ -9,6 +9,20 @@
      echo $mobile;
      echo "<br>";
      print_r($image);
+     echo "<br>";
+
+     $imagefilename = $image['name'];
+     print_r($imagefilename);
+     echo "<br>";
+     $imagefileerror=$image['error'];
+     print_r($imagefileerror);
+     echo "<br>";
+     $imagefiletemp = $image['temp_name'];
+     print_r($imagefiletemp);
+     echo "<br>";
+
+     $filename_seperate=explode('.',$imagefilename);
+     print_r($filename_seperate);
    }
 ?>
 
