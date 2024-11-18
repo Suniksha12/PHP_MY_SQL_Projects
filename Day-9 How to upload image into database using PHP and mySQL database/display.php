@@ -53,6 +53,29 @@
     <title>Display data</title>
 </head>
 <body>
-    
+    <h1 class="text-center my-4">User Data</h1>
+    <div class="container mt-5 flex justify-content-center">
+    <table class="table table-bordered w-50">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Sl No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+               $sql = "SELECT * FROM `registrations`";
+               $result = mysqli_query($con,$sql);
+               $row=mysqli_fetch_assoc($result);
+               echo $row['name'];
+            ?>
+            <tr>
+                <th></th>
+            </tr>
+        </tbody>
+    </table>
+    </div>
 </body>
 </html>
