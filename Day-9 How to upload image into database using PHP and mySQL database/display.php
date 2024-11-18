@@ -29,7 +29,16 @@
      $extension = array('jpeg','jpg','png');
      if(in_array($file_extension,$extension)){
         $uploadimage = 'images/'.$imagefilename;
+        move_uploaded_file($imagefiletemp,$uploadimage);
+        $sql = "INSERT into `registrations` (name,mobile,image) values ('$username','$mobile','$upload_image')";
+        $result = mysqli_query($con,$sql);
+        if($result){
+            echo "Data inserted successfully";
+        } else {
+            die(mysqli_error($con));
+        }
      }
+
    }
 ?>
 
