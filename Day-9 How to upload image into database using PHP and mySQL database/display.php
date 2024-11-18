@@ -23,6 +23,13 @@
 
      $filename_seperate=explode('.',$imagefilename);
      print_r($filename_seperate);
+     $file_extension=strtolower($filename_seperate[1]);
+     print_r($file_extension);
+
+     $extension = array('jpeg','jpg','png');
+     if(in_array($file_extension,$extension)){
+        $uploadimage = 'images/'.$imagefilename;
+     }
    }
 ?>
 
