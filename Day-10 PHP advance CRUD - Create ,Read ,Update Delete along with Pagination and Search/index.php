@@ -29,7 +29,7 @@
             </div>
             <div class="col-2">
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#usermodal">
-                   Add New User
+                    Add New User
                 </button>
             </div>
         </div>
@@ -42,13 +42,25 @@
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Adding or Updating Users</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                       <form id="addform" method="post"></form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+                    <form id="addform" method="post" enctype="multipart/form-data">
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label>Name: </label>
+                               <div class="input-group">
+                                   <div class="input-group-prepend">
+                                       <span class="input-group-text bg-dark"><i class="bi bi-person text-light"></i></span>
+                                   </div>
+                                   <input type="text" class="form-control" placeholder="Enter Your Username" autocomplete="off" required="required" id="username">
+                               </div>
+                              </div>
+
+                              <!--email-->
+                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark">Submit</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
