@@ -12,12 +12,22 @@
     
     <h1 class="bg-dark text-light text-center py-2">PHP Advance Crud</h1>
 
+    <div class="container">
     <div class="row">
         <div class="col-10">
             <div class="input-group">
-                
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-dark"><i class="fas fa-search text-white"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Search user..">
             </div>
         </div>
+        <div class="col-2">
+            <button class="btn btn-dark">
+                Add New User
+            </button>
+        </div>
+    </div>
     </div>
     
     <!-- Jquery -->
