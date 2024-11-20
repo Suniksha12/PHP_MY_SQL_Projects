@@ -34,6 +34,10 @@
             </div>
         </div>
 
+        <!--table-->
+        
+    </div>
+
         <!-- Form Modal -->
         <div class="modal fade" id="usermodal" aria-hidden="true">
             <div class="modal-dialog">
@@ -85,7 +89,6 @@
                                         <input type="file" class="custom-file-input" name="photo" id="userphoto" required>
                                     </div>
                                 </div>
-                                </div>
                             </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-dark">Submit</button>
@@ -95,7 +98,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
