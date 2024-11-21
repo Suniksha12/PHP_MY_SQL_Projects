@@ -1,5 +1,7 @@
 <?php
-   require_once ''
+   require_once 'partials/connect.php';
+   $dbobj = new Database();
+   var_dump($dbobj);
 ?>
 
 <!doctype html>
