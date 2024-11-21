@@ -46,75 +46,90 @@
             <tbody>
                 <tr>
                     <th scope="row">Picture 1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Suniksha</td>
+                    <td>suniksha@gmail.com</td>
+                    <td>2907917825</td>
+                    <td>
+                        <span>Edit</span>
+                        <span>Profile</span>
+                        <span>Delete</span>
+                    </td>
                 </tr>
             </tbody>
         </table>
+
+        <!-- pagination-->
+        <nav aria-label="Page navigation example" id="pagination">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
     </div>
 
-        <!-- Form Modal -->
-        <div class="modal fade" id="usermodal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Adding or Updating Users</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <form id="addform" method="post" enctype="multipart/form-data">
-                        <div class="modal-body">
-                          <div class="form-group">
+    <!-- Form Modal -->
+    <div class="modal fade" id="usermodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Adding or Updating Users</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="addform" method="post" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="form-group">
                             <!--username-->
                             <label>Name: </label>
-                               <div class="input-group">
-                                   <div class="input-group-prepend">
-                                       <span class="input-group-text bg-dark"><i class="bi bi-person text-light"></i></span>
-                                   </div>
-                                   <input type="text" class="form-control" placeholder="Enter Your Username" autocomplete="off" required="required" id="username" name="username">
-                               </div>
-                              </div>
-
-                              <!--email-->
-                              <div class="form-group">
-                                <label>Email: </label>
-                                   <div class="input-group">
-                                       <div class="input-group-prepend">
-                                           <span class="input-group-text bg-dark"><i class="bi bi-envelope text-light"></i></i></span>
-                                       </div>
-                                    <input type="email" class="form-control" placeholder="Enter Your Email" autocomplete="off" required="required" id="email" name="email">
-                                 </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-dark"><i class="bi bi-person text-light"></i></span>
                                 </div>
-
-                                <!--mobile-->
-                                <div class="form-group">
-                                <label>Mobile: </label>
-                                   <div class="input-group">
-                                       <div class="input-group-prepend">
-                                           <span class="input-group-text bg-dark"><i class="bi bi-telephone text-light"></i></i></span>
-                                       </div>
-                                    <input type="text" class="form-control" placeholder="Enter Your Phone no" autocomplete="off" required="required" id="mobile" name="mobile" maxlength="10" minlength="10">
-                                 </div>
-                                </div>
-
-                                <!--photo-->
-                                <div class="form-group">
-                                    <label>Photo:</label>
-                                    <div class="input-group">
-                                        <label class="custom-file-label" for="userphoto">Choose File</label>
-                                        <input type="file" class="custom-file-input" name="photo" id="userphoto" required>
-                                    </div>
-                                </div>
+                                <input type="text" class="form-control" placeholder="Enter Your Username" autocomplete="off" required="required" id="username" name="username">
                             </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark">Submit</button>
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
-                    </form>
-                </div>
+
+                        <!--email-->
+                        <div class="form-group">
+                            <label>Email: </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-dark"><i class="bi bi-envelope text-light"></i></i></span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Enter Your Email" autocomplete="off" required="required" id="email" name="email">
+                            </div>
+                        </div>
+
+                        <!--mobile-->
+                        <div class="form-group">
+                            <label>Mobile: </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-dark"><i class="bi bi-telephone text-light"></i></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Enter Your Phone no" autocomplete="off" required="required" id="mobile" name="mobile" maxlength="10" minlength="10">
+                            </div>
+                        </div>
+
+                        <!--photo-->
+                        <div class="form-group">
+                            <label>Photo:</label>
+                            <div class="input-group">
+                                <label class="custom-file-label" for="userphoto">Choose File</label>
+                                <input type="file" class="custom-file-input" name="photo" id="userphoto" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark">Submit</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
