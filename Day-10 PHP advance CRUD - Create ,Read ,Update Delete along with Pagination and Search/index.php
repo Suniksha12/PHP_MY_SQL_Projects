@@ -18,7 +18,7 @@
 
     <div class="container">
         <!--Input search and button modal -->
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-10">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -35,7 +35,24 @@
         </div>
 
         <!--table-->
-        
+        <table class="table" id="usertable">
+            <thead class="table-dark">
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Operations</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Picture 1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
         <!-- Form Modal -->
