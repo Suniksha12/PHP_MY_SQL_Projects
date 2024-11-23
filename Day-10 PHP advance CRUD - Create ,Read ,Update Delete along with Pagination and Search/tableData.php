@@ -13,9 +13,15 @@
             <td>suniksha@gmail.com</td>
             <td>2907917825</td>
             <td>
-                <span>Edit</span>
-                <span>Profile</span>
-                <span>Delete</span>
+                <a href="">
+                   <i class="bi bi-eye"></i>
+                </a>
+                <a href="">
+                   <i class="bi bi-pencil-square"></i>
+                </a>
+                <a href="">
+                   <i class="bi bi-trash"></i>
+                </a>
             </td>
         </tr>
     </tbody>
