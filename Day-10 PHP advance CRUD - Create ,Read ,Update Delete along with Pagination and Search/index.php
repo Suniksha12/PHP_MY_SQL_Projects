@@ -42,6 +42,7 @@
 
         <!--table-->
         <?php require_once 'tableData.php' ?>
+        <?php include 'profile.php' ?>
 
         <!-- pagination-->
         <nav aria-label="Page navigation example" id="pagination">
