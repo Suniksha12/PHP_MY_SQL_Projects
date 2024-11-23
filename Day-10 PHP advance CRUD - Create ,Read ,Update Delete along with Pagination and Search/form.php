@@ -1,5 +1,5 @@
     <!-- Form Modal -->
-    <div class="modal fade" id="usermodal" aria-hidden="true">
+    <div class="modal fade" id="usermodal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

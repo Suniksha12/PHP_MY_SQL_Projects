@@ -1,7 +1,7 @@
 <?php
-   require_once 'partials/connect.php';
-   $dbobj = new Database();
-   var_dump($dbobj);
+require_once 'partials/connect.php';
+$dbobj = new Database();
+var_dump($dbobj);
 ?>
 
 <!doctype html>
@@ -37,27 +37,29 @@
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#usermodal">
                     Add New User
                 </button>
+
             </div>
         </div>
 
-        <!--table-->
-        <?php require_once 'tableData.php' ?>
-        <?php include 'profile.php' ?>
 
-        <!-- pagination-->
-        <nav aria-label="Page navigation example" id="pagination">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
-    </div>
+    <!--table-->
+    <?php include 'tableData.php' ?>
+
+    <!-- pagination-->
+    <nav aria-label="Page navigation example" id="pagination">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
 
     <!-- Form Modal -->
     <?php include 'form.php' ?>
+    <?php include 'profile.php' ?>
+    </div>
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
