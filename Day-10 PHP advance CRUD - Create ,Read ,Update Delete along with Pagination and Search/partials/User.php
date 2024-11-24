@@ -18,9 +18,14 @@
            $sql = "INSERT INTO {$this->tableName} (".implode(",",$fields).") VALUES(".implode(",",$placeholder).")";
            $stmt = $this->conn->prepare($sql);
            try{
-                
+              $this->conn->beginTransaction(); 
+              $stmt->execute($data);
+              $lastInsertedId=$this->conn->lastInsertId();
+              $this->conn->commit();
+              return $lastInsertedId; 
            } catch(PDOException $e){
                 echo "Error:".$e->getMessage();
+                $this->conn->rollback();
            }
         }
 
