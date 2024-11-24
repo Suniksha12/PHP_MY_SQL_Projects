@@ -9,12 +9,19 @@
         public function add($data){
             if(!empty($data)){
                 $fields = $placeholder=[];
-                foreach($data as $fields => $value){
+                foreach($data as $field => $value){
                     $fields[] = $field;
                     $placeholder[] = ":{field}";
                 }
             }
-            $sql = "INSERT INTO {$this->tableName} (pname,email,phone) VALUES (:pname,:email,:phone);"
+           // $sql = "INSERT INTO {$this->tableName} (pname,email,phone) VALUES (:pname,:email,:phone);"
+           $sql = "INSERT INTO {$this->tableName} (".implode(",",$fields).") VALUES(".implode(",",$placeholder).")";
+           $stmt = $this->conn->prepare($sql);
+           try{
+                
+           } catch(PDOException $e){
+                echo "Error:".$e->getMessage();
+           }
         }
 
         //function to get rows
