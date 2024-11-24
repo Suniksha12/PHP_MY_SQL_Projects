@@ -8,7 +8,7 @@
     </thead>
     <tbody>
         <tr>
-            <th scope="row">Picture 1</th>
+            <td scope="row">Picture 1</td>
             <td>Suniksha</td>
             <td>suniksha@gmail.com</td>
             <td>2907917825</td>
@@ -16,10 +16,10 @@
                 <a href="#" class="mr-6 profile" data-bs-target="#userViewModal" data-bs-toggle="modal" title="View Profile">
                     <i class="bi bi-eye text-success"></i>
                 </a>
-                <a href="#" class="mr-3 edituser" title="Edit">
+                <a href="#" class="mr-3 edituser" title="Edit" data-bs-target="#userModal" data-bs-toggle="modal">
                    <i class="bi bi-pencil-square text-info"></i>
                 </a>
-                <a href="#" class="mr-3 deleteuser" title="Delete">
+                <a href="#" class="mr-3 deleteuser" title="Delete" data-bs-target="#userViewModal" data-bs-toggle="modal">
                    <i class="bi bi-trash text-danger"></i>
                 </a>
             </td>
