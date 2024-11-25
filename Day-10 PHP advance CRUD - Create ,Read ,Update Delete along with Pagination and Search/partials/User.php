@@ -11,7 +11,7 @@
                 $fields = $placeholder=[];
                 foreach($data as $field => $value){
                     $fields[] = $field;
-                    $placeholder[] = ":{field}";
+                    $placeholder[] = ":{$field}";
                 }
             }
            // $sql = "INSERT INTO {$this->tableName} (pname,email,phone) VALUES (:pname,:email,:phone);"
@@ -76,7 +76,7 @@
                $fileExtension = strtolower(end($fileNameCmps));
                $newFileName = md5(time().$fileName). '.' .$fileExtension;
                $allowedExtn = ["png","jpg","jpeg"];
-               
+
                if(in_array($fileExtension,$allowedExtn)){
                 $uploadFileDir = getcwd().'/uploads/';
                 $destFilePath = $uploadFileDir.$newFileName;
