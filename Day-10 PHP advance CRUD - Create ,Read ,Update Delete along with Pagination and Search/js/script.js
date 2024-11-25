@@ -21,6 +21,6 @@ $(document).ready(function(){
                 console.log(arguments);
                 console.log("Error"+error);
             },           
-        })
-    })
-})
+        });
+    });
+});
