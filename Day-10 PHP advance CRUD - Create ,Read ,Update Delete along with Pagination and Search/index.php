@@ -1,9 +1,3 @@
-<?php
-require_once 'partials/Database.php';
-$dbobj = new Database();
-var_dump($dbobj);
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -43,7 +37,7 @@ var_dump($dbobj);
 
 
     <!--table-->
-    <?php include 'tableData.php' ?>
+    <?php require_once 'tableData.php' ?>
 
     <!-- pagination-->
     <nav aria-label="Page navigation example" id="pagination">
