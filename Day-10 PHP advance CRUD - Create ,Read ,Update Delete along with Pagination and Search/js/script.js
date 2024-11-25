@@ -1,8 +1,8 @@
 $(document).ready(function(){
     //addding users
 
-    $(document).on("submit","#addform",function(e){
-        e.preventDefault();
+    $(document).on("submit","#addform",function(event){
+        event.preventDefault();
         //ajax
         $.ajax({
             url:"/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
@@ -11,7 +11,7 @@ $(document).ready(function(){
             data: new FormData(this),
             processData:false,
             contentType:false,
-            beforeSending:function(){
+            beforeSend: function(){
                 console.log("Wait...Data is loading");
             },
             success:function(response){

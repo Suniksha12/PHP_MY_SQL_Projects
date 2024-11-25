@@ -46,7 +46,7 @@
                             <label>Photo:</label>
                             <div class="input-group">
                                 <label class="custom-file-label" for="userphoto">Choose File</label>
-                                <input type="file" class="custom-file-input" name="photo" id="photo" required>
+                                <input type="file" class="custom-file-input" name="photo" id="photo">
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                         <!-- 2 input fields first for adding and next for updating , deleting or viewing profile-->
                          <input type="hidden" name="action" value="adduser">
                          <input type="hidden" name="userId" id="userId" value="">
-                         <inout
+
 
                     </div>
                 </form>
