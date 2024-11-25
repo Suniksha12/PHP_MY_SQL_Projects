@@ -9,7 +9,7 @@
      }
 
      //adding user action
-     if($action=='adduser' && !empty($_POST)){
+     if($action=='add' && !empty($_POST)){
         $pname = $_POST['username'];
         $email = $_POST['email'];
         $mobile = $_POST['mobile'];

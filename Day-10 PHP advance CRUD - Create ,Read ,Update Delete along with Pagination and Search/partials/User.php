@@ -3,7 +3,7 @@
    require_once 'Database.php';
    
    class User extends Database{
-        protected $tableName="usertable";
+        protected $tableName='usertable';
 
         //function to add users
         public function add($data){
@@ -15,7 +15,7 @@
                 }
             }
            // $sql = "INSERT INTO {$this->tableName} (pname,email,phone) VALUES (:pname,:email,:phone);"
-           $sql = "INSERT INTO {$this->tableName} (".implode(",",$fields).") VALUES(".implode(",",$placeholder).")";
+           $sql = "INSERT INTO {$this->tableName} (".implode(',',$fields).") VALUES(".implode(',',$placeholder).")";
            $stmt = $this->conn->prepare($sql);
            try{
               $this->conn->beginTransaction(); 
@@ -31,7 +31,7 @@
 
         //function to get rows
         public function getRows($start=0,$limit=4){
-            $sql = "SELECT * FROM {$this->tableName} ORDER BY DESC LIMIT {$start},{$limit}";
+            $sql = "SELECT * FROM {$this->tableName} ORDER BY id DESC LIMIT {$start},{$limit}";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()>0){
@@ -43,11 +43,11 @@
             return $results;
         }
 
-        //function to get single row
+        //function to get single row for updating deleting seraching
         public function getRow($field,$value){
             $sql = "SELECT * FROM {$this->tableName} WHERE {$field}=:{$field}";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute();
+            $stmt->execute([":{$field}" => $value]);
             if($stmt->rowCount()>0){
                 $result=$stmt->fetch(PDO::FETCH_ASSOC);
                 
@@ -71,11 +71,12 @@
             if(!empty($file)){
                $fileTempPath = $file['tmp_name'];
                $fileName = $file['name'];
+               $fileSize = $file['size'];
                $fileType= $file['type'];
                $fileNameCmps = explode('.',$fileName);
                $fileExtension = strtolower(end($fileNameCmps));
                $newFileName = md5(time().$fileName). '.' .$fileExtension;
-               $allowedExtn = ["png","jpg","jpeg"];
+               $allowedExtn = ["png","jpg","jpeg","gif"];
 
                if(in_array($fileExtension,$allowedExtn)){
                 $uploadFileDir = getcwd().'/uploads/';

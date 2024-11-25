@@ -46,7 +46,7 @@
                             <label>Photo:</label>
                             <div class="input-group">
                                 <label class="custom-file-label" for="userphoto">Choose File</label>
-                                <input type="file" class="custom-file-input" name="photo" id="userphoto" required>
+                                <input type="file" class="custom-file-input" name="photo" id="photo" required>
                             </div>
                         </div>
                     </div>
