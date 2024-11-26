@@ -3,18 +3,18 @@ function getuserrow(user){
     var userRow="";
     if(user){
         userRow=`<tr>
-            <td scope="row">Picture 1</td>
-            <td>Suniksha</td>
-            <td>suniksha@gmail.com</td>
-            <td>2907917825</td>
+            <td scope="row"><img src=${user.photo}></td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.mobile}</td>
             <td>
-                <a href="#" class="mr-6 profile" data-bs-target="#userViewModal" data-bs-toggle="modal" title="View Profile">
+                <a href="#" class="mr-6 profile" data-bs-target="#userViewModal" data-bs-toggle="modal" title="View Profile" data-id=${user.id}>
                     <i class="bi bi-eye text-success"></i>
                 </a>
-                <a href="#" class="mr-3 edituser" title="Edit" data-bs-target="#userModal" data-bs-toggle="modal">
+                <a href="#" class="mr-3 edituser" title="Edit" data-bs-target="#userModal" data-bs-toggle="modal" data-id=${user.id}>
                    <i class="bi bi-pencil-square text-info"></i>
                 </a>
-                <a href="#" class="mr-3 deleteuser" title="Delete" data-bs-target="#userViewModal" data-bs-toggle="modal">
+                <a href="#" class="mr-3 deleteuser" title="Delete" data-bs-target="#userViewModal" data-bs-toggle="modal" data-id=${user.id}>
                    <i class="bi bi-trash text-danger"></i>
                 </a>
             </td>
@@ -35,18 +35,18 @@ function getusers() {
     beforeSend: function () {
       console.log("Wait...Data is loading");
     },
-    success: function (row) {
-      console.log(row);
-      if(row.players){
+    success: function (rows) {
+      console.log(rows);
+      if(rows.players){
         var userslist="";
-        $.each(row.players,function(index,user){
-
-        })
+        $.each(rows.players,function(index,user){
+           userslist += getuserrow(user);
+        });
+        $("#usertable tbody").html(userslist);
       }
     },
-    error: function (request, error) {
-      console.log(arguments);
-      console.log("Error" + error);
+    error: function () {
+      console.log("Oops! Something Went Wrong!");
     },
   });
 }
@@ -73,6 +73,7 @@ $(document).ready(function () {
         if (response) {
           $("#usermodal").modal("hide");
           $("#addform")[0].reset();
+          getusers();
         }
       },
       error: function (request, error) {
