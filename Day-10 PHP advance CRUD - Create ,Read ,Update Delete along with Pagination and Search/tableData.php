@@ -7,7 +7,7 @@
         <th scope="col">Operations</th>
     </thead>
     <tbody>
-        <tr>
+        <!--<tr>
             <td scope="row">Picture 1</td>
             <td>Suniksha</td>
             <td>suniksha@gmail.com</td>
@@ -23,6 +23,6 @@
                    <i class="bi bi-trash text-danger"></i>
                 </a>
             </td>
-        </tr>
+        </tr> -->
     </tbody>
 </table>
