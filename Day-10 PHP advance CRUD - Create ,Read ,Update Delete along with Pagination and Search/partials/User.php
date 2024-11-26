@@ -67,24 +67,45 @@
         }
 
         //function to uplaod photo
-        public function uploadPhoto($file){
-            if(!empty($file)){
-               $fileTempPath = $file['tmp_name'];
-               $fileName = $file['name'];
-               $fileSize = $file['size'];
-               $fileType= $file['type'];
-               $fileNameCmps = explode('.',$fileName);
-               $fileExtension = strtolower(end($fileNameCmps));
-               $newFileName = md5(time().$fileName). '.' .$fileExtension;
-               $allowedExtn = ["png","jpg","jpeg","gif"];
-
-               if(in_array($fileExtension,$allowedExtn)){
-                $uploadFileDir = getcwd().'/uploads/';
-                $destFilePath = $uploadFileDir.$newFileName;
-                if(move_uploaded_file($fileTempPath,$destFilePath)){
-                   return $newFileName;
+        public function uploadPhoto($file) {
+            // Check if the file is uploaded
+            if (isset($file) && !empty($file) && $file['error'] === UPLOAD_ERR_OK) {
+                $fileTempPath = $file['tmp_name'];
+                $fileName = $file['name'];
+                $fileSize = $file['size'];
+                $fileType = $file['type'];
+                $fileNameCmps = explode('.', $fileName);
+                $fileExtension = strtolower(end($fileNameCmps));
+                $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
+                $allowedExtn = ["png", "jpg", "jpeg", "gif"];
+                
+                // Validate file extension
+                if (in_array($fileExtension, $allowedExtn)) {
+                    // Validate file size (example: max 2MB)
+                    if ($fileSize <= 2 * 1024 * 1024) {
+                        $uploadFileDir = getcwd() . '/uploads/';
+                        
+                        // Create the upload directory if it doesn't exist
+                        if (!is_dir($uploadFileDir)) {
+                            mkdir($uploadFileDir, 0755, true);
+                        }
+                        
+                        $destFilePath = $uploadFileDir . $newFileName;
+                        
+                        // Move the uploaded file to the destination
+                        if (move_uploaded_file($fileTempPath, $destFilePath)) {
+                            return $newFileName; // Return the new file name
+                        } else {
+                            return 'Error moving the uploaded file.';
+                        }
+                    } else {
+                        return 'File size exceeds the maximum limit of 2MB.';
+                    }
+                } else {
+                    return 'Invalid file extension. Allowed extensions: ' . implode(', ', $allowedExtn);
                 }
-               }
+            } else {
+                return 'No file uploaded or there was an upload error.';
             }
         }
 

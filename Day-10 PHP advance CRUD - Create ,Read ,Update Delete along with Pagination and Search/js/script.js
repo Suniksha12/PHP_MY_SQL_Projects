@@ -49,4 +49,7 @@ $(document).ready(function(){
             }, 
         });
     }
+
+    //calling get Users Function
+    getusers();
 });

@@ -1,43 +1,63 @@
 <?php
-//    print_r($_FILES);
-//    die;
+// print_r($_FILES);
+// die;
 
-     $action=$_REQUEST['action'];
-     if(!empty($action)){
-        require_once 'partials/User.php';
-        $obj=new User();
-     }
+$action = $_REQUEST['action'];
+if (!empty($action)) {
+    require_once 'partials/User.php';
+    $obj = new User();
+}
 
-     //adding user action
-     if($action=='adduser' && !empty($_POST)){
-        $pname = $_POST['username'];
-        $email = $_POST['email'];
-        $mobile = $_POST['mobile'];
-        $photo = $_POST['photo'];
+// Adding user action
+if ($action == 'adduser' && !empty($_POST)) {
+    $pname = $_POST['username'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    
+    // Accessing the uploaded file from $_FILES
+    $photo = isset($_FILES['userphoto']) ? $_FILES['userphoto'] : null;
 
-        $playerid = (!empty($_POST['userid']))? $_POST['userid']: '';
-        
-        $imagename = "";
-        if(!empty($photo['name'])){
-            $imagename = $obj->uploadPhoto($photo);
-            $playerData = [
-                'pname'=>$pname,
-                'email'=>$email,
-                'mobile'=>$mobile,
-                'photo'=>$imagename,
-            ];
-        } else {
-            $playerData = [
-                'pname'=>$pname,
-                'email'=>$email,
-                'mobile'=>$mobile,
-            ];
-        }
-        $playerid=$obj->add($playerData);
-        if(!empty($playerId)){
-            $player=$obj->getRow('id',$playerId);
-            echo json_encode($player);
-            exit();
-        }
-     }
+    $playerid = (!empty($_POST['userid'])) ? $_POST['userid'] : '';
+    
+    $imagename = "";
+    if ($photo && !empty($photo['name'])) {
+        $imagename = $obj->uploadPhoto($photo);
+        $playerData = [
+            'pname' => $pname,
+            'email' => $email,
+            'mobile' => $mobile,
+            'photo' => $imagename,
+        ];
+    } else {
+        $playerData = [
+            'pname' => $pname,
+            'email' => $email,
+            'mobile' => $mobile,
+        ];
+    }
+    
+    $playerId = $obj->add($playerData); // Note: Fixed variable name from $playerid to $playerId
+    if (!empty($playerId)) {
+        $player = $obj->getRow('id', $playerId);
+        echo json_encode($player);
+        exit();
+    }
+}
+
+// Get countOf function and get all users action
+if ($action == 'getallusers') {
+    $page = (!empty($_GET['page'])) ? $_GET['page'] : 1;
+    $limit = 4;
+    $start = ($page - 1) * $limit;
+    $users = $obj->getRows($start, $limit);
+    if (!empty($users)) {
+        $userlist = $users;
+    } else {
+        $userlist = [];
+    }
+    $total = $obj->getCount();
+    $userArr = ['count' => $total, 'users' => $userlist];
+    echo json_encode($userlist);
+    exit();
+}
 ?>
