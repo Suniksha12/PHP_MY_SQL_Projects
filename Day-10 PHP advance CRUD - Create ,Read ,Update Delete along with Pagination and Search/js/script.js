@@ -27,4 +27,26 @@ $(document).ready(function(){
             },           
         });
     });
+
+    //get users function
+    function getusers(){
+        var pageno=$("#currentpage").val();
+        $.ajax({
+            url:"/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
+            type: "GET",
+            dataType: "json",
+            data:{page:pageno,action:'getallusers'},
+            beforeSend: function(){
+                console.log("Wait...Data is loading");
+            },
+            success:function(row){
+                console.log(row);
+                
+            },
+            error:function(request,error){
+                console.log(arguments);
+                console.log("Error"+error);
+            }, 
+        });
+    }
 });

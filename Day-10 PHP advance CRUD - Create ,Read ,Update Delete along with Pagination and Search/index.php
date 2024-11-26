@@ -50,6 +50,9 @@
         </ul>
     </nav>
 
+    <input type="hidden" value="1" name="currentpage" id="currentpage">
+    
+
     <!-- Form Modal -->
     <?php include 'form.php' ?>
     <?php include 'profile.php' ?>
