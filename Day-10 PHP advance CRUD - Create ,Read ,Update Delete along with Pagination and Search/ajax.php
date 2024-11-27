@@ -56,8 +56,8 @@ if ($action == 'getallusers') {
         $userlist = [];
     }
     $total = $obj->getCount();
-    $userArr = ['count' => $total, 'users' => $userlist];
-    echo json_encode($userlist);
+    $userArr = ['count' => $total, 'players' => $userlist]; // Change 'users' to 'players'
+    echo json_encode($userArr); // Return the complete array
     exit();
 }
 ?>

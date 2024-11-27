@@ -1,28 +1,28 @@
 //function to get users from database
-function getuserrow(user){
-    var userRow="";
-    if(user){
-        userRow=`<tr>
-            <td scope="row"><img src=${user.photo}></td>
-            <td>${user.name}</td>
-            <td>${user.email}</td>
-            <td>${user.mobile}</td>
-            <td>
-                <a href="#" class="mr-6 profile" data-bs-target="#userViewModal" data-bs-toggle="modal" title="View Profile" data-id=${user.id}>
-                    <i class="bi bi-eye text-success"></i>
-                </a>
-                <a href="#" class="mr-3 edituser" title="Edit" data-bs-target="#userModal" data-bs-toggle="modal" data-id=${user.id}>
-                   <i class="bi bi-pencil-square text-info"></i>
-                </a>
-                <a href="#" class="mr-3 deleteuser" title="Delete" data-bs-target="#userViewModal" data-bs-toggle="modal" data-id=${user.id}>
-                   <i class="bi bi-trash text-danger"></i>
-                </a>
-            </td>
-        </tr>`;
-        
+function getuserrow(user) {
+    var userRow = "";
+    if (user) {
+      userRow = `<tr>
+          <td scope="row"><img src=uploads/${user.photo} alt="User  Photo"></td>
+          <td>${user.name}</td>
+          <td>${user.email}</td>
+          <td>${user.mobile}</td>
+          <td>
+              <a href="#" class="mr-6 profile" data-bs-target="#userViewModal" data-bs-toggle="modal" title="View Profile" data-id="${user.id}">
+                  <i class="bi bi-eye text-success"></i>
+              </a>
+              <a href="#" class="mr-3 edituser" title="Edit" data-bs-target="#userModal" data-bs-toggle="modal" data-id="${user.id}">
+                 <i class="bi bi-pencil-square text-info"></i>
+              </a>
+              <a href="#" class="mr-3 deleteuser" title="Delete" data-bs-target="#userViewModal" data-bs-toggle="modal" data-id="${user.id}">
+                 <i class="bi bi-trash text-danger"></i>
+              </a>
+          </td>
+      </tr>`;
     }
+    console.log("Generated user row:", userRow); // Log the generated row
     return userRow;
-}
+  }
 
 //get users function
 function getusers() {
