@@ -3,12 +3,18 @@ function pagination(totalpages,currentpages){
     var pagelist="";
     if(totalpages>1){
         currentpages=parseInt(currentpages);
-        pagelist+=`<ul class="pagination justify-content-center">`,
-        pagelist+=`<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>`;
-        pagelist+=`<li class="page-item active"><a class="page-link" href="#">1</a></li>`;
-        pagelist+=`<li class="page-item"><a class="page-link" href="#">Next</a></li>`;
+        pagelist+=`<ul class="pagination justify-content-center">`;
+        const prevClass=currentpages==1?"disabled":"";
+        pagelist+=`<li class="page-item${prevClass}"><a class="page-link" href="#" data-page="${currentpages-1}">Previous</a></li>`;
+        for(let p=1;p<=totalpages;p++){
+            const activeClass = currentpages==p?"active":"";
+           pagelist+=`<li class="page-item${activeClass}"><a class="page-link" href="#" data-page="${p}"></a>${p}</li>`;
+        }
+        const nextClass=currentpages==totalpages?"disabled":"";
+        pagelist+=`<li class="page-item${nextClass}"><a class="page-link" href="#" data-page="${currentpages+1}">Next</a></li>`;
         pagelist+=`</ul>`;
     }
+    $("#pagination").html(pagelist);
 }
 
 //function to get users from database
@@ -17,7 +23,7 @@ function getuserrow(user) {
     if (user) {
       userRow = `<tr>
           <td scope="row"><img src=uploads/${user.photo} alt="User  Photo"></td>
-          <td>${user.name}</td>
+          <td>${user.pname}</td>
           <td>${user.email}</td>
           <td>${user.mobile}</td>
           <td>
