@@ -115,7 +115,13 @@
                 $fields="";
                 $x=1;
                 $fieldsCount=count($data);
-                
+                foreach($data as $field=>$value){
+                    $fields .="{$field}=:{$field}";
+                    if($x<$fieldsCount){
+                        $fields.=",";
+                    }
+                    $x++;
+                }
             }
             $sql = "UPDATE {$this->tableName} SET {$fields} WHERE id=:id";
             $stmt = $this->conn->prepare($sql);
