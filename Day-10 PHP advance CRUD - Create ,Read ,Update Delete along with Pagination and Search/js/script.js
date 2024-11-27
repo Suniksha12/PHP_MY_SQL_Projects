@@ -79,7 +79,7 @@ function getusers() {
 }
 
 //loading document
-$(document).ready(function () {
+$(document).ready(function() {
   //addding users
 
   $(document).on("submit", "#addform", function (event) {
@@ -109,6 +109,16 @@ $(document).ready(function () {
       },
     });
   });
+
+  //onclick event for pagination
+  $(document).on("click","ul.pagination li a",function(event){
+    event.preventDefault();
+    const pagenum = $(this).data("page");
+    $("#currentpage").val(pagenum);
+    getusers();
+    $(this).parent().siblings().removeClass("active");
+    $(this).parent().siblings().addClass("active");
+  })
 
   //calling get Users Function
   getusers();
