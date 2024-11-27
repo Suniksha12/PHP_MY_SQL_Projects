@@ -1,3 +1,16 @@
+//function for  pagination
+function pagination(totalpages,currentpages){
+    var pagelist="";
+    if(totalpages>1){
+        currentpages=parseInt(currentpages);
+        pagelist+=`<ul class="pagination justify-content-center">`,
+        pagelist+=`<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>`;
+        pagelist+=`<li class="page-item active"><a class="page-link" href="#">1</a></li>`;
+        pagelist+=`<li class="page-item"><a class="page-link" href="#">Next</a></li>`;
+        pagelist+=`</ul>`;
+    }
+}
+
 //function to get users from database
 function getuserrow(user) {
     var userRow = "";

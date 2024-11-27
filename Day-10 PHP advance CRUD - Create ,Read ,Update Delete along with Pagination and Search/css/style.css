@@ -1,1 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+img{
+    width: 150px;
+    height: 100px;
+    object-fit:cover;
+}
