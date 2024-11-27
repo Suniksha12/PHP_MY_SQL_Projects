@@ -110,6 +110,25 @@
         }
 
         //function to update
+        public function update($data,$id){
+            if(!empty($data)){
+                $fields="";
+                $x=1;
+                $fieldsCount=count($data);
+                
+            }
+            $sql = "UPDATE {$this->tableName} SET {$fields} WHERE id=:id";
+            $stmt = $this->conn->prepare($sql);
+           try{
+              $this->conn->beginTransaction(); 
+              $data['id'] = $id;
+              $stmt->execute($data);
+              $this->conn->commit();
+           } catch(PDOException $e){
+                echo "Error:".$e->getMessage();
+                $this->conn->rollback();
+           }
+        }
 
         //function to delete
 
