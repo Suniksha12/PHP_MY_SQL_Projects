@@ -32,7 +32,7 @@ function getuserrow(user) {
               <a href="#" class="mr-6 profile" data-bs-target="#userViewModal" data-bs-toggle="modal" title="View Profile" data-id="${user.id}">
                   <i class="bi bi-eye text-success"></i>
               </a>
-              <a href="#" class="mr-3 edituser" title="Edit" data-bs-target="#userModal" data-bs-toggle="modal" data-id="${user.id}">
+              <a href="#" class="mr-3 edituser" title="Edit" data-bs-target="#usermodal" data-bs-toggle="modal" data-id="${user.id}">
                  <i class="bi bi-pencil-square text-info"></i>
               </a>
               <a href="#" class="mr-3 deleteuser" title="Delete" data-bs-target="#userViewModal" data-bs-toggle="modal" data-id="${user.id}">
@@ -121,19 +121,25 @@ $(document).ready(function() {
   });
 
   //onclick event for editing
-  $(document).on("click", "a.edituser", function () {
+  $(document).on("click", "a.edituser", function() {
     var uid = $(this).data("id");
-    alert(uid);
+    // alert(uid);
     $.ajax({
       url: "/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
       type: "GET",
       dataType: "json",
-      data: { id: uid, action: "editusersdata" },
+      data: { id:uid, action:"editusersdata" },
       beforeSend: function () {
         console.log("Wait...Data is loading");
       },
       success: function (rows) {
         console.log(rows);
+        if(rows){
+            $("#username").val(rows.pname);
+            $("#email").val(rows.email);
+            $("#mobile").val(rows.mobile);
+            $("#userId").val(rows.id);
+        }
 
       },
       error: function () {

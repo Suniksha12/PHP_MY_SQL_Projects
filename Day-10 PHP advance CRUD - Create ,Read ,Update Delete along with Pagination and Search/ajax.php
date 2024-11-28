@@ -62,7 +62,7 @@ if ($action == 'getallusers') {
 }
 
 //action to  perform editing
-if($action == 'editusersdata'){
+if($action == "editusersdata"){
     $playerId = (!empty($_GET['id'])) ? $_GET['id'] : '';
     if(!empty($playerId)){
         $user = $obj->getRow('id', $playerId);

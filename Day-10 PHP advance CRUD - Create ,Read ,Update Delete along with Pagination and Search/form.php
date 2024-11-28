@@ -3,8 +3,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title fs-5" id="exampleModalLabel">Adding or Updating Users</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Adding or Updating Users <i class="bi bi-cloud-plus text-dark"></i></h1>
                 </div>
                 <form id="addform" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
