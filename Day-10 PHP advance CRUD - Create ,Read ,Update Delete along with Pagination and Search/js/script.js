@@ -111,14 +111,36 @@ $(document).ready(function() {
   });
 
   //onclick event for pagination
-  $(document).on("click","ul.pagination li a",function(event){
+  $(document).on("click", "ul.pagination li a", function (event) {
     event.preventDefault();
     const pagenum = $(this).data("page");
     $("#currentpage").val(pagenum);
     getusers();
     $(this).parent().siblings().removeClass("active");
     $(this).parent().siblings().addClass("active");
-  })
+  });
+
+  //onclick event for editing
+  $(document).on("click", "a.edituser", function () {
+    var uid = $(this).data("id");
+    alert(uid);
+    $.ajax({
+      url: "/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
+      type: "GET",
+      dataType: "json",
+      data: { page: pageno, action: "editusersdata" },
+      beforeSend: function () {
+        console.log("Wait...Data is loading");
+      },
+      success: function (rows) {
+        console.log(rows);
+
+      },
+      error: function () {
+        console.log("Oops! Something Went Wrong!");
+      },
+    });
+  });
 
   //calling get Users Function
   getusers();
