@@ -13,12 +13,12 @@ if ($action == 'adduser' && !empty($_POST)) {
     $pname = $_POST['username'];
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
-    
+
     // Accessing the uploaded file from $_FILES
     $photo = isset($_FILES['userphoto']) ? $_FILES['userphoto'] : null;
 
     $playerid = (!empty($_POST['userid'])) ? $_POST['userid'] : '';
-    
+
     $imagename = "";
     if ($photo && !empty($photo['name'])) {
         $imagename = $obj->uploadPhoto($photo);
@@ -35,7 +35,7 @@ if ($action == 'adduser' && !empty($_POST)) {
             'mobile' => $mobile,
         ];
     }
-    
+
     $playerId = $obj->add($playerData); // Note: Fixed variable name from $playerid to $playerId
     if (!empty($playerId)) {
         $player = $obj->getRow('id', $playerId);
@@ -59,5 +59,15 @@ if ($action == 'getallusers') {
     $userArr = ['count' => $total, 'players' => $userlist]; // Change 'users' to 'players'
     echo json_encode($userArr); // Return the complete array
     exit();
+}
+
+//action to  perform editing
+if($action == 'editusersdata'){
+    $playerId = (!empty($_GET['id'])) ? $_GET['id'] : '';
+    if(!empty($playerId)){
+        $user = $obj->getRow('id', $playerId);
+        echo json_encode($user);
+        exit();
+    }
 }
 ?>
