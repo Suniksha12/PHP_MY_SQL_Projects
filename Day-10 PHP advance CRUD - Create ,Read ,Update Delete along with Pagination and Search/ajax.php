@@ -23,7 +23,7 @@ if ($action == 'adduser' && !empty($_POST)) {
     // Accessing the uploaded file from $_FILES
     $photo = $_FILES['userphoto'] ?? null;
 
-    $playerId = $_POST['userId'] ?? ''; // Use consistent naming
+    $playerId = (!empty($_POST['userId'])) ? $_POST['userId'] : ''; // Use consistent naming
 
     $imagename = "";
     if ($photo && !empty($photo['name'])) {
