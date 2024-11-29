@@ -85,4 +85,10 @@ if ($action == "editusersdata") {
     }
     exit();
 }
+
+//perform deleting 
+if($action == 'deleteuser'){
+    $playerId = (!empty($_GET['id'])) ? $_GET['id'] : '';
+
+}
 ?>
