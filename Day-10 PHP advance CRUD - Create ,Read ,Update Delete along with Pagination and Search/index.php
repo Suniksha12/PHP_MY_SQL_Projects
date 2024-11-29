@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="col-2">
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#usermodal">
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#usermodal" id="adduserbtn">
                     Add New User
                 </button>
 

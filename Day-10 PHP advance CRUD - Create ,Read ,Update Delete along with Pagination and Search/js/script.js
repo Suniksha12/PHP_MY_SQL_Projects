@@ -149,6 +149,13 @@ $(document).ready(function() {
   });
 
 
+  //onclick for adding user btn
+  $("#adduserbtn").on("click",function(){
+    $("#addform")[0].reset();
+    $("#userId").val("");
+  })
+
+  
   //calling get Users Function
   getusers();
 });
