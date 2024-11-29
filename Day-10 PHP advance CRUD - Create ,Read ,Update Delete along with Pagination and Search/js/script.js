@@ -148,6 +148,12 @@ $(document).ready(function() {
     });
   });
 
+  //onclick event for editing
+  $(document).on("click","a.edituser",function(){
+    var uid = $(this).data("id");
+    alert(uid);
+  })
+
   //calling get Users Function
   getusers();
 });
