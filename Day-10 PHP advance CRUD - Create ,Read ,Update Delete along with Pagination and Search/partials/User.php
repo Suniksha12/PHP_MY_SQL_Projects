@@ -155,5 +155,9 @@
         }
         //function for search
 
+        public function searchuser($searchText,$start=0,$limit=4){
+            $sql = "SELECT * FROM {$this->tableName} WHERE name LIKE :searchText LIMIT
+        }
+
    }
 ?>
