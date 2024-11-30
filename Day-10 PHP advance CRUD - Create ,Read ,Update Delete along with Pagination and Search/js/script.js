@@ -186,6 +186,10 @@ $(document).on("click", "a.deleteuser", function(e) {
 });
 
 
+   //Profile View
+   $(document).on("click")
+
+
   //calling get Users Function
   getusers();
 });
