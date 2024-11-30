@@ -187,7 +187,31 @@ $(document).on("click", "a.deleteuser", function(e) {
 
 
    //Profile View
-   $(document).on("click")
+   $(document).on("click","a.profile",function(){
+    var uid = $(this).data("id");
+    $.ajax({
+        url: "/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
+        type: "GET",
+        dataType: "json",
+        data: { id:uid, action:"editusersdata"},
+        success:function(user){
+           if(user){
+                const profile = `<div class="row">
+                        <div class ="col-sm-6 col-md-4">
+                            <img src="uploads/${user.image}" alt="User Image" class="img-circle">
+                        </div>
+                        <div class="col-sm-6 col-md-8">
+                           <h4 class="text-primary">${user.name}</h4>
+                           <p></p>
+                        <div>
+                    </div>`;
+            }
+           },
+           error: function() {
+            console.log("Oops! Something Went Wrong!");
+        }
+    });
+   })
 
 
   //calling get Users Function
