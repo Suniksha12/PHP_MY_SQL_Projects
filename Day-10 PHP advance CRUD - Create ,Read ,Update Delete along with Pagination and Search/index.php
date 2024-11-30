@@ -25,7 +25,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text bg-dark"><i class="bi bi-search text-light"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Search user..">
+                    <input type="text" class="form-control" placeholder="Search user.." id="searchinput">
                 </div>
             </div>
             <div class="col-2">
