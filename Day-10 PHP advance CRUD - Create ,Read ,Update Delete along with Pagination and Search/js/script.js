@@ -225,16 +225,22 @@ $(document).ready(function () {
                 dataType: "json",
                 data: { searchQuery:searchText,action:"searchuser" },
                 success: function (users) {
-                    var usersList = "";
-                    $.each(users, function(index,user){
-                        userslist += getUserRow(user);
-                    });
-                    $("#usertable")
+                    if(users){
+                        var usersList = "";
+                        $.each(users, function(index,user){
+                            userslist += getUserRow(user);
+                        });
+                        $("#usertable tbody").html(usersList);
+                        $("#pagination").hide();
+                    }
                 },
                 error: function () {
                     console.log("Oops! Something Went Wrong!");
                 },
             });
+        } else {
+            getUsers();
+            $("#pagination").show();
         }
     })
 
