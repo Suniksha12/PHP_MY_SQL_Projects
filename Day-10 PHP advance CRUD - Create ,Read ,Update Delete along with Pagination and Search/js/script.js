@@ -216,7 +216,27 @@ $(document).ready(function () {
     })
 
     //function for seraching 
-    
+    $(document).on("keyup",function(){
+        const searchText =  $(this).val();
+        if(searchText.length>1){
+            $.ajax({
+                url: "/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
+                type: "GET",
+                dataType: "json",
+                data: { searchQuery:searchText,action:"searchuser" },
+                success: function (users) {
+                    var usersList = "";
+                    $.each(users, function(index,user){
+                        userslist += getUserRow(user);
+                    });
+                    $("#usertable")
+                },
+                error: function () {
+                    console.log("Oops! Something Went Wrong!");
+                },
+            });
+        }
+    })
 
     //calling get Users Function
     getUsers();
