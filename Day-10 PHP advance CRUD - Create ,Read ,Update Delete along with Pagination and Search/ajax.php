@@ -88,7 +88,16 @@ if ($action == "editusersdata") {
 
 //perform deleting 
 if($action == 'deleteuser'){
-    $playerId = (!empty($_GET['id'])) ? $_GET['id'] : '';
-
+    $userId = (!empty($_GET['id'])) ? $_GET['id'] : '';
+    if(!empty($userId)){
+        $isdeleted = $obj->deleteRow($userId);
+        if($isdeleted){
+            $displaymessage=['delete'=>1];
+        } else {
+            $displaymessage=['delete'=>0];
+        }
+        echo json_encode($displaymessage);
+        exit();
+    }
 }
 ?>

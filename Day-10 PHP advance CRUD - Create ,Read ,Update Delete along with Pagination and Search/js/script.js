@@ -168,6 +168,11 @@ $(document).ready(function() {
             beforeSend: function () {
               console.log("Wait...Data is loading");
             },
+            success:function(res){
+                if(res.deleted==1){
+                    
+                }
+            },
             error: function () {
                 console.log("Oops! Something Went Wrong!");
               }

@@ -17,6 +17,7 @@
     <h1 class="bg-dark text-light text-center py-2">PHP Advance Crud</h1>
 
     <div class="container">
+        <div class="displaymessage"></div>
         <!--Input search and button modal -->
         <div class="row mb-3">
             <div class="col-10">
