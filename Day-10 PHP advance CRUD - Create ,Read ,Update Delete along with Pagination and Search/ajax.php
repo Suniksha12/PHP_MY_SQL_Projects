@@ -63,7 +63,7 @@ if ($action == 'adduser' && !empty($_POST)) {
 
 // Get countOf function and get all users action
 if ($action == 'getallusers') {
-    $playerId = (!empty($_GET['id'])) ? $_GET['id'] : '';
+    $page = $_GET['page'] ?? 1;
     $limit = 4;
     $start = ($page - 1) * $limit;
     $users = $obj->getRows($start, $limit);
