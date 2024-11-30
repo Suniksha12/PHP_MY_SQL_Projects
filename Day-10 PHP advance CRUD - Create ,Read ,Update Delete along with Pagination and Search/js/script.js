@@ -156,29 +156,34 @@ $(document).ready(function() {
   });
 
   //onclick event for deleting the funstion
-  $(document).on("click","a.deleteuser",function(e){
+$(document).on("click", "a.deleteuser", function(e) {
     e.preventDefault();
     var uid = $(this).data("id");
-    if(confirm("Are your sure you want to delete this user?")){
+    if (confirm("Are you sure you want to delete this user?")) {
+        console.log("User  confirmed deletion:", uid); // Debugging line
         $.ajax({
             url: "/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
             type: "GET",
             dataType: "json",
-            data: { id:uid, action:"deleteuser" },
-            beforeSend: function () {
-              console.log("Wait...Data is loading");
+            data: { id: uid, action: "deleteuser" },
+            beforeSend: function() {
+                console.log("Wait...Data is loading");
             },
-            success:function(res){
-                if(res.deleted==1){
-                    
+            success: function(res) {
+                if (res.delete == 1) { // Ensure this matches your PHP response
+                    $(".displaymessage").html("User  deleted successfully").fadeIn().delay(2500).fadeOut(); // Corrected fadeOut
+                    getusers();
+                    console.log("User  deleted successfully");
+                } else {
+                    $(".displaymessage").html("Failed to delete user").fadeIn().delay(2500).fadeOut();
                 }
             },
-            error: function () {
+            error: function() {
                 console.log("Oops! Something Went Wrong!");
-              }
-        })
-     } 
-  })
+            }
+        });
+    }
+});
 
 
   //calling get Users Function

@@ -138,17 +138,19 @@
 
         //function to delete
 
-        public function deleteRow($id){
-            $sql = "DELETE FROM {$this->tableName} WHERE id=:id";
+        public function deleteRow($id) {
+            $sql = "DELETE FROM {$this->tableName} WHERE id = :id";
             $stmt = $this->conn->prepare($sql);
-            try{
-                $stmt->execute([':id'=>$id]);
-                if($stmt->rowCount()>0){
-                    return true;
+            try {
+                $stmt->execute([':id' => $id]);
+                if ($stmt->rowCount() > 0) {
+                    return true; // Deletion was successful
+                } else {
+                    return false; // No rows were deleted (ID may not exist)
                 }
-            } catch(PDOException $e){
-                echo "Error:".$e->getMessage();
-                return false;
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+                return false; // Return false on error
             }
         }
         //function for search

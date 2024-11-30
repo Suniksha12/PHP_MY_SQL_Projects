@@ -87,17 +87,19 @@ if ($action == "editusersdata") {
 }
 
 //perform deleting 
-if($action == 'deleteuser'){
+// Perform deleting 
+if ($action == "deleteuser") {
     $userId = (!empty($_GET['id'])) ? $_GET['id'] : '';
-    if(!empty($userId)){
-        $isdeleted = $obj->deleteRow($userId);
-        if($isdeleted){
-            $displaymessage=['delete'=>1];
+    if (!empty($userId)) {
+        $isDeleted = $obj->deleteRow($userId);
+        if ($isDeleted) {
+            echo json_encode(['delete' => 1, 'message' => 'User  deleted successfully']);
         } else {
-            $displaymessage=['delete'=>0];
+            echo json_encode(['delete' => 0, 'message' => 'Failed to delete user']);
         }
-        echo json_encode($displaymessage);
-        exit();
+    } else {
+        echo json_encode(['delete' => 0, 'message' => 'User  ID is required']);
     }
+    exit();
 }
 ?>
