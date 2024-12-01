@@ -83,6 +83,7 @@ $(document).ready(function () {
 
     $(document).on("submit", "#addform", function (event) {
         event.preventDefault();
+        var msg=("#userId").val().length>0?"User has been updated succesfully":"New User has been added sucessfully";
         //ajax
         $.ajax({
             url: "/PHP_My_SQL_Projects/Day-10 PHP advance CRUD - Create ,Read ,Update Delete along with Pagination and Search/ajax.php",
@@ -99,6 +100,7 @@ $(document).ready(function () {
                 if (response) {
                     $("#usermodal").modal("hide");
                     $("#addform")[0].reset();
+                    $('.displaymessage').html(msg).fadeIn().delay(2500).fadeOut();
                     getUsers();
                 }
             },
