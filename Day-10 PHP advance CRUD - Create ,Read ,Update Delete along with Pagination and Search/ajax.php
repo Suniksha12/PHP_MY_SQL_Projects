@@ -102,4 +102,12 @@ if ($action == "deleteuser") {
     }
     exit();
 }
+
+//serach data
+if($action=='searchuser'){
+    $queryStaring=(!empty($_GET['searchQuery']))?trim($_GET['searchQuery']):'';
+    $results = $obj->searchuser($queryStaring);
+    echo json_encode($results);
+    exit();
+}
 ?>
