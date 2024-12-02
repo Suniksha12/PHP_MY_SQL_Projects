@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-dark my-4 ">Login</button>
-                <p>Don't have and account? <a href="#" class="text-white"> Register Here</a></p>
+                <p>Don't have and account? <a href="partials/registrations.php" class="text-white"> Register Here</a></p>
             </form>
          </div>
     </div>
