@@ -10,7 +10,26 @@
 <body class="bg-dark">
     <h1 class="text-info text-center p-3">Voting System</h1>
     <div class="bg-info">
-         <h2>Login</h2>
+         <h2 class="text-center">Login</h2>
+         <div class="container">
+            <form action="">
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50 m-auto" name="mobile" placeholder="Enter your mobile" required maxlength="10" minlength="10">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control w-50 m-auto" name="mobile" placeholder="Enter your password" required>
+                </div>
+                <div class="mb-3">
+                    <select name="std" class=" form-control w-50 m-auto">
+                        <option value="group">Group</option>
+                        <option value="voter">Voter</option>
+                    </select>
+                </div>
+            </form>
+         </div>
     </div>
     
     <!-- script js -->
