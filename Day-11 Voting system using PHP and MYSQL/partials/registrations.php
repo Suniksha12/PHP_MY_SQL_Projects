@@ -11,7 +11,7 @@
     <h1 class="text-info text-center p-3">Voting System</h1>
     <div class="bg-info py-4">
         <h2 class="text-center">Register Account</h2>
-        <div class="container">
+        <div class="container text-center">
             <form action="">
                 <div class="mb-3">
                     <input type="text" class="form-control w-50 m-auto" placeholder="Enter your username" required name="username">
@@ -34,6 +34,8 @@
                         <option value="voter">Voter</option>
                     </select>
                 </div>
+                <button type="submit" class="btn btn-dark my-4">Register</button>
+                <p>Already have an account? <a href="../" class="text-white">Login Here</a></p>
             </form>
         </div>
     </div>
