@@ -9,6 +9,16 @@
 </head>
 <body class="bg-dark">
     <h1 class="text-info text-center p-3">Voting System</h1>
+    <div class="bg-info py-4">
+        <h2 class="text-center">Register Account</h2>
+        <div class="container">
+            <form action="">
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50 m-auto" placeholder="Enter your username" required name="username">
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- script js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
