@@ -16,6 +16,24 @@
                 <div class="mb-3">
                     <input type="text" class="form-control w-50 m-auto" placeholder="Enter your username" required name="username">
                 </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50 m-auto" placeholder="Enter your mobile number" required name="mobile">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control w-50 m-auto" placeholder="Enter your password" required name="password">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control w-50 m-auto" placeholder="Enter your Confirm password" required name="cpassword">
+                </div>
+                <div class="mb-3">
+                    <input type="file" class="form-control w-50 m-auto" name="photo">
+                </div>
+                <div class="mb-3">
+                    <select name="std" class="form-select w-50 m-auto">
+                        <option value="group">Group</option>
+                        <option value="voter">Voter</option>
+                    </select>
+                </div>
             </form>
         </div>
     </div>
