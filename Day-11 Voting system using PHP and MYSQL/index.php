@@ -12,7 +12,7 @@
     <div class="bg-info py-4">
          <h2 class="text-center">Login</h2>
          <div class="container text-center ">
-            <form action="../Day-11 Voting system using PHP and MYSQL/actions/register.php" method="post" enctype="multipart/form-data">
+            <form action="../Day-11 Voting system using PHP and MYSQL/actions/login.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter your username" required>
                 </div>
