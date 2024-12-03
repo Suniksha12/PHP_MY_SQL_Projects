@@ -6,7 +6,17 @@
    $cpassword=$_POST['cpassword'];
    $image=$_POST['photo']['name'];
    $tmp_name=$_POST['photo']['tmp_name'];
-   $mobile=$_POST['mobile'];
+   $std=$_POST['std'];
+
+   if($password!=$cpassword){
+    echo '<script>alert("Password didnot match");
+        window.location="../partials/registration.php";
+        </script>';
+   } else {
+      move_uploaded_file($tmp_name,"../uploads/$image");
+
+   }
+
 
 
 ?>
