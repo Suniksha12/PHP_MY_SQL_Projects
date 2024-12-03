@@ -10,7 +10,14 @@
 
    $result = mysqli_query($con,$sql);
    if($mysqli_num_rows($result)>0){
-     
+      $sql = "SELECT username,photo,votes,id from `userdata` WHERE standard='group'";
+      $resultgroup = mysqli_query($con,$sql);
+      if(mysqli_num_rows($resultgroup)>0){
+        $groups=mysqli_fetch_all($resultgroup,MYSQLI_ASSOC);
+        $_SESSION['groups']=$groups;
+
+      }
+      $data=mysqli_fetch_array();
    } else{
      echo '<script>
           alert("Invalid Credentials");
