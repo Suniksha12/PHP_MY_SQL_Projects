@@ -17,7 +17,15 @@
         $_SESSION['groups']=$groups;
 
       }
-      $data=mysqli_fetch_array();
+      $data=mysqli_fetch_array($result);
+      $_SESSION['id']=$data['id'];
+      $_SESSION['status']=$data['status'];
+      $_SESSION['data']=$data;
+
+      echo '<script>
+      window.location="../partials/dashboard.php";
+   </script>';
+
    } else{
      echo '<script>
           alert("Invalid Credentials");
