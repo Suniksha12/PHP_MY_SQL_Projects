@@ -20,7 +20,7 @@
                     <input type="text" class="form-control w-50 m-auto" name="mobile" placeholder="Enter your mobile Number" required maxlength="10" minlength="10">
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control w-50 m-auto" name="mobile" placeholder="Enter your password" required>
+                    <input type="password" class="form-control w-50 m-auto" name="password" placeholder="Enter your password" required>
                 </div>
                 <div class="mb-3">
                     <select name="std" class=" form-select w-50 m-auto">

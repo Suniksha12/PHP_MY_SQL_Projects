@@ -1,4 +1,5 @@
 <?php
+   session_start();
    include('connect.php');
 
    $username=$_POST['username'];
@@ -6,10 +7,12 @@
    $password=$_POST['password'];
    $std=$_POST['std'];
 
-   $sql = "SELECT * FROM `userdata` WHERE username='$username' and mobile='$mobile' and password='$password' and standard='$std'";
-
-   $result = mysqli_query($con,$sql);
-   if($mysqli_num_rows($result)>0){
+   $sql = "SELECT * FROM `userdata` WHERE username=? and mobile=? and password=? and standard=?";
+   $stmt=mysqli_prepare($con,$sql);
+   mysqli_stmt_bind_param($stmt,'ssss',$username,$mobile,$password,$std);
+   mysqli_stmt_execute($stmt);
+   $result = mysqli_stmt_get_result($stmt);
+   if(mysqli_num_rows($result)>0){
       $sql = "SELECT username,photo,votes,id from `userdata` WHERE standard='group'";
       $resultgroup = mysqli_query($con,$sql);
       if(mysqli_num_rows($resultgroup)>0){
@@ -32,4 +35,8 @@
           window.location="../";
        </script>';
    }
+
+   //closing the statment
+   mysqli_stmt_close($stmt);
+   mysqli_close($con);
 ?>
