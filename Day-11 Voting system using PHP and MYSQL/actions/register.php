@@ -14,7 +14,13 @@
         </script>';
    } else {
       move_uploaded_file($tmp_name,"../uploads/$image");
-
+      $sql="INSERT into `userdata` (username,mobile,password,photo,standard,status,votes) values('$username','$mobile','$password','$image','$std',0,0)";
+      $result = mysqli_query($con,$sql);
+      if($result){
+        echo '<script>alert("Registration Successfull");
+        window.location="../";
+        </script>';
+      }
    }
 
 
