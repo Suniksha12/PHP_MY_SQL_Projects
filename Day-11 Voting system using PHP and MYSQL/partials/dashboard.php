@@ -1,10 +1,20 @@
+<?php
+   session_start();
+    $data = $_SESSION['data'];
+    if($_SESSION['status']==1){
+        $status = '<b class = "text-success">Voted</b>';
+    } else{
+        $status = '<b class = "text-danger">Not Voted</b>';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Day-11 Voting system using PHP and MYSQL/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>PHP Voting System</title>
 </head>
 <body class="bg-secondary text-light">
@@ -26,14 +36,17 @@
             </div>
             <hr>
            </div>
-           <div class="col md 5">
+           <div class="col-md-5">
                <!--User Profile-->
-               <img src="" alt="User Image">
+               <img src="../uploads/<?php echo $data['photo'] ?>" alt="User Image">
                <br>
                <br>
-               <strong class="text-dark h5">Name:</strong><br><br>
-               <strong class="text-dark h5">Mobile:</strong><br><br>
-               <strong class="text-dark h5">Status:</strong><br><br>
+               <strong class="text-dark h5">Name:</strong>
+               <?php echo $data['username']; ?><br><br>
+               <strong class="text-dark h5">Mobile:</strong>
+               <?php echo $data['mobile']; ?><br><br>
+               <strong class="text-dark h5">Status:</strong>
+               <?php echo $status; ?><br><br>
            </div>
         </div>
     </div>
