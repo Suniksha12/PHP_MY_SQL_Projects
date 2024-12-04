@@ -24,17 +24,28 @@
         <h1 class="my-3">Voting System</h1>
         <div class="row my-5">
            <div class="col-md-7">
+             <?php
+                 if(isset($_SESSION['groups'])){
+                     $groups=$_SESSION['groups'];
+                     for($i=0;$i<count($groups);$i++){
+                        ?>
+                           <div class="row">
+                           <div class="col-md-4">
+                               <img src="../uploads/<?php echo $groups[$i]['photo'] ?>" alt="Image1">
+                           </div>
+                           <div class="col-md-8">
+                               <strong class="text-dark h5">Group name:</strong>
+                               <?php echo $groups[$i]['username'] ?><br>
+                               <strong class="text-dark h5">Votes:</strong>
+                               <?php echo $groups[$i]['votes'] ?><br>
+                           </div>
+                       </div>
+                       <hr>
+                <?php
+                     }
+                 }
+              ?>
             <!--groups-->
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="" alt="Image1">
-                </div>
-                <div class="col-md-8">
-                    <strong class="text-dark h5">Group name:</strong><br>
-                    <strong class="text-dark h5">Votes:</strong><br>
-                </div>
-            </div>
-            <hr>
            </div>
            <div class="col-md-5">
                <!--User Profile-->
