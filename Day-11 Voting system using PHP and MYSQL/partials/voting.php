@@ -17,14 +17,14 @@
           $_SESSION['groups']=$groups;
           $_SESSION['status']=1;
           echo '<script>
-          alert("Technical error !! Voting successfull");
-          window.location="../partials/dashboard.php";            
-     </script>';
-    }else {
-        echo '<script>
-             alert("Technical error !! Vote after sometime");
-             window.location="../partials/dashboard.php";            
-        </script>';
-    }
+                   alert("Technical error !! Voting successfull");
+                   window.location="../partials/dashboard.php";            
+                </script>';
+          }else {
+              echo '<script>
+                   alert("Technical error !! Vote after sometime");
+                   window.location="../partials/dashboard.php";            
+              </script>';
+          }
 
 ?>
