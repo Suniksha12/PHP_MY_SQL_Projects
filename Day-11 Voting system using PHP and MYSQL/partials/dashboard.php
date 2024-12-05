@@ -40,13 +40,31 @@
                                <?php echo $groups[$i]['votes'] ?><br>
                            </div>
                        </div>
-                       <hr>
                        <form action="../actions/voting.php" method="post">
                           <input type="hidden" name="groupvotes" value="<?php echo $groups[$i]['votes'] ?>">
                           <input type="hidden" name="groupid" value="<?php echo $groups[$i]['id'] ?>">
+
+                          <?php
+                              if($_SESSION['status']==1){
+                                ?>
+                                <button class="bg-success my-3 text-white px-3">Voted</button>
+                                <?php
+                              } else {
+                                ?>
+                                <button class="bg-danger my-4 text-white px-3" type="submit">Vote</button>
+                            <?php
+                              }
+                          ?>
                        </form>
+                       <hr>
                 <?php
                      }
+                 } else {
+                    ?>
+                    <div class="container">
+                        <p>No groups to display</p>
+                    </div>
+                    <?php
                  }
               ?>
             <!--groups-->
