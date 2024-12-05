@@ -1,0 +1,9 @@
+This E-Commerce website will have some Pre-requisites such as :
+
+- Xampp Control server
+- Visual Studio Code editor
+- Basics of HTML
+- Bootstrap
+- Basics of JavaScript
+- MySQL database
+- PHP
