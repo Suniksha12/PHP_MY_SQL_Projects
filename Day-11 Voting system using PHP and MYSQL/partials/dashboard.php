@@ -41,6 +41,10 @@
                            </div>
                        </div>
                        <hr>
+                       <form action="../actions/voting.php" method="post">
+                          <input type="hidden" name="groupvotes" value="<?php echo $groups[$i]['votes'] ?>">
+                          <input type="hidden" name="groupid" value="<?php echo $groups[$i]['id'] ?>">
+                       </form>
                 <?php
                      }
                  }
