@@ -42,7 +42,40 @@
         <div class="row">
             <div class="col-md-12 bg-secondary p-1">
                 <div>
-                    <a href="#"><img src="../images" alt=""></a>
+                    <a href="#"><img src="../images/pineapple.jpg" class="admin_image" alt=""></a>
+                    <p class="text-light text-center">Admin Name</p>
+                </div>
+                <div class="button text-center">
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
+                    <button>
+                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    </button>
                 </div>
             </div>
         </div>
