@@ -148,9 +148,46 @@
             </div>
             <div class="col-md-2 bg-secondary p-0">
                 <!--side Navigation -->
+                <!-- brands to be displayed -->
                 <ul class="navbar-nav me-auto text-center">
                     <li class="nav-item bg-info">
                         <a href="#" class="nav-link text-light text-center"><h4>Delivery Brands</h4></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Brand1</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Brand2</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Brand3</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Brand4</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Brand5</a>
+                    </li>
+                </ul>
+                <!-- categories column-->
+                <ul class="navbar-nav me-auto text-center">
+                    <li class="nav-item bg-info">
+                        <a href="#" class="nav-link text-light text-center"><h4>Categories</h4></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Categories1</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Categories2</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Categories3</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Categories4</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link text-light text-center">Categories5</a>
                     </li>
                 </ul>
             </div>
