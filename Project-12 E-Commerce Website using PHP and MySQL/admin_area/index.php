@@ -16,11 +16,36 @@
 <body>
     <!--navbar-->
     <div class="container-fluid">
+        <!--First child-->
         <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <div class="container-fluid">
                 <img src="../images/logo.png" alt="" class="logo">
+                <nav class="navbar navbar-expand-lg">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Welcome guest</a>
+                        </li>
+                    </ul>
+
+                </nav>
             </div>
         </nav>
+
+        <!--second child-->
+        <div class="bf-light">
+            <h3 class="text-center p-2">
+                Manage Details
+            </h3>
+        </div>
+
+        <!--third Child-->
+        <div class="row">
+            <div class="col-md-12 bg-secondary p-1">
+                <div>
+                    <a href="#"><img src="../images" alt=""></a>
+                </div>
+            </div>
+        </div>
     </div>
     <!--script.js-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
