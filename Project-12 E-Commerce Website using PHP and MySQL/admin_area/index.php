@@ -40,44 +40,50 @@
 
         <!--third Child-->
         <div class="row">
-            <div class="col-md-12 bg-secondary p-1">
-                <div>
+            <div class="col-md-12 bg-secondary p-1 d-flex algin-items-center">
+                <div class="p-3">
                     <a href="#"><img src="../images/pineapple.jpg" class="admin_image" alt=""></a>
                     <p class="text-light text-center">Admin Name</p>
                 </div>
+                <!-- button*10>a.nav-link.text-light.bg-info.my-1 -->
                 <div class="button text-center">
-                    <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                    <button class="my-3">
+                        <a href="" class="nav-link text-light bg-info my-1">Insert Products</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">View Products</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">Insert Categories</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">View Categories</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">Insert Brands</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">View Brands</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">All Orders</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">All Payments</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">List Users</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1"></a>
+                        <a href="" class="nav-link text-light bg-info my-1">LogOut</a>
                     </button>
                 </div>
             </div>
+        </div>
+
+         <!-- last child -->
+         <div class="bg-info p-3 text-center footer">
+            <p>All right reserved @- Designed By Suniksha - 2024</p>
         </div>
     </div>
     <!--script.js-->
