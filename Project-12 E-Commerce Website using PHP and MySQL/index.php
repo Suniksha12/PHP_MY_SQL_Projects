@@ -53,6 +53,37 @@
             </div>
         </nav>
 
+        <!-- second child-->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+             <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Welcome Guest</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+             </ul>
+         </nav>
+
+         <!--Third child-->
+         <div class="bg-light">
+            <h3 class="text-center">
+                Hidden Store
+            </h3>
+            <p class="text-center">Communications is at the heart of E-commerce and Community</p>
+         </div>
+
+         <!--fourth child-->
+         <div class="row">
+            <div class="col-md-10">
+                <!-- Products -->
+                 
+            </div>
+            <div class="col-md-2">
+                  <!--side Navigation -->  
+            </div>
+         </div>
+
         <!-- last child -->
         <div class="bg-info p-3 text-center">
             <p>All right reserved @- Designed By Suniksha - 2024</p>
