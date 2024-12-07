@@ -48,7 +48,7 @@
                 <!-- button*10>a.nav-link.text-light.bg-info.my-1 -->
                 <div class="button text-center">
                     <button class="my-3">
-                        <a href="" class="nav-link text-light bg-info my-1">Insert Products</a>
+                        <a href="insert_categories.php" class="nav-link text-light bg-info my-1">Insert Products</a>
                     </button>
                     <button>
                         <a href="" class="nav-link text-light bg-info my-1">View Products</a>
