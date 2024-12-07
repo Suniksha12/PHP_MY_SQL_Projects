@@ -90,6 +90,7 @@
                if(isset($_GET['insert_brand'])){
                   include('insert_brands.php');
                }
+               
             ?>
          </div>
 
