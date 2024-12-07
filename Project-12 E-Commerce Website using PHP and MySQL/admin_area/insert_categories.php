@@ -5,11 +5,17 @@
 
        //select data from database
        $select_query-"SELECT * FROM `categories` WHERE category_title='$category_title'";
-       $insert_query="insert into `categories` (category_title) values ('$category_title')";
-       $result = mysqli_query($con,$insert_query);
-       if($result){
-           echo "<script>alert('Category has been inserted successfully!')</script>";
-       }
+       $result_select=mysqli_query($con,$select_query);
+       $number = mysqli_num_rows($result_select);
+       if($number>0) {
+           echo "<script>alert('This Category is already present inside the database')</script>";
+       } else {
+        $insert_query = "insert into `categories` (category_title) values ('$category_title')";
+        $result = mysqli_query($con, $insert_query);
+        if ($result) {
+            echo "<script>alert('Category has been inserted successfully!')</script>";
+        }
+     }
    }
 ?>
 
