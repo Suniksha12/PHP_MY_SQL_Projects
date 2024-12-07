@@ -48,7 +48,7 @@
                 <!-- button*10>a.nav-link.text-light.bg-info.my-1 -->
                 <div class="button text-center">
                     <button class="my-3">
-                        <a href="insert_categories.php" class="nav-link text-light bg-info my-1">Insert Products</a>
+                        <a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Products</a>
                     </button>
                     <button>
                         <a href="" class="nav-link text-light bg-info my-1">View Products</a>
@@ -80,6 +80,15 @@
                 </div>
             </div>
         </div>
+
+        <!-- Fourth child-->
+         <div class="container my-5">
+            <?php
+               if(isset($_GET['insert_category'])){
+                  include('insert_categories.php');
+               }
+            ?>
+         </div>
 
          <!-- last child -->
          <div class="bg-info p-3 text-center footer">
