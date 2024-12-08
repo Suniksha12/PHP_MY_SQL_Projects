@@ -18,7 +18,19 @@
         <h1 class="text-center">
             Insert Products
         </h1>
-
+        <!-- form -->
+        <form action="" method="post" enctype="multipart/form-data">
+            <!-- title -->
+            <div class="form-outline mb-4 w-50 m-auto">
+                <label for="product_title" class="form-label">Product title</label>
+                <input type="text" name="product_title" id="product_title" class="form-control" placeholder="Enter Product title" autocomplete="off" required>
+            </div>
+            <!-- description -->
+            <div class="form-outline mb-4 w-50 m-auto">
+                <label for="description" class="form-label">Product description</label>
+                <input type="text" name="description" id="description" class="form-control" placeholder="Enter Product description" autocomplete="off" required>
+            </div>
+        </form>
      </div>
 
      <!--script.js-->
