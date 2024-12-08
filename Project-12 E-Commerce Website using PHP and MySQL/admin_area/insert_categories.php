@@ -4,7 +4,7 @@
        $category_title = $_POST['cat_title'];
 
        //select data from database
-       $select_query-"SELECT * FROM `categories` WHERE category_title='$category_title'";
+       $select_query="SELECT * FROM `categories` WHERE category_title='$category_title'";
        $result_select=mysqli_query($con,$select_query);
        $number = mysqli_num_rows($result_select);
        if($number>0) {
