@@ -14,7 +14,7 @@
 </head>
 
 <body class="bg-light">
-     <div class="conatiner mt-3">
+    <div class="conatiner mt-3">
         <h1 class="text-center">
             Insert Products
         </h1>
@@ -30,11 +30,36 @@
                 <label for="description" class="form-label">Product description</label>
                 <input type="text" name="description" id="description" class="form-control" placeholder="Enter Product description" autocomplete="off" required>
             </div>
+            <!-- Keywords -->
+            <div class="form-outline mb-4 w-50 m-auto">
+                <label for="product_keywords" class="form-label">Product Keywords</label>
+                <input type="text" name="product_keywords" id="product_keywords" class="form-control" placeholder="Enter Product keywords" autocomplete="off" required>
+            </div>
+            <!--categories-->
+            <div class="form-outline mb-4 w-50 m-auto">
+                <select name="product_category" id="" class="form-select">
+                    <option value="">Select a category</option>
+                    <option value="">Category1</option>
+                    <option value="">Category2</option>
+                    <option value="">Category3</option>
+                    <option value="">Category1</option>
+                </select>
+            </div>
+            <!--Brands-->
+            <div class="form-outline mb-4 w-50 m-auto">
+                <select name="product_brands" id="" class="form-select">
+                    <option value="">Select a category</option>
+                    <option value="">Category1</option>
+                    <option value="">Category2</option>
+                    <option value="">Category3</option>
+                    <option value="">Category1</option>
+                </select>
+            </div>
         </form>
-     </div>
+    </div>
 
-     <!--script.js-->
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <!--script.js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 
