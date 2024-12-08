@@ -158,26 +158,21 @@
                     <li class="nav-item bg-info">
                         <a href="#" class="nav-link text-light text-center"><h4>Delivery Brands</h4></a>
                     </li>
+
                     <?php
+
                         $select_brands="SELECT * FROM `brands`";
                         $result_brands=mysqli_query($con,$select_brands);
-
+                        // $row_data = mysqli_fetch_assoc($result_brands)
+                        // echo $row_data['brand_title'];
+                        while($row_data = mysqli_fetch_assoc($result_brands)){
+                           $brand_title= $row_data['brand_title'];
+                           $brand_id=$row_data['brand_id'];
+                           echo "<li class='nav-item '>
+                                    <a href='index.php?brand=$brand_id' class='nav-link text-light text-center'>$brand_title</a>
+                                </li>";
+                        }
                     ?>
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link text-light text-center">Brand1</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link text-light text-center">Brand2</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link text-light text-center">Brand3</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link text-light text-center">Brand4</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link text-light text-center">Brand5</a>
-                    </li>
                 </ul>
                 <!-- categories column-->
                 <ul class="navbar-nav me-auto text-center">
