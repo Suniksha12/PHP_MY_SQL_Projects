@@ -1,3 +1,8 @@
+<!-- connect file -->
+<?php
+    include('includes/connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -153,6 +158,11 @@
                     <li class="nav-item bg-info">
                         <a href="#" class="nav-link text-light text-center"><h4>Delivery Brands</h4></a>
                     </li>
+                    <?php
+                        $select_brands="SELECT * FROM `brands`";
+                        $result_brands=mysqli_query($con,$select_brands);
+
+                    ?>
                     <li class="nav-item ">
                         <a href="#" class="nav-link text-light text-center">Brand1</a>
                     </li>
