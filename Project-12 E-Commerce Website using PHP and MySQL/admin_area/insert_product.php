@@ -1,3 +1,7 @@
+<?php
+    include('../includes/connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,10 +46,15 @@
             <div class="form-outline mb-4 w-50 m-auto">
                 <select name="product_category" id="" class="form-select">
                     <option value="">Select a category</option>
-                    <option value="">Category1</option>
-                    <option value="">Category2</option>
-                    <option value="">Category3</option>
-                    <option value="">Category4</option>
+                    <?php
+                         $select_query="SELECT * FROM `categories`";
+                         $result_query=mysqli_query($con,$select_query);
+                         while($row=mysqli_fetch_assoc($result_query)){
+                            $category_title=$row['category_title'];
+                            $category_id=$row['category_id'];
+                            echo "<option value=''>$category_title</option>";
+                         }
+                    ?>
                 </select>
             </div>
 
