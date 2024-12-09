@@ -169,7 +169,7 @@
                            $brand_title= $row_data['brand_title'];
                            $brand_id=$row_data['brand_id'];
                            echo "<li class='nav-item '>
-                                    <a href='index.php?brand=$brand_id' class='nav-link text-light text-center'>$brand_title</a>
+                                    <a href='index.php?brand=$brand_title' class='nav-link text-light text-center'>$brand_title</a>
                                 </li>";
                         }
                     ?>
