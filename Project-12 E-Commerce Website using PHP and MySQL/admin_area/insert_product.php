@@ -10,14 +10,14 @@
        $product_status='true';
 
        //access images
-       $product_image1 = $_POST['product_image1']['name'];
-       $product_image2 = $_POST['product_image2']['name'];
-       $product_image3 = $_POST['product_image3']['name'];
+       $product_image1 = $_FILES['product_image1']['name'];
+       $product_image2 = $_FILES['product_image2']['name'];
+       $product_image3 = $_FILES['product_image3']['name'];
        
        //acessing image tmp name
-       $temp_image1 = $_POST['product_image1']['tmp_name'];
-       $temp_image2 = $_POST['product_image2']['tmp_name'];
-       $temp_image3 = $_POST['product_image3']['tmp_name'];
+       $temp_image1 = $_FILES['product_image1']['tmp_name'];
+       $temp_image2 = $_FILES['product_image2']['tmp_name'];
+       $temp_image3 = $_FILES['product_image3']['tmp_name'];
 
        //checking empty condition
        if($product_title=='' or $description=='' or $product_keywords=='' or $product_category=='' or $product_brands=='' or $product_price=='' or $product_image1=='' or $product_image2=='' or $product_image3==''){
@@ -30,7 +30,10 @@
 
            //insert query
            $insert_products="INSERT INTO `products` (product_title,product_description,product_keywords,category_id,brand_id,product_image1,product_image2,product_image3,product_price,date,status) values ('$product_title','$description','$product_keywords','$product_category','$product_brands','$product_image1','$product_image2','$product_image3','$product_price',NOW(),'$product_status')";
-           
+           $result_query=mysqli_query($con,$insert_products);
+           if($result_query){
+            echo "<script>alert('Product inserted successfully')</script>";
+           }
         }
    }
 ?>
