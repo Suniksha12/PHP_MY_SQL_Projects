@@ -7,6 +7,7 @@
        $product_category=$_POST['product_category'];
        $product_brands=$_POST['product_brands'];
        $product_price=$_POST['product_price'];
+       $product_status='true';
 
        //access images
        $product_image1 = $_POST['product_image1']['name'];
@@ -28,8 +29,9 @@
            move_uploaded_file($temp_image3,"./product_images/$product_image3");
 
            //insert query
-           $insert_products="INSERT INTO `products (product_title,product_description,product_keywords,category_id)`";
-       }
+           $insert_products="INSERT INTO `products` (product_title,product_description,product_keywords,category_id,brand_id,product_image1,product_image2,product_image3,product_price,date,status) values ('$product_title','$description','$product_keywords','$product_category','$product_brands','$product_image1','$product_image2','$product_image3','$product_price',NOW(),'$product_status')";
+           
+        }
    }
 ?>
 
