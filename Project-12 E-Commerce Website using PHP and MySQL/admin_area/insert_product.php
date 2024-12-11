@@ -1,5 +1,16 @@
 <?php
-include('../includes/connect.php');
+   include('../includes/connect.php');
+   if(isset($_POST['insert_product'])){
+       $product_title=$_POST['product_title'];
+       $description=$_POST['description'];
+       $product_keywords=$_POST['product_keywords'];
+       $product_category=$_POST['product_category'];
+       $product_brands=$_POST['product_brands'];
+       $product_price=$_POST['product_price'];
+
+       //access images
+       
+   }
 ?>
 
 <!DOCTYPE html>
