@@ -23,7 +23,12 @@
           echo "<script>alert('Please fill all the valid available fields')</script>";
           exit();
        } else {
-         
+           move_uploaded_file($temp_image1,"./product_images/$product_image1");
+           move_uploaded_file($temp_image2,"./product_images/$product_image2");
+           move_uploaded_file($temp_image3,"./product_images/$product_image3");
+
+           //insert query
+           $insert_products="INSERT INTO `products (product_title,product_description,product_keywords,category_id)`";
        }
    }
 ?>
