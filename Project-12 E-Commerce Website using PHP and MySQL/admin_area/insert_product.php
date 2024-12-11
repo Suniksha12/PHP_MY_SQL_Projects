@@ -9,7 +9,22 @@
        $product_price=$_POST['product_price'];
 
        //access images
+       $product_image1 = $_POST['product_image1']['name'];
+       $product_image2 = $_POST['product_image2']['name'];
+       $product_image3 = $_POST['product_image3']['name'];
        
+       //acessing image tmp name
+       $temp_image1 = $_POST['product_image1']['tmp_name'];
+       $temp_image2 = $_POST['product_image2']['tmp_name'];
+       $temp_image3 = $_POST['product_image3']['tmp_name'];
+
+       //checking empty condition
+       if($product_title=='' or $description=='' or $product_keywords=='' or $product_category=='' or $product_brands=='' or $product_price=='' or $product_image1=='' or $product_image2=='' or $product_image3==''){
+          echo "<script>alert('Please fill all the valid available fields')</script>";
+          exit();
+       } else {
+         
+       }
    }
 ?>
 
