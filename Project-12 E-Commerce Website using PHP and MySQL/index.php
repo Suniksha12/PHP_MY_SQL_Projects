@@ -88,6 +88,7 @@
                     <?php
                        getproducts();
                        get_unique_categories();
+                       get_unique_brands();
                     ?>
                 <!--row end-->
                 </div>
