@@ -41,8 +41,13 @@
     
         //condition to check isset or not
         if(isset($_GET['category'])){
-               $select_query = "SELECT * FROM `products` Order by rand() LIMIT 0,9";
+               $category_id = $_GET['category'];
+               $select_query = "SELECT * FROM `products` WHERE category_id=$category_id";
                $result_query = mysqli_query($con, $select_query);
+               $num_of_rows=mysqli_num_rows($result_query);
+               if($num_of_rows==0){
+                echo "<h2 class='text-center text-danger'>No stock for this Category</h2>";
+               }
                while($row=mysqli_fetch_assoc($result_query)){
                    $product_id = $row['product_id'];
                    $product_title = $row['product_title'];

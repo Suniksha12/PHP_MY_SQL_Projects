@@ -87,6 +87,7 @@
                     <!--fetching products-->
                     <?php
                        getproducts();
+                       get_unique_categories();
                     ?>
                 <!--row end-->
                 </div>
