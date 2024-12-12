@@ -79,10 +79,26 @@
         </div>
 
         <!--fourth child-->
-        <div class="row">
+        <div class="row p-3">
             <div class="col-md-10">
                 <!-- Products -->
                 <div class="row">
+                    <!--fetching products-->
+                    <?php
+                       $select_query = "SELECT * FROM `products`";
+                       $result_query = mysqli_query($con, $select_query);
+                       while($row=mysqli_fetch_assoc($result_query)){
+                           $product_id = $row['product_id'];
+                           $product_title = $row['product_title'];
+                           $product_description = $row['product_description'];
+                           $product_image1 = $row['product_image1'];
+                           $product_price = $row['product_price'];
+                           $category_id = $row['category_id'];
+                           $brand_id = $row['brand_id'];
+                           $product_id = $row['product_id'];
+
+                       }
+                    ?>
                     <div class="col-md-4 mb-2">
                         <div class="card">
                             <img src="./images/apple.png" class="card-img-top" alt="...">
