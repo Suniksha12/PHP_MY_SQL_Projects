@@ -28,4 +28,38 @@
      </div>";
     }
    }
+
+   //Displaying brands in side nav
+
+   function getbrands(){
+    global $con;
+    $select_brands="SELECT * FROM `brands`";
+    $result_brands = mysqli_query($con, $select_brands);
+    // $row_data = mysqli_fetch_assoc($result_brands)
+    // echo $row_data['brand_title'];
+    while ($row_data = mysqli_fetch_assoc($result_brands)) {
+        $brand_title = $row_data['brand_title'];
+        $brand_id = $row_data['brand_id'];
+        echo "<li class='nav-item '>
+                                    <a href='index.php?brand=$brand_title' class='nav-link text-light text-center'>$brand_title</a>
+                                </li>";
+    }
+   }
+
+   //displaying categories in side nav
+   
+   function getcategories(){
+    global $con;
+    $select_categories="SELECT * FROM `categories`";
+    $result_categories=mysqli_query($con,$select_categories);
+    // $row_data = mysqli_fetch_assoc($result_brands)
+    // echo $row_data['brand_title'];
+    while($row_data = mysqli_fetch_assoc($result_categories)){
+       $category_title= $row_data['category_title'];
+       $category_id=$row_data['category_id'];
+       echo "<li class='nav-item'>
+                <a href='index.php?category=$category_id' class='nav-link text-light text-center'>$category_title</a>
+            </li>";
+     }
+   }
 ?>
