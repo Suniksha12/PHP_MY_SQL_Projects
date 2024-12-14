@@ -1,7 +1,7 @@
 <!-- connect file -->
 <?php
-    include('includes/connect.php');
-    include('functions/common_function.php');
+include('includes/connect.php');
+include('functions/common_function.php');
 ?>
 
 <!DOCTYPE html>
@@ -87,40 +87,66 @@
                 <div class="row">
                     <div class="col-md-4">
                         <!--card-->
+                        <div class='card'>
+                            <img src='./images/mango1.webp' class='card-img-top' alt='$product_title'>
+                            <div class=card-body'>
+                                <h5 class='card-title'>$product_title</h5>
+                                <p class='card-text'>$product_description</p>
+                                <a href='#' class='btn btn-info'>Add to cart</a>
+                                <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-md-8">
-                        <!-- realted cards-->
+                        <!-- realted images-->
+                         <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="text-center text-info mb-5">
+                                    Related Products
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <img src='./images/mango3.webp' class='card-img-top' alt='$product_title'>
+                            </div>
+                            <div class="col-md-6">
+                                <img src='./images/mango4.webp' class='card-img-top' alt='$product_title'>
+                            </div>
+                         </div>
                     </div>
                     <!--fetching products-->
                     <?php
-                       
-                       get_unique_categories();
-                       get_unique_brands();
+
+                    get_unique_categories();
+                    get_unique_brands();
                     ?>
-                <!--row end-->
+                    <!--row end-->
                 </div>
-            <!--col end-->
+                <!--col end-->
             </div>
             <div class="col-md-2 bg-secondary p-0">
                 <!--side Navigation -->
                 <!-- brands to be displayed -->
                 <ul class="navbar-nav me-auto text-center">
                     <li class="nav-item bg-info">
-                        <a href="#" class="nav-link text-light text-center"><h4>Delivery Brands</h4></a>
+                        <a href="#" class="nav-link text-light text-center">
+                            <h4>Delivery Brands</h4>
+                        </a>
                     </li>
 
                     <?php
-                        getbrands();
+                    getbrands();
                     ?>
                 </ul>
                 <!-- categories column-->
                 <ul class="navbar-nav me-auto text-center">
                     <li class="nav-item bg-info">
-                        <a href="#" class="nav-link text-light text-center"><h4>Categories</h4></a>
+                        <a href="#" class="nav-link text-light text-center">
+                            <h4>Categories</h4>
+                        </a>
                     </li>
                     <?php
-                       getcategories();
+                    getcategories();
                     ?>
                 </ul>
             </div>
@@ -128,7 +154,7 @@
 
         <!-- last child -->
         <?php
-             include ('./includes/footer.php');
+        include('./includes/footer.php');
         ?>
 
     </div>
