@@ -119,8 +119,8 @@
         $brand_title = $row_data['brand_title'];
         $brand_id = $row_data['brand_id'];
         echo "<li class='nav-item '>
-                                    <a href='index.php?brand=$brand_id' class='nav-link text-light text-center'>$brand_title</a>
-                                </li>";
+                <a href='index.php?brand=$brand_id' class='nav-link text-light text-center'>$brand_title</a>
+            </li>";
     }
    }
 
@@ -148,6 +148,10 @@
         $search_data_value=$_GET['search_data'];
         $search_query = "SELECT * FROM `products` where product_keywords like '%$search_data_value%'";
         $result_query = mysqli_query($con, $search_query);
+        $num_of_rows = mysqli_num_rows($result_query);
+        if ($num_of_rows == 0) {
+            echo "<h2 class='text-center text-danger'>No result match. No products found on this category!</h2>";
+        }
     while ($row = mysqli_fetch_assoc($result_query)) {
         $product_id = $row['product_id'];
         $product_title = $row['product_title'];
