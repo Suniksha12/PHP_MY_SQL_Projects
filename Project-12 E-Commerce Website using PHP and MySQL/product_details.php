@@ -116,7 +116,7 @@ include('functions/common_function.php');
                     </div>
                     <!--fetching products-->
                     <?php
-
+                    view_details();
                     get_unique_categories();
                     get_unique_brands();
                     ?>
