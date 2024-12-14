@@ -51,7 +51,7 @@
                             <a class="nav-link" href="#">Total Price:100/-</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
+                    <form class="d-flex" role="search" action="" method="get">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
                         <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
                         <input type="submit" value="search" class="btn btn-outline-light" name="search_data_product">
@@ -87,7 +87,7 @@
                 <div class="row">
                     <!--fetching products-->
                     <?php
-                       getproducts();
+                       search_product();
                        get_unique_categories();
                        get_unique_brands();
                     ?>
