@@ -87,7 +87,7 @@
                 <div class="row">
                     <!--fetching products-->
                     <?php
-                       getproducts();
+                       get_all_products();
                        get_unique_categories();
                        get_unique_brands();
                     ?>
