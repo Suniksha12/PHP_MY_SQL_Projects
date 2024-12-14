@@ -246,6 +246,21 @@
                             <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                             </div>
                         </div>
+                    </div>
+                    <div class='col-md-8'>
+                         <div class='row'>
+                            <div class='col-md-12'>
+                                <h4 class='text-center text-info mb-5'>
+                                    Related Products
+                                </h4>
+                            </div>
+                            <div class='col-md-6'>
+                                <img src='./admin_area/product_images/$product_image2' class='card-img-top' alt='$product_title'>
+                            </div>
+                            <div class='col-md-6'>
+                                <img src='./admin_area/product_images/$product_image3' class='card-img-top' alt='$product_title'>
+                            </div>
+                         </div>
                     </div>";
                     }
                 }

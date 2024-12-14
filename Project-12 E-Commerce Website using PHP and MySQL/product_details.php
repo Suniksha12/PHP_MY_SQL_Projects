@@ -85,35 +85,7 @@ include('functions/common_function.php');
             <div class="col-md-10">
                 <!-- Products -->
                 <div class="row">
-                    <div class="col-md-4">
-                        <!--card-->
-                        <div class='card'>
-                            <img src='./images/mango1.webp' class='card-img-top' alt='$product_title'>
-                            <div class=card-body'>
-                                <h5 class='card-title'>$product_title</h5>
-                                <p class='card-text'>$product_description</p>
-                                <a href='#' class='btn btn-info'>Add to cart</a>
-                                <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-8">
-                        <!-- realted images-->
-                         <div class="row">
-                            <div class="col-md-12">
-                                <h4 class="text-center text-info mb-5">
-                                    Related Products
-                                </h4>
-                            </div>
-                            <div class="col-md-6">
-                                <img src='./images/mango3.webp' class='card-img-top' alt='$product_title'>
-                            </div>
-                            <div class="col-md-6">
-                                <img src='./images/mango4.webp' class='card-img-top' alt='$product_title'>
-                            </div>
-                         </div>
-                    </div>
                     <!--fetching products-->
                     <?php
                     view_details();
