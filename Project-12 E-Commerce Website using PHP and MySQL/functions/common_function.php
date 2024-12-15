@@ -285,9 +285,20 @@
     function cart(){
         if(isset($_GET['add_to_cart'])){
             global $con;
-            $ip=getIPAddress();
+            $get_ip_add=getIPAddress();
             $get_product_id=$_GET['add_to_cart'];
             $select_query="SELECT * FROM `card_details` WHERE ip_address=$ip and product_id=$get_product_id";
+            $result_query=mysqli_query($con,$select_query);
+            $num_of_rows = mysqli_num_rows($result_query);
+            if ($num_of_rows > 1) {
+                echo "<script>
+                    alert('This item is already present inside cart')
+                </script>";
+                echo "<script>window.open('index.php','_self')</script>";
+            }else {
+                $insert_query="INSERT INTO `card_details` (product_id,ip_address,quantity) values ($get_product_id,'$get_ip_add',0)";
+                
+            }
         }
     }
 ?>
