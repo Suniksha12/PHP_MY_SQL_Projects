@@ -243,7 +243,7 @@
                             <h5 class='card-title'>$product_title</h5>
                             <p class='card-text'>$product_description</p>
                             <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
-                            <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
+                            <a href='index.php' class='btn btn-secondary'>Go home</a>
                             </div>
                         </div>
                     </div>
@@ -290,14 +290,13 @@
             $select_query="SELECT * FROM `card_details` WHERE ip_address='$get_ip_add' and product_id=$get_product_id";
             $result_query=mysqli_query($con,$select_query);
             $num_of_rows = mysqli_num_rows($result_query);
-            if ($num_of_rows > 1) {
-                echo "<script>
-                    alert('This item is already present inside cart')
-                </script>";
+            if ($num_of_rows > 0) {
+                echo "<script> alert('This item is already present inside cart')</script>";
                 echo "<script>window.open('index.php','_self')</script>";
             }else {
                 $insert_query="INSERT INTO `card_details` (product_id,ip_address,quantity) values ($get_product_id,'$get_ip_add',0)";
                 $result_query=mysqli_query($con,$insert_query);
+                echo "<script>alert('Item is added to cart')</script>";
                 echo "<script>window.open('index.php','_self')</script>";
             }
         }

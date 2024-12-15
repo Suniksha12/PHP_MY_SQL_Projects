@@ -59,6 +59,11 @@ include('functions/common_function.php');
                 </div>
             </div>
         </nav>
+   
+        <!-- cart function-->
+        <?php
+             cart();
+        ?>
 
         <!-- second child-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
