@@ -90,8 +90,8 @@
                        getproducts();
                        get_unique_categories();
                        get_unique_brands();
-                       $ip = getIPAddress();
-                       echo 'user Real IP Address - '.$ip;
+                    //    $ip = getIPAddress();
+                    //    echo 'user Real IP Address - '.$ip;
                     ?>
                 <!--row end-->
                 </div>

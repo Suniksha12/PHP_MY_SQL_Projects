@@ -26,7 +26,7 @@
                         <div class=card-body'>
                             <h5 class='card-title'>$product_title</h5>
                             <p class='card-text'>$product_description</p>
-                            <a href='#' class='btn btn-info'>Add to cart</a>
+                            <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                             <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                         <div class=card-body'>
                             <h5 class='card-title'>$product_title</h5>
                             <p class='card-text'>$product_description</p>
-                            <a href='#' class='btn btn-info'>Add to cart</a>
+                            <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                             <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                           </div>
                         </div>
@@ -98,7 +98,7 @@
                             <div class=card-body'>
                                 <h5 class='card-title'>$product_title</h5>
                                 <p class='card-text'>$product_description</p>
-                                <a href='#' class='btn btn-info'>Add to cart</a>
+                                <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                                 <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                               </div>
                             </div>
@@ -135,7 +135,7 @@
                             <div class=card-body'>
                                 <h5 class='card-title'>$product_title</h5>
                                 <p class='card-text'>$product_description</p>
-                                <a href='#' class='btn btn-info'>Add to cart</a>
+                                <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                                 <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                               </div>
                             </div>
@@ -206,7 +206,7 @@
                         <div class=card-body'>
                             <h5 class='card-title'>$product_title</h5>
                             <p class='card-text'>$product_description</p>
-                            <a href='#' class='btn btn-info'>Add to cart</a>
+                            <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                             <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                           </div>
                         </div>
@@ -242,7 +242,7 @@
                         <div class=card-body'>
                             <h5 class='card-title'>$product_title</h5>
                             <p class='card-text'>$product_description</p>
-                            <a href='#' class='btn btn-info'>Add to cart</a>
+                            <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                             <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
                             </div>
                         </div>
@@ -281,4 +281,13 @@
         return $ip;
     }
 
+    //cart function
+    function cart(){
+        if(isset($_GET['add_to_cart'])){
+            global $con;
+            $ip=getIPAddress();
+            $get_product_id=$_GET['add_to_cart'];
+            $select_query="SELECT * FROM `card_details` WHERE ip_address=$ip and product_id=$get_product_id";
+        }
+    }
 ?>
