@@ -287,7 +287,7 @@
             global $con;
             $get_ip_add=getIPAddress();
             $get_product_id=$_GET['add_to_cart'];
-            $select_query="SELECT * FROM `card_details` WHERE ip_address=$ip and product_id=$get_product_id";
+            $select_query="SELECT * FROM `card_details` WHERE ip_address='$get_ip_add' and product_id=$get_product_id";
             $result_query=mysqli_query($con,$select_query);
             $num_of_rows = mysqli_num_rows($result_query);
             if ($num_of_rows > 1) {
@@ -297,7 +297,8 @@
                 echo "<script>window.open('index.php','_self')</script>";
             }else {
                 $insert_query="INSERT INTO `card_details` (product_id,ip_address,quantity) values ($get_product_id,'$get_ip_add',0)";
-                
+                $result_query=mysqli_query($con,$insert_query);
+                echo "<script>window.open('index.php','_self')</script>";
             }
         }
     }
