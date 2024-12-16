@@ -45,7 +45,8 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i><sup><?php cart_item(); ?></sup></a>
+                            <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i><sup><?php cart_item(); ?></sup>
+                        <?php ?></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Total Price:100/-</a>
