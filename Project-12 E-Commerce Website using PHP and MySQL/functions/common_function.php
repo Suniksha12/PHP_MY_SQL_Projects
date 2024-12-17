@@ -325,4 +325,13 @@
             }
             echo $count_cart_items;
         }
+
+        //total price function
+        function total_cart_price(){
+            global $con;
+            $get_ip_add=getIPAddress();
+            $cart_query="SELECT * from `card_details` WHERE ip_address='$get_ip_add'";
+            $result_query=mysqli_query($con,$cart_query);
+            
+        }
 ?>
