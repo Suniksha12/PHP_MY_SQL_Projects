@@ -48,7 +48,7 @@
                             <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i><sup><?php cart_item(); ?></sup></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Total Price:100/-</a>
+                            <a class="nav-link" href="#">Total Price: <?php total_cart_price(); ?>/-</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search" action="" method="get">
