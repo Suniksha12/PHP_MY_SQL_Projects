@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" integrity="sha512-7rXIvd/xj1FnI2zKQjjXzDFxC4twqBByp8yxOgEQJs4C/aNzNyoQsOO7VxH0RgYNhbAYLJLwzqslaP50KTTHIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Css link -->
     <link rel="stylesheet" href="../Project-12 E-Commerce Website using PHP and MySQL/css/style.css" class="css">
-    <title>Ecommerece Website using PHP and MySQL</title>
+    <title>Ecommerce Website-Cart Details</title>
 </head>
 
 <body>
@@ -48,34 +48,9 @@
                             <a class="nav-link" href="cart.php"><i class="bi bi-cart-fill"></i><sup><?php cart_item(); ?></sup>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Total Price: <?php total_cart_price(); ?>/-</a>
-                        </li>
                     </ul>
-                    <form class="d-flex" role="search" action="search_product.php" method="get">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-                        <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
-                        <input type="submit" value="search" class="btn btn-outline-light" name="search_data_product">
-                    </form>
                 </div>
             </div>
-        </nav>
-
-        <!-- cart function-->
-         <?php
-             cart();
-         ?>
-
-        <!-- second child-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Welcome Guest</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-            </ul>
         </nav>
 
         <!--Third child-->
@@ -86,46 +61,8 @@
             <p class="text-center">Communications is at the heart of E-commerce and Community</p>
         </div>
 
-        <!--fourth child-->
-        <div class="row px-1">
-            <div class="col-md-10">
-                <!-- Products -->
-                <div class="row">
-                    <!--fetching products-->
-                    <?php
-                       getproducts();
-                       get_unique_categories();
-                       get_unique_brands();
-                    //    $ip = getIPAddress();
-                    //    echo 'user Real IP Address - '.$ip;
-                    ?>
-                <!--row end-->
-                </div>
-            <!--col end-->
-            </div>
-            <div class="col-md-2 bg-secondary p-0">
-                <!--side Navigation -->
-                <!-- brands to be displayed -->
-                <ul class="navbar-nav me-auto text-center">
-                    <li class="nav-item bg-info">
-                        <a href="#" class="nav-link text-light text-center"><h4>Delivery Brands</h4></a>
-                    </li>
-
-                    <?php
-                        getbrands();
-                    ?>
-                </ul>
-                <!-- categories column-->
-                <ul class="navbar-nav me-auto text-center">
-                    <li class="nav-item bg-info">
-                        <a href="#" class="nav-link text-light text-center"><h4>Categories</h4></a>
-                    </li>
-                    <?php
-                       getcategories();
-                    ?>
-                </ul>
-            </div>
-        </div>
+        <!-- Fourth Child-->
+         
 
         <!-- last child -->
         <?php
