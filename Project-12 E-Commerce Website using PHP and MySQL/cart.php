@@ -77,12 +77,33 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- php code to display dynamic data -->
+                        <?php
+                             $get_ip_add = getIPAddress();
+                             $total_price=0;
+                             $cart_query="SELECT * FROM `cart_details` WHERE ip_address='get_ip_add'";
+                             $result = mysqli_query($con,$cart_query);
+                             while($row=mysqli_fetch_array($result)){
+                                $product_id=$row['product_id'];
+                                $select_products="SELECT * FROM `products` WHERE product_id='$product_id'";
+                                $result_products=mysqli_query($con,$select_products);
+                                while($row_product_price=mysqli_fetch_array($result_products)){
+                                    $product_price=array($row_product_price['product_price']);
+                                    $price_table=$row_product_price['product_price'];
+                                    $product_title=$row_product_price['product_title'];
+                                    $product_image1=$row_product_price['product_image1'];
+                                    $product_values=array_sum($product_price);
+                                    $total_price+=$product_values;
+                                }
+                            }
+
+                        ?>
                         <tr>
-                            <td>Apple</td>
+                            <td><?php echo $product_title ?></td>
                             <td><img src="./images/apple.png" alt=""></td>
                             <td><input type="text" name="qty" id="" class="form-input w-50"></td>
                             <?php
-
+                                $get_ip_add = getIPAddress();
                             ?>
                             <td><?php echo $price_table?>/-</td>
                             <td><input type="checkbox"></td>
