@@ -62,7 +62,43 @@
         </div>
 
         <!-- Fourth Child-->
-         
+         <div class="container">
+            <div class="row">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Product Title</th>
+                            <th>Product Image</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Remove</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple</td>
+                            <td><img src="./images/apple.png" alt=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td>9000</td>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <p>Update</p>
+                                <p>Remove</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- subtotal-->
+                 <div class="d-flex mb-5">
+                    <h4 class="px-3">
+                        Subtotal: <strong class="text-info">5000/-</strong>
+                    </h4>
+                    <a href="index.php"><button class="bg-info px-3 py-2 border-0 mx-3">Continue Shopping</button></a>
+                    <a href="#"><button class="bg-secondary p-3  py-2 border-0 text-light">Checkout</button></a>
+                 </div>
+            </div>
+         </div>
 
         <!-- last child -->
         <?php
