@@ -94,8 +94,6 @@
                                     $product_image1=$row_product_price['product_image1'];
                                     $product_values=array_sum($product_price);
                                     $total_price+=$product_values;
-                                }
-                            }
 
                         ?>
                         <tr>
@@ -112,19 +110,21 @@
                                 }
                             ?>
                             <td><?php echo $price_table?>/-</td>
-                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox" name="removeitem[]" value="<?php echo $product_id ?>"></td>
                             <td>
                                 <!-- <button class="bg-info px-3 py-2 border-0 mx-3">Update</button> -->
                                  <input type="submit" value="Update Cart" class="bg-info px-3 py-2 border-0 mx-3" name="update_cart">
-                                <button class="bg-info px-3 py-2 border-0 mx-3">Remove</button>
+                                <!-- <button class="bg-info px-3 py-2 border-0 mx-3">Remove</button> -->
+                                <input type="submit" value="Remove Cart" class="bg-info px-3 py-2 border-0 mx-3" name="remove_cart">
                             </td>
                         </tr>
+            <?php  }}?> 
                     </tbody>
                 </table>
                 <!-- subtotal-->
                  <div class="d-flex mb-5">
                     <h4 class="px-3">
-                        Subtotal: <strong class="text-info">5000/-</strong>
+                        Subtotal: <strong class="text-info"><?php echo $total_price?>/-</strong>
                     </h4>
                     <a href="index.php"><button class="bg-info px-3 py-2 border-0 mx-3">Continue Shopping</button></a>
                     <a href="#"><button class="bg-secondary p-3  py-2 border-0 text-light">Checkout</button></a>
@@ -132,6 +132,19 @@
             </div>
          </div>
         </form>
+
+        <!-- function to remove items -->
+
+        <?php 
+             function remove_cart_item(){
+                 global $con;
+                 if(isset($_POST['remove_cart'])){
+                    foreach($_POST['removeitem'] as $remove_id){
+                        echo $remove_id;
+                    }
+                 }
+             }
+        ?>
 
         <!-- last child -->
         <?php
