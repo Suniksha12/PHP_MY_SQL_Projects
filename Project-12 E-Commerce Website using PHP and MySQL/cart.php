@@ -81,7 +81,7 @@
                         <?php
                              $get_ip_add = getIPAddress();
                              $total_price=0;
-                             $cart_query="SELECT * FROM `cart_details` WHERE ip_address='get_ip_add'";
+                             $cart_query="SELECT * FROM `card_details` WHERE ip_address='get_ip_add'";
                              $result = mysqli_query($con,$cart_query);
                              while($row=mysqli_fetch_array($result)){
                                 $product_id=$row['product_id'];
@@ -104,6 +104,12 @@
                             <td><input type="text" name="qty" id="" class="form-input w-50"></td>
                             <?php
                                 $get_ip_add = getIPAddress();
+                                if(isset($_POST['update_cart'])){
+                                    $quantities = $_POST['qty'];
+                                    $update_cart="UPDATE `cart_details` set quantity=$quantities WHERE ip_address='$get_ip_add'";
+                                    $result_products_quantity=mysqli_query($con,$update_cart);
+                                    $total_price=$total_price*$quantities;
+                                }
                             ?>
                             <td><?php echo $price_table?>/-</td>
                             <td><input type="checkbox"></td>
