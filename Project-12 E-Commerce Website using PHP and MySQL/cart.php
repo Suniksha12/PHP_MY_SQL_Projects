@@ -4,6 +4,7 @@
     include('functions/common_function.php');
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,7 +99,7 @@
                         ?>
                         <tr>
                             <td><?php echo $product_title ?></td>
-                            <td><img src="./images/apple.png" alt=""></td>
+                            <td><img src="./admin_area/product_images/<?php echo $product_image1?>" alt="" class="cart_img"></td>
                             <td><input type="text" name="qty" id="" class="form-input w-50"></td>
                             <?php
                                 $get_ip_add = getIPAddress();
@@ -141,9 +142,15 @@
                  if(isset($_POST['remove_cart'])){
                     foreach($_POST['removeitem'] as $remove_id){
                         echo $remove_id;
+                        $delete_query="DELETE FROM `card_details` WHERE product_id = $remove_id";
+                        $run_delete=mysqli_query($con,$delete_query);
+                        if($run_delete){
+                            echo "<script>window.opne('cart.php','_self')</script>";
+                        }
                     }
                  }
              }
+             echo $remove_item = remove_cart_item();
         ?>
 
         <!-- last child -->
