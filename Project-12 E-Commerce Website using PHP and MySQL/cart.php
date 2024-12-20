@@ -2,6 +2,7 @@
 <?php
     include('includes/connect.php');
     include('functions/common_function.php');
+
 ?>
 
 
@@ -67,34 +68,37 @@
             <div class="row">
                 <form action="" method="post">
                 <table class="table table-bordered text-center">
-                    <thead>
-                        <tr>
-                            <th>Product Title</th>
-                            <th>Product Image</th>
-                            <th>Quantity</th>
-                            <th>Total Price</th>
-                            <th>Remove</th>
-                            <th>Operations</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                    
                         <!-- php code to display dynamic data -->
                         <?php
                              $get_ip_add = getIPAddress();
                              $total_price=0;
                              $cart_query="SELECT * FROM `card_details` WHERE ip_address='get_ip_add'";
                              $result = mysqli_query($con,$cart_query);
-                             while($row=mysqli_fetch_array($result)){
-                                $product_id=$row['product_id'];
-                                $select_products="SELECT * FROM `products` WHERE product_id='$product_id'";
-                                $result_products=mysqli_query($con,$select_products);
-                                while($row_product_price=mysqli_fetch_array($result_products)){
-                                    $product_price=array($row_product_price['product_price']);
-                                    $price_table=$row_product_price['product_price'];
-                                    $product_title=$row_product_price['product_title'];
-                                    $product_image1=$row_product_price['product_image1'];
-                                    $product_values=array_sum($product_price);
-                                    $total_price+=$product_values;
+                             $result_count = mysqli_num_rows($result);
+                             if($result_count>0){
+                                echo "<thead>
+                                          <tr>
+                                              <th>Product Title</th>
+                                              <th>Product Image</th>
+                                              <th>Quantity</th>
+                                              <th>Total Price</th>
+                                              <th>Remove</th>
+                                              <th colspan='2'>Operations</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>";
+                                while($row=mysqli_fetch_array($result)){
+                                   $product_id=$row['product_id'];
+                                   $select_products="SELECT * FROM `products` WHERE product_id='$product_id'";
+                                   $result_products=mysqli_query($con,$select_products);
+                                   while($row_product_price=mysqli_fetch_array($result_products)){
+                                       $product_price=array($row_product_price['product_price']);
+                                       $price_table=$row_product_price['product_price'];
+                                       $product_title=$row_product_price['product_title'];
+                                       $product_image1=$row_product_price['product_image1'];
+                                       $product_values=array_sum($product_price);
+                                       $total_price+=$product_values;
 
                         ?>
                         <tr>
@@ -119,7 +123,10 @@
                                 <input type="submit" value="Remove Cart" class="bg-info px-3 py-2 border-0 mx-3" name="remove_cart">
                             </td>
                         </tr>
-            <?php  }}?> 
+            <?php  }}} else {
+                echo "<h2 class='text-center text-danger'>Cart is Empty</h2>";
+                
+            }?> 
                     </tbody>
                 </table>
                 <!-- subtotal-->
@@ -127,7 +134,7 @@
                     <h4 class="px-3">
                         Subtotal: <strong class="text-info"><?php echo $total_price?>/-</strong>
                     </h4>
-                    <a href="index.php"><button class="bg-info px-3 py-2 border-0 mx-3">Continue Shopping</button></a>
+                    <a href="./index.php"><button class="bg-info px-3 py-2 border-0 mx-3">Continue Shopping</button></a>
                     <a href="#"><button class="bg-secondary p-3  py-2 border-0 text-light">Checkout</button></a>
                  </div>
             </div>
