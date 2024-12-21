@@ -2,7 +2,6 @@
 <?php
     include('includes/connect.php');
     include('functions/common_function.php');
-
 ?>
 
 
@@ -141,13 +140,19 @@
                                     Subtotal: <strong class='text-info'>$total_price/-</strong>
                                   </h4>
                                   <input type='submit' value='Continue Shopping' class='bg-info px-3 py-2 border-0 mx-3' name='continue_shopping'>
-                                  <button class='bg-secondary p-3  py-2 border-0'><a href='checkout.php' class='text-light text-decoration-none'>Checkout</a></button>";
+                                  <input type='submit' value='Checkout' class='bg-secondary p-3  py-2 border-0 text-light text-decoration-none' name='checkout'>";
                         } else{
                             echo "<input type='submit' value='Continue Shopping' class='bg-info px-3 py-2 border-0 mx-3' name='continue_shopping'>";
+                            echo "<input type='submit' value='Checkout' class='bg-secondary p-3  py-2 border-0 text-light text-decoration-none' name='checkout'>";
+
                         }
 
                         if(isset($_POST['continue_shopping'])){
                             echo "<script>window.open('index.php','_self')</script>";
+                        }
+
+                        if(isset($_POST['checkout'])){
+                            echo "<script>window.open('checkout.php','_self')</script>";
                         }
                     ?>
                  </div>

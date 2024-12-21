@@ -1,6 +1,7 @@
 <!-- connect file -->
 <?php
     include('includes/connect.php');
+    include('functions/common_function.php');
 ?>
 
 <!DOCTYPE html>
@@ -60,11 +61,6 @@
             </div>
         </nav>
 
-        <!-- cart function-->
-         <?php
-             cart();
-         ?>
-
         <!-- second child-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <ul class="navbar-nav me-auto">
@@ -87,43 +83,20 @@
 
         <!--fourth child-->
         <div class="row px-1">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <!-- Products -->
                 <div class="row">
-                    <!--fetching products-->
-                    <?php
-                       getproducts();
-                       get_unique_categories();
-                       get_unique_brands();
-                    //    $ip = getIPAddress();
-                    //    echo 'user Real IP Address - '.$ip;
-                    ?>
-                <!--row end-->
+                  <?php
+                    if(!isset($_SESSION['username'])){
+                        include('users_area/user_login.php');
+                    }else {
+                        include('payment.php');
+                    }
+                  ?>
                 </div>
             <!--col end-->
             </div>
-            <div class="col-md-2 bg-secondary p-0">
-                <!--side Navigation -->
-                <!-- brands to be displayed -->
-                <ul class="navbar-nav me-auto text-center">
-                    <li class="nav-item bg-info">
-                        <a href="#" class="nav-link text-light text-center"><h4>Delivery Brands</h4></a>
-                    </li>
 
-                    <?php
-                        getbrands();
-                    ?>
-                </ul>
-                <!-- categories column-->
-                <ul class="navbar-nav me-auto text-center">
-                    <li class="nav-item bg-info">
-                        <a href="#" class="nav-link text-light text-center"><h4>Categories</h4></a>
-                    </li>
-                    <?php
-                       getcategories();
-                    ?>
-                </ul>
-            </div>
         </div>
 
         <!-- last child -->
