@@ -1,9 +1,11 @@
+
 <?php
-  //sessions
+   //sessions
+   session_start();
+   $_SESSION['username']="suniksha";
+   $_SESSION['password']="CSE";
+   $_SESSION['email']="abc@gmail.com";
 
-  session_start();
-  $_SESSION['username']="suniksha";
-  $_SESSION['password']="CSE";
+   echo "Session data is saved";
 
-  echo "SESSIon data is saved";
 ?>

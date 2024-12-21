@@ -1,11 +1,9 @@
 <?php
-   session_start();
+    session_start();
+    echo "Welcome".$_SESSION['username'];
+    echo "<br>";
+    echo "and your password is ".$_SESSION['password'];
+    echo "<br>";
+    echo "Your email is ".$_SESSION['email'];
 
-   if(isset($_SESSION['username'])){
-   echo "Welcome ".$_SESSION['username'];
-   echo "<br>";
-   echo "and your password is ".$_SESSION['password'];
-   } else {
-      echo "Please login again to continue";
-   }
 ?>
