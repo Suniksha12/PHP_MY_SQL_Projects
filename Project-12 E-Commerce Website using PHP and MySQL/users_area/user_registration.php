@@ -20,7 +20,21 @@
         </h2>
         <div class="row">
             <div class="col-lg-12 col-xl-6">
-                <form action="" method="post" enctype="multipart/form-data"></form>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <!--username Field-->
+                    <div class="form-outline md-4">
+                        <label for="user_username" class="form-label">Username</label>
+                        <input type="text" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off" required name="user_username">
+                    </div>
+
+                    <!--Email Field-->
+                    <div class="form-outline md-4">
+                        <label for="user_email" class="form-label">Email</label>
+                        <input type="text" id="user_email" class="form-control" placeholder="Enter your Email" autocomplete="off" required name="user_email">
+                    </div>
+
+
+                </form>
             </div>
         </div>
     </div>
