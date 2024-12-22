@@ -1,7 +1,7 @@
 <!-- connect file -->
 <?php
-    include('includes/connect.php');
-    include('functions/common_function.php');
+    include("includes/connect.php");
+    include("functions/common_function.php");
 ?>
 
 
@@ -152,7 +152,7 @@
                         }
 
                         if(isset($_POST['checkout'])){
-                            echo "<script>window.open('checkout.php','_self')</script>";
+                            echo "<script>window.open('./users_area/checkout.php','_self')</script>";
                         }
                     ?>
                  </div>
