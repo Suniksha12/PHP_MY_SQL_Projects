@@ -1,7 +1,7 @@
 <!-- connect file -->
 <?php
-    include('includes/connect.php');
-    include('functions/common_function.php');
+    include("../includes/connect.php");
+    include("../functions/common_function.php");
 ?>
 
 <!DOCTYPE html>
@@ -84,3 +84,10 @@
 </body>
 
 </html>
+
+<!-- PHP Code -->
+<?php
+    if(isset($_POST['user_register'])){
+        
+    }
+?>

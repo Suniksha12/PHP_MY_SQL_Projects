@@ -1,7 +1,7 @@
 <!-- connect file -->
 <?php
-    include('includes/connect.php');
-    include('functions/common_function.php');
+    include("../includes/connect.php");
+    include("../functions/common_function.php");
 ?>
 
 <!DOCTYPE html>
