@@ -109,10 +109,17 @@
             echo "<script>alert('Password do not match')</script>";
         } else{
         move_uploaded_file($user_image_tmp,"./user_images/$user_image");
-
         //Insert Query
         $insert_query = "INSERT INTO `user_table` (username,user_email,user_password,user_image,user_ip,user_address,user_mobile) values('$user_username','$user_email','$hash_password','$user_image','$user_ip','$user_address','$user_contact')";
         $sql_execute=mysqli_query($con,$insert_query);
+        }
+        //selecting cart items
+        $select_cart_items="SELECT * FROM `cart_details` WHERE ip_address='$user_ip'";
+        $result_cart=mysqli_query($con,$select_cart_items);
+        $rows_count=mysqli_num_rows($result_cart);
+        if($rows_count>0){
+            echo "<script>alert('You have items in your cart')</script>";
+            echo "<script>window.open('checkout.php','_self')</script>";
         }
     }
 ?>
