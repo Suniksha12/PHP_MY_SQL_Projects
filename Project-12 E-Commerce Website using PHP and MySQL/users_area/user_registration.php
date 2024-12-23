@@ -99,12 +99,14 @@
         $user_ip=getIPAddress();
 
         //select query
-        $select_query="SELECT * FROM `user_table` WHERE username='$user_username'";
+        $select_query="SELECT * FROM `user_table` WHERE username='$user_username' or user_email='$user_email'";
         $result = mysqli_query($con,$select_query);
         $rows_count=mysqli_num_rows($result);
         if($rows_count>0){
-            echo "<script>alert('Username already exist')</script>";
-        } else {
+            echo "<script>alert('Username and Email already exist')</script>";
+        } else if($user_password!=$conf_user_password){
+            echo "<script>alert('Password do not match')</script>";
+        }
 
         move_uploaded_file($user_image_tmp,"./user_images/$user_image");
 
