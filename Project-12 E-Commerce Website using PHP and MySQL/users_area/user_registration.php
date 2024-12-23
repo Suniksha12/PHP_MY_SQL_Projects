@@ -104,5 +104,11 @@
         $insert_query = "INSERT INTO `user_table` (username,user_email,user_password,user_image,user_ip,user_address,user_mobile) values('$user_username','$user_email','$user_password','$user_image','$user_ip','$user_address','$user_contact')";
         $sql_execute=mysqli_query($con,$insert_query);
 
+        if($sql_execute){
+            echo "<script>alert('Data inserted Successfully')</script>";
+        } else {
+            die(mysqli_error($con));
+        }
+
     }
 ?>
