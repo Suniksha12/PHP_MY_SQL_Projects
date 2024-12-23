@@ -97,5 +97,12 @@
         $user_image=$_FILES['user_image']['name'];
         $user_image_tmp=$_FILES['user_image']['tmp_name'];
         $user_ip=getIPAddress();
+
+        move_uploaded_file($user_image_tmp,"./user_images/$user_image");
+
+        //Insert Query
+        $insert_query = "INSERT INTO `user_table` (username,user_email,user_password,user_image,user_ip,user_address,user_mobile) values('$user_username','$user_email','$user_password','$user_image','$user_ip','$user_address','$user_contact')";
+        $sql_execute=mysqli_query($con,$insert_query);
+
     }
 ?>
