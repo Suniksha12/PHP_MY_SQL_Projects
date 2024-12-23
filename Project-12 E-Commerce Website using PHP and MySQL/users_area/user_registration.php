@@ -106,8 +106,7 @@
             echo "<script>alert('Username and Email already exist')</script>";
         } else if($user_password!=$conf_user_password){
             echo "<script>alert('Password do not match')</script>";
-        }
-
+        } else{
         move_uploaded_file($user_image_tmp,"./user_images/$user_image");
 
         //Insert Query
