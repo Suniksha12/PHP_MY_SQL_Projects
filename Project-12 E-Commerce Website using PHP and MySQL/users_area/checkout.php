@@ -1,7 +1,8 @@
 <!-- connect file -->
 <?php
-    include("../includes/connect.php");
-    include("../functions/common_function.php");
+    session_start(); // Start the session
+    include_once("../includes/connect.php");
+    include_once("../functions/common_function.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap css Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--FonT awesome link -->
+    <!--Font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" integrity="sha512-7rXIvd/xj1FnI2zKQjjXzDFxC4twqBByp8yxOgEQJs4C/aNzNyoQsOO7VxH0RgYNhbAYLJLwzqslaP50KTTHIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Css link -->
     <link rel="stylesheet" href="../css/style.css" class="css">
-    <title>Ecommerece Website-Check Out page</title>
+    <title>Ecommerce Website - Check Out Page</title>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                             <a class="nav-link" href="#">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+ <a class="nav-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="cart.php"><i class="bi bi-cart-fill"></i><sup><?php cart_item(); ?></sup>
@@ -54,7 +55,6 @@
                     </ul>
                     <form class="d-flex" role="search" action="search_product.php" method="get">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-                        <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
                         <input type="submit" value="search" class="btn btn-outline-light" name="search_data_product">
                     </form>
                 </div>
@@ -88,9 +88,9 @@
                 <div class="row">
                   <?php
                     if(!isset($_SESSION['username'])){
-                        include("./user_login.php");
+                        include_once("../users_area/user_login.php");
                     }else {
-                        include('../payment.php');
+                        include('./payment.php');
                     }
                   ?>
                 </div>

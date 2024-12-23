@@ -1,12 +1,19 @@
 <?php
-   $host = 'localhost';
-   $username = 'root';
-   $password = '';
-   $database = 'signupforms';
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-   $con = mysqli_connect($host, $username, $password, $database);
+// Database connection parameters
+$host = 'localhost';
+$username = 'root'; // Change to your MySQL username
+$password = ''; // Change to your MySQL password
+$database = 'signupforms';
 
-   if (!$con) {
-       die('Could not connect: ' . mysqli_connect_error());
-   }
+// Establishing the connection
+$con = mysqli_connect($host, $username, $password, $database);
+
+// Check connection
+if (!$con) {
+    die('Connection failed: ' . mysqli_connect_error());
+}
 ?>

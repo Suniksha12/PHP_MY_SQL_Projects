@@ -1,7 +1,7 @@
 <!-- connect file -->
 <?php
-    include("../includes/connect.php");
-    include("../functions/common_function.php");
+    include_once("../includes/connect.php");
+    include_once("../functions/common_function.php");
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +114,7 @@
         $sql_execute=mysqli_query($con,$insert_query);
         }
         //selecting cart items
-        $select_cart_items="SELECT * FROM `cart_details` WHERE ip_address='$user_ip'";
+        $select_cart_items="SELECT * FROM `card_details` WHERE ip_address='$user_ip'";
         $result_cart=mysqli_query($con,$select_cart_items);
         $rows_count=mysqli_num_rows($result_cart);
         if($rows_count>0){

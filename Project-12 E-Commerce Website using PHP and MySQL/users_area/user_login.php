@@ -1,7 +1,7 @@
 <!-- connect file -->
 <?php
-    include("../includes/connect.php");
-    include("../functions/common_function.php");
+    include_once("../includes/connect.php");
+    include_once("../functions/common_function.php");
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
         </h2>
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-lg-12 col-xl-6">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="" method="post">
                     <!--username Field-->
                     <div class="form-outline md-4">
                         <label for="user_username" class="form-label">Username</label>
@@ -54,3 +54,11 @@
 </body>
 
 </html>
+
+<?php
+    if(isset($_POST['$user_login'])){
+        $user_username = $_POST['user_username'];
+        $user_password = $_POST['user_password'];
+
+    }
+?>
