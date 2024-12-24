@@ -41,7 +41,7 @@
                             <a class="nav-link" href="display_all.php">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
+                            <a class="nav-link" href="./users_area/user_registration.php">Register</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -53,6 +53,23 @@
                     </ul>
                 </div>
             </div>
+        </nav>
+
+        <!-- calling cart function -->
+         <?php
+            cart();
+          ?>
+
+        <!-- second child-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Welcome Guest</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./users_area/user_login.php">Login</a>
+                </li>
+            </ul>
         </nav>
 
         <!--Third child-->
