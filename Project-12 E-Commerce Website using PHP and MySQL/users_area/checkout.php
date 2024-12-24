@@ -90,7 +90,7 @@
                     if(!isset($_SESSION['username'])){
                         include_once("../users_area/user_login.php");
                     }else {
-                        include('./payment.php');
+                        include('payment.php');
                     }
                   ?>
                 </div>
