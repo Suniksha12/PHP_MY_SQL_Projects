@@ -15,7 +15,7 @@
     <!--FonT awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" integrity="sha512-7rXIvd/xj1FnI2zKQjjXzDFxC4twqBByp8yxOgEQJs4C/aNzNyoQsOO7VxH0RgYNhbAYLJLwzqslaP50KTTHIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Css link -->
-    <link rel="stylesheet" href="../Project-12 E-Commerce Website using PHP and MySQL/css/style.css" class="css">
+    <link rel="stylesheet" href="../css/style.css" class="css">
     <title>Ecommerece Website-User Login</title>
 </head>
 
@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="mt-4 pt-2">
-                        <input type="submit" value="Register" class="bg-info py-2 px-3 border-0" name="user_login">
+                        <input type="submit" value="Login" class="bg-info py-2 px-3 border-0" name="user_login">
                         <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account ?<a href="user_registration.php" class="text-danger"> Register</a></p>
                     </div>
                 </form>
@@ -56,10 +56,21 @@
 </html>
 
 <?php
-    if(isset($_POST['$user_login'])){
+    if(isset($_POST['user_login'])){
         $user_username = $_POST['user_username'];
         $user_password = $_POST['user_password'];
         $select_query = "SELECT * FROM `user_table` WHERE username='$user_username'";
-        
+        $result=mysqli_query($con,$select_query);
+        $row_count = mysqli_num_rows($result);
+        $row_data=mysqli_fetch_assoc($result);
+        if($row_count>0){
+            if(password_verify($user_password,$row_data['user_password'])){
+               echo "<script>alert('You have login successfully')</script>";
+            } else {
+               echo "<script>alert('Invalid Credentials!!')</script>";
+            }
+        } else {
+            echo "<script>alert('Invalid Credentials!!')</script>";
+        }
     }
 ?>
