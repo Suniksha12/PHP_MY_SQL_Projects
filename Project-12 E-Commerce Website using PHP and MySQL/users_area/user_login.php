@@ -59,6 +59,7 @@
     if(isset($_POST['$user_login'])){
         $user_username = $_POST['user_username'];
         $user_password = $_POST['user_password'];
-
+        $select_query = "SELECT * FROM `user_table` WHERE username='$user_username'";
+        
     }
 ?>
