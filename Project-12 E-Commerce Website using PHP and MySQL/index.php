@@ -2,7 +2,7 @@
 <?php
     include_once('includes/connect.php');
     include_once('functions/common_function.php');
-    session_start();
+    @session_start();
 ?>
 
 <!DOCTYPE html>
