@@ -17,14 +17,28 @@
     <link rel="stylesheet" href="../css/style.css" class="css">
     <title>Payment Page</title>
 </head>
-
+<style>
+    img{
+        width: 75%;
+    }
+</style>
 <body>
+    <!-- php code to access user id -->
+     <?php
+        $user_ip = getIPAddress();
+        $get_user = ""
+     ?>
     <div class="container">
         <h2 class="text-center text-info">
             Payment Options
         </h2>
-        <div class="row">
-            <a href="http://www.paypal.com"><img src="../images/payment.jpg" alt=""></a>
+        <div class="row d-flex justify-content-center align-items-center my-5">
+            <div class="col-md-6">
+                <a href="http://www.paypal.com" target="_blank"><img src="../images/payment.jpg" alt=""></a>
+            </div>
+            <div class="col-md-6">
+                <a href="order.php"><h2 class="text-center">Pay Offline</h2></a>
+            </div>
         </div>
     </div>
 
