@@ -11,5 +11,11 @@
     $get_ip_address = getIPAddress();
     $total_price=0;
     $cart_query_price="SELECT * FROM `card_details` WHERE ip_address='$get_ip_address'";
-    
+    $result_cart_price = mysqli_query($con,$cart_query_price);
+    $count_products=mysqli_num_rows($result_cart_price);
+    while($row_price=mysqli_fetch_assoc($result_cart_price)){
+        $product_id=$row_price['product_id'];
+        $select_product="SELECT * FROM `products` WHERE product_id='$product_id'";
+        
+    }
 ?>
