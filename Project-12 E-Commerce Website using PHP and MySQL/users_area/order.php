@@ -12,6 +12,8 @@
     $total_price=0;
     $cart_query_price="SELECT * FROM `card_details` WHERE ip_address='$get_ip_address'";
     $result_cart_price = mysqli_query($con,$cart_query_price);
+    $invoice_number = mt_rand();
+    $status='pending';
     $count_products=mysqli_num_rows($result_cart_price);
     while($row_price=mysqli_fetch_assoc($result_cart_price)){
         $product_id=$row_price['product_id'];
@@ -22,5 +24,17 @@
             $product_values = array_sum($product_price);
             $total_price+=$product_values;
         }
+    }
+
+    //getting quantity from cart
+    $get_cart="SELECT * FROM `card_details`";
+    $run_cart = mysqli_query($con,$get_cart);
+    $get_item_quantity=mysqli_fetch_array($run_cart);
+    $quantity=$get_item_quantity['quantity'];
+    if($quantity==0){
+        $quantity=1;
+        $subtotal = $total_price;
+    } else {
+        
     }
 ?>
