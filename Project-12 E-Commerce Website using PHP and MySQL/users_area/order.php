@@ -16,6 +16,11 @@
     while($row_price=mysqli_fetch_assoc($result_cart_price)){
         $product_id=$row_price['product_id'];
         $select_product="SELECT * FROM `products` WHERE product_id='$product_id'";
-        
+        $run_price = mysqli_query($con,$select_product);
+        while($row_product_price=mysqli_fetch_array($run_price)){
+            $product_price=array($row_product_price['product_price']);
+            $product_values = array_sum($product_price);
+            $total_price+=$product_values;
+        }
     }
 ?>
