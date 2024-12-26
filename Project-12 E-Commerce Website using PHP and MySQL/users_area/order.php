@@ -35,6 +35,15 @@
         $quantity=1;
         $subtotal = $total_price;
     } else {
-        
+        $quantity=$quantity;
+        $subtotal = $total_price * $quantity;
+    }
+
+    $insert_order = "INSERT INTO `user_orders` (user_id,amout_due,invoice_number,total_products,order_date,order_status)
+                    values ($user_id,$subtotal,$invoice_number,$count_products,NOW(),'$status')";
+    $result_query=mysqli_query($con,$insert_order);
+    if($result_query){
+        echo "<script>alert('Orders are submitted successfully')</script>";
+        echo "<script>window.open('profile.php','_self')</script>";
     }
 ?>
