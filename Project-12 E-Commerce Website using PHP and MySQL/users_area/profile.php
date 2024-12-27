@@ -109,9 +109,16 @@
                     <li class="nav-item bg-info">
                         <a class="nav-link text-light" href='#'><h4>Your profile</h4></a>
                     </li>
-                    <li class="nav-item">
-                        <img src="../images/mango.jpg" alt="image1" class="profile_img my-4">
-                    </li>
+                    <?php
+                        $username=$_SESSION['username'];
+                        $user_image="SELECT * FROM `user_table` WHERE username='$username'";
+                        $user_image=mysqli_query($con,$user_image);
+                        $row_image=mysqli_fetch_array($user_image);
+                        $user_image=$row_image['user_image'];
+                        echo "<li class='nav-item'>
+                                <img src='../images/mango.jpg' alt='image1' class='profile_img my-4'>
+                              </li>";
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link text-light" href='#'>Pending Orders</a>
                     </li>
