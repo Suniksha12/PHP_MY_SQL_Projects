@@ -46,4 +46,10 @@
         echo "<script>alert('Orders are submitted successfully')</script>";
         echo "<script>window.open('profile.php','_self')</script>";
     }
+
+    //orders pending
+    $insert_pending_orders = "INSERT INTO `orders_pending` (user_id,invoice_number,product_id,quantity,order_status)
+                    values ($user_id,$invoice_number,$product_id,$quantity,'$status')";
+    $result_pending_orders=mysqli_query($con,$insert_pending_orders);
+    
 ?>
