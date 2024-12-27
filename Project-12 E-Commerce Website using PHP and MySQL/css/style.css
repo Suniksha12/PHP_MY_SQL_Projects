@@ -40,3 +40,10 @@ body{
 .img{
    width: 50%; 
 }
+
+.profile_img{
+   width: 90%;
+   margin: auto;
+   display: block;
+   height: 100%;
+}
