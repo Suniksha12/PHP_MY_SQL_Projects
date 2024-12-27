@@ -46,14 +46,14 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cart.php"><i class="bi bi-cart-fill"></i><sup><?php cart_item(); ?></sup>
+                            <a class="nav-link" href="../cart.php"><i class="bi bi-cart-fill"></i><sup><?php cart_item(); ?></sup>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Total Price: <?php total_cart_price(); ?>/-</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search" action="search_product.php" method="get">
+                    <form class="d-flex" role="search" action="../search_product.php" method="get">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
                         <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
                         <input type="submit" value="search" class="btn btn-outline-light" name="search_data_product">
@@ -102,6 +102,19 @@
             <p class="text-center">Communications is at the heart of E-commerce and Community</p>
         </div>
 
+        <!--fourth child-->
+        <div class="row">
+            <div class="col-md-2 p-0">
+                <ul class="navbar-nav bg-secondary text-center">
+                    <li class="nav-item bg-info">
+                        <a class="nav-link text-light" href='#'><h4>Your profile</h4></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+
+            </div>
+        </div>
 
 
         <!-- last child -->
