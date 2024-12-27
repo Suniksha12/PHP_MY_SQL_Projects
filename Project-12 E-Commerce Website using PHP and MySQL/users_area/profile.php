@@ -2,7 +2,7 @@
 <?php
     include_once('../includes/connect.php');
     include_once('../functions/common_function.php');
-    @session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" integrity="sha512-7rXIvd/xj1FnI2zKQjjXzDFxC4twqBByp8yxOgEQJs4C/aNzNyoQsOO7VxH0RgYNhbAYLJLwzqslaP50KTTHIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Css link -->
     <link rel="stylesheet" href="../css/style.css" class="css">
-    <title>Ecommerece Website using PHP and MySQL</title>
+    <title>Welcome <?php echo $_SESSION['username'] ?></title>
 </head>
 
 <body>
@@ -104,27 +104,27 @@
 
         <!--fourth child-->
         <div class="row">
-            <div class="col-md-2 p-0">
-                <ul class="navbar-nav bg-secondary text-center">
+            <div class="col-md-2">
+                <ul class="navbar-nav bg-secondary text-center" style="height: 100vh;">
                     <li class="nav-item bg-info">
                         <a class="nav-link text-light" href='#'><h4>Your profile</h4></a>
                     </li>
                     <li class="nav-item">
-                        <img src="../images/mango.jpg" alt="image1" class="profile_img">
+                        <img src="../images/mango.jpg" alt="image1" class="profile_img my-4">
                     </li>
-                    <li class="nav-item bg-info">
+                    <li class="nav-item">
                         <a class="nav-link text-light" href='#'>Pending Orders</a>
                     </li>
-                    <li class="nav-item bg-info">
+                    <li class="nav-item">
                         <a class="nav-link text-light" href='#'>Edit Account</a>
                     </li>
-                    <li class="nav-item bg-info">
+                    <li class="nav-item">
                         <a class="nav-link text-light" href='#'>My orders</a>
                     </li>
-                    <li class="nav-item bg-info">
+                    <li class="nav-item">
                         <a class="nav-link text-light" href='#'>Delete Account</a>
                     </li>
-                    <li class="nav-item bg-info">
+                    <li class="nav-item">
                         <a class="nav-link text-light" href='#'>Logout</a>
                     </li>
                 </ul>
