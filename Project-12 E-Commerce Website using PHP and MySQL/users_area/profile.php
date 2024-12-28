@@ -137,7 +137,11 @@
                 </ul>
             </div>
             <div class="col-md-10">
-                <?php get_user_order_details(); ?>
+                <?php get_user_order_details();
+                      if(isset($_GET['edit_account'])){
+                         include('edit_account.php');
+                      }
+                ?>
             </div>
         </div>
 
