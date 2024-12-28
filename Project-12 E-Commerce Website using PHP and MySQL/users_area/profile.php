@@ -137,7 +137,7 @@
                 </ul>
             </div>
             <div class="col-md-10">
-
+                <?php get_user_order_details(); ?>
             </div>
         </div>
 
