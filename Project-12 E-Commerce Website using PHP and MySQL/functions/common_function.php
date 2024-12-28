@@ -353,4 +353,20 @@
        }
        echo $total_price;
    }
+
+   //get user order details
+   function get_user_order_details(){
+      global $con;
+      $username=$_SESSION['username'];
+      $get_details="SELECT * FROM `user_table` WHERE username='$username'";
+      $result_query=mysqli_query($con,$get_details);
+      while($row_query=mysqli_fetch_array($result_query)){
+        $user_id=$row_query['user_id'];
+        if(!isset($_GET['edit_account'])){
+           if(!isset($_GET['my_orders'])){
+              
+           } 
+        }
+      }
+   }
 ?>
