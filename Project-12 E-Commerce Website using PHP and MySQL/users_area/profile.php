@@ -147,6 +147,7 @@
                      if(isset($_GET['delete_account'])){
                         include('delete_account.php');
                      }
+                     
                 ?>
             </div>
         </div>
