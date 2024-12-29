@@ -33,16 +33,21 @@
                   $status=$row['status'];
                   $number++;
                   ?>
-                  echo "<tr class='text-center'>
-                            <td><?php echo $number; ?></td>
-                            <td><?php echo $product_title; ?></td>
-                            <td><img src='./product_images/$product_image1' class='product_img'></td>
-                            <td>$product_price</td>
-                            <td>0</td>
-                            <td>$status</td>
-                            <td><a href='' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
-                            <td><a href='' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
-                        </tr>";
+                  <tr class='text-center'>
+                    <td><?php echo $number; ?></td>
+                    <td><?php echo $product_title; ?></td>
+                    <td><img src='./product_images/<?php echo $product_image1; ?>' class='product_img'></td>
+                    <td><?php echo $product_price; ?></td>
+                    <td><?php
+                       $get_count = "SELECT * FROM `orders_pending` WHERE product_id=$product_id";
+                       $result_count = mysqli_query($con,$get_count);
+                       $rows_count = mysqli_num_rows($result_count);
+                       echo $rows_count;
+                    ?></td>
+                    <td><?php echo $status; ?></td>
+                    <td><a href='' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
+                    <td><a href='' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
+                  </tr>
             <?php
                }
             ?>
