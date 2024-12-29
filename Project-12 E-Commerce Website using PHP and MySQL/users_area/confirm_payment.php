@@ -11,6 +11,17 @@
         $invoice_number=$row_fetch['invoice_number'];
         $amount_due=$row_fetch['amount_due'];
     }
+
+    if(isset($_POST['confirm_payment'])){
+        $invoice_number=$_POST['invoice_number'];
+        $amount=$_POST['amount'];
+        $payment_mode=$_POST['payment_mode'];
+        $insert_query="INSERT INTO `user_payments` (order_id,invoice_number,amount,payment_mode) VALUES ($order_id,$invoice_number,$amount,'$payment_mode')";
+        $result = mysqli_query($con,$insert_query);
+        if($result){
+            echo "<h3 class='text-center text-light'>Successfully Completed the payment</h3>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
