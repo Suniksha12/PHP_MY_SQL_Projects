@@ -37,7 +37,7 @@
         </nav>
 
         <!--second child-->
-        <div class="bf-light">
+        <div class="bg-light">
             <h3 class="text-center p-2">
                 Manage Details
             </h3>
@@ -51,36 +51,36 @@
                     <p class="text-light text-center">Admin Name</p>
                 </div>
                 <!-- button*10>a.nav-link.text-light.bg-info.my-1 -->
-                <div class="button text-center">
-                    <button class="my-3">
-                        <a href="insert_product.php" class="nav-link text-light bg-info my-1">Insert Products</a>
+                <div class="button text-center m-auto">
+                    <button class="my-5 mb-5">
+                        <a href="insert_product.php" class="nav-link text-light bg-info my-1 mx-3">Insert Products</a>
                     </button>
                     <button>
-                        <a href="index.php?view_products" class="nav-link text-light bg-info my-1">View Products</a>
+                        <a href="index.php?view_products" class="nav-link text-light bg-info my-1 mx-3">View Products</a>
                     </button>
                     <button>
-                        <a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a>
+                        <a href="index.php?insert_category" class="nav-link text-light bg-info my-1 mx-3">Insert Categories</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1">View Categories</a>
+                        <a href="" class="nav-link text-light bg-info my-1 mx-3">View Categories</a>
                     </button>
                     <button>
-                        <a href="index.php?insert_brand" class="nav-link text-light bg-info my-1">Insert Brands</a>
+                        <a href="index.php?insert_brand" class="nav-link text-light bg-info my-1 mx-3">Insert Brands</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1">View Brands</a>
+                        <a href="" class="nav-link text-light bg-info my-1 mx-3">View Brands</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1">All Orders</a>
+                        <a href="" class="nav-link text-light bg-info my-1 mx-3">All Orders</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1">All Payments</a>
+                        <a href="" class="nav-link text-light bg-info my-1 mx-3">All Payments</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1">List Users</a>
+                        <a href="" class="nav-link text-light bg-info my-1 mx-3">List Users</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1">LogOut</a>
+                        <a href="" class="nav-link text-light bg-info my-1 mx-3">LogOut</a>
                     </button>
                 </div>
             </div>

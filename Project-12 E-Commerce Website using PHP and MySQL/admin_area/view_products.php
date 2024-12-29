@@ -24,25 +24,29 @@
             <?php
                $get_products="SELECT * FROM `products`";
                $result = mysqli_query($con,$get_products);
+               $number=0;
                while($row=mysqli_fetch_assoc($result)){
                   $product_id=$row['product_id'];
                   $product_title=$row['product_title'];
                   $product_image1=$row['product_image1'];
-                  $product_price=$row['prduct_price'];
+                  $product_price=$row['product_price'];
                   $status=$row['status'];
-                  
+                  $number++;
+                  ?>
+                  echo "<tr class='text-center'>
+                            <td><?php echo $number; ?></td>
+                            <td><?php echo $product_title; ?></td>
+                            <td><img src='./product_images/$product_image1' class='product_img'></td>
+                            <td>$product_price</td>
+                            <td>0</td>
+                            <td>$status</td>
+                            <td><a href='' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
+                            <td><a href='' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
+                        </tr>";
+            <?php
                }
             ?>
-            <tr class="text-center">
-                <td>1</td>
-                <td>Mango</td>
-                <td>Image</td>
-                <td>444</td>
-                <td>1</td>
-                <td>true</td>
-                <td><a href="" class="table-light"><i class="bi bi-pencil-square"></i></a></td>
-                <td><a href="" class="table-light"><i class="bi bi-trash-fill"></i></a></td>
-            </tr>
+            ?>
         </tbody>
     </table>
 </body>
