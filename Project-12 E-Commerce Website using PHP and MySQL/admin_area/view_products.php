@@ -7,9 +7,9 @@
 </head>
 <body>
     <h3 class="text-center text-success">All Products</h3>
-    <table class="table table-bordered mt-5">
-        <thead class="bg-info">
-            <tr>
+    <table class="table table-bordered mt-5 table-hover">
+        <thead class="table-primary">
+            <tr class="text-center">
                 <th>Product ID</th>
                 <th>Product Title</th>
                 <th>Product Image</th>
@@ -20,16 +20,16 @@
                 <th>Delete</th>
             </tr>
         </thead>
-        <tbody class="bg-secondary text-dark">
-            <tr>
+        <tbody class="table-secondary table-light">
+            <tr class="text-center">
                 <td>1</td>
                 <td>Mango</td>
                 <td>Image</td>
                 <td>444</td>
                 <td>1</td>
                 <td>true</td>
-                <td>edit</td>
-                <td>delete</td>
+                <td><a href="" class="table-light"><i class="bi bi-pencil-square"></i></a></td>
+                <td><a href="" class="table-light"><i class="bi bi-trash-fill"></i></a></td>
             </tr>
         </tbody>
     </table>
