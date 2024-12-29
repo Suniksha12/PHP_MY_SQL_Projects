@@ -20,7 +20,10 @@
         $result = mysqli_query($con,$insert_query);
         if($result){
             echo "<h3 class='text-center text-light'>Successfully Completed the payment</h3>";
+            echo "<script>window.open('profile.php?my_orders','_self')</script>";
         }
+        $update_orders="UPDATE `user_orders` set order_status='Complete' Where order_id=$order_id";
+        $result_orders = mysqli_query($con,$update_orders);
     }
 ?>
 

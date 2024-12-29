@@ -144,6 +144,9 @@
                       if(isset($_GET['my_orders'])){
                         include('user_orders.php');
                      }
+                     if(isset($_GET['delete_account'])){
+                        include('delete_account.php');
+                     }
                 ?>
             </div>
         </div>
