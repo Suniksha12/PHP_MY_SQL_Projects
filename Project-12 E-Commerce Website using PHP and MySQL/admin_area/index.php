@@ -1,3 +1,8 @@
+<?php 
+    include_once("../includes/connect.php");
+    include_once("../functions/common_function.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +56,7 @@
                         <a href="insert_product.php" class="nav-link text-light bg-info my-1">Insert Products</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1">View Products</a>
+                        <a href="index.php?view_products" class="nav-link text-light bg-info my-1">View Products</a>
                     </button>
                     <button>
                         <a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a>
@@ -95,9 +100,9 @@
          </div>
 
          <!-- last child -->
-         <div class="bg-info p-3 text-center footer">
-            <p>All right reserved @- Designed By Suniksha - 2024</p>
-        </div>
+        <?php
+             include ('../includes/footer.php');
+        ?>
     </div>
     <!--script.js-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
