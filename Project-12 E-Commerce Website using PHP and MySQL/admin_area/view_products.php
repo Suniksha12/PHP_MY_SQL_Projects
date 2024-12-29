@@ -21,6 +21,18 @@
             </tr>
         </thead>
         <tbody class="table-secondary table-light">
+            <?php
+               $get_products="SELECT * FROM `products`";
+               $result = mysqli_query($con,$get_products);
+               while($row=mysqli_fetch_assoc($result)){
+                  $product_id=$row['product_id'];
+                  $product_title=$row['product_title'];
+                  $product_image1=$row['product_image1'];
+                  $product_price=$row['prduct_price'];
+                  $status=$row['status'];
+                  
+               }
+            ?>
             <tr class="text-center">
                 <td>1</td>
                 <td>Mango</td>
