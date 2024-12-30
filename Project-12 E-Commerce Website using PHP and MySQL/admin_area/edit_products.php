@@ -21,14 +21,14 @@
       $result_category=mysqli_query($con,$select_category);
       $row_category=mysqli_fetch_assoc($result_category);
       $category_title=$row_category['category_title'];
-      echo $category_title;
+    //   echo $category_title;
 
       //fetching brand name
       $select_brand="SELECT * FROM `brands` WHERE brand_id=$brand_id";
       $result_brand=mysqli_query($con,$select_brand);
       $row_brand=mysqli_fetch_assoc($result_brand);
       $brand_title=$row_brand['brand_title'];
-      echo $brand_title;
+    //   echo $brand_title;
    }
 ?>
 
@@ -51,21 +51,33 @@
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_category" class="form-label">Product Categories</label>
             <select name="product_category" id="" class="form-select">
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
+                <option value="<?php echo $category_title; ?>"><?php echo $category_title; ?></option>
+                <?php
+                       //fetching category name
+                        $select_category_all="SELECT * FROM `categories`";
+                        $result_category_all=mysqli_query($con,$select_category_all);
+                        while($row_category_all=mysqli_fetch_assoc($result_category_all)){
+                            $category_title=$row_category_all['category_title'];
+                            $category_id=$row_category_all['category_id'];
+                            echo "<option value='$category_id'>$category_title</option>";
+                        }
+                ?>
             </select>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_brands" class="form-label">Product Brands</label>
             <select name="product_brands" id="" class="form-select">
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
+                <option value="<?php echo $brand_title; ?>"><?php echo $brand_title; ?></option>
+                <?php
+                       //fetching brand name
+                        $select_brand_all="SELECT * FROM `brands`";
+                        $result_brand_all=mysqli_query($con,$select_brand_all);
+                        while($row_brand_all=mysqli_fetch_assoc($result_brand_all)){
+                            $brand_title=$row_brand_all['brand_title'];
+                            $brand_id=$row_brand_all['brand_id'];
+                            echo "<option value='$brand_id'>$brand_title</option>";
+                        }
+                ?>
             </select>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
