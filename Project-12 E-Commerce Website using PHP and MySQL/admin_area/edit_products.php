@@ -1,3 +1,13 @@
+<!-- displaying the dynamic data -->
+<?php 
+   if(isset($_GET['edit_products'])){
+      $edit_id=$_GET['edit_products'];
+      //   echo $edit_id;
+      $get_
+   }
+?>
+
+
 <div class="container mt-5">
     <h1 class="text-center">Edit Product</h1>
     <form action="" method="post" enctype="multipart/form-data">

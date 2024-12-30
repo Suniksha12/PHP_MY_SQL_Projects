@@ -45,7 +45,7 @@
                        echo $rows_count;
                     ?></td>
                     <td><?php echo $status; ?></td>
-                    <td><a href='index.php?edit_products' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
+                    <td><a href='index.php?edit_products=<?php echo $product_id; ?>' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
                     <td><a href='' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
                   </tr>
             <?php
