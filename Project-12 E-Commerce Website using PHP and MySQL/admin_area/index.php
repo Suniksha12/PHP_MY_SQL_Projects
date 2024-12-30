@@ -68,7 +68,7 @@
                         <a href="index.php?insert_brand" class="nav-link text-light bg-info my-1 mx-3">Insert Brands</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1 mx-3">View Brands</a>
+                        <a href="index.php?view_brands" class="nav-link text-light bg-info my-1 mx-3">View Brands</a>
                     </button>
                     <button>
                         <a href="" class="nav-link text-light bg-info my-1 mx-3">All Orders</a>
@@ -106,6 +106,10 @@
              }
              if(isset($_GET['view_categories'])){
                 include('view_categories.php');
+             }
+
+             if(isset($_GET['view_brands'])){
+                include('view_brands.php');
              }
             ?>
          </div>

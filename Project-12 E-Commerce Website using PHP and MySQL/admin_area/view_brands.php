@@ -1,28 +1,28 @@
-<h3 class="text-center text-success">All Categories</h3>
+<h3 class="text-center text-success">All Brands</h3>
 
 <table class="table table-bordered mt-5">
     <thead class="table-info">
         <tr class="text-center">
             <th>SlNO</th>
-            <th>Category Title</th>
+            <th>Brand Title</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
     </thead>
     <tbody class="table-secondary text-light">
         <?php
-           $select_cat="SELECT * FROM `categories`";
+           $select_cat="SELECT * FROM `brands`";
            $result=mysqli_query($con,$select_cat);
            $number=0;
            while($row=mysqli_fetch_assoc($result)){
-              $category_id=$row['category_id'];
-              $category_title=$row['category_title'];
+              $brand_id=$row['brand_id'];
+              $brand_title=$row['brand_title'];
               $number++;
 
         ?>
         <tr class="text-center">
             <th><?php echo $number; ?></th>
-            <th><?php echo $category_title; ?></th>
+            <th><?php echo $brand_title; ?></th>
             <td><a href='' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
             <td><a href='' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
         </tr>
