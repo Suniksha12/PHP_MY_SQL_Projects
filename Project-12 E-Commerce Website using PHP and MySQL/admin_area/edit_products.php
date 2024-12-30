@@ -16,6 +16,19 @@
       $product_iamge3=$row['product_image3'];
       $product_price=$row['product_price'];
 
+      //fetching category name
+      $select_category="SELECT * FROM `categories` WHERE category_id=$category_id";
+      $result_category=mysqli_query($con,$select_category);
+      $row_category=mysqli_fetch_assoc($result_category);
+      $category_title=$row_category['category_title'];
+      echo $category_title;
+
+      //fetching brand name
+      $select_brand="SELECT * FROM `brands` WHERE brand_id=$brand_id";
+      $result_brand=mysqli_query($con,$select_brand);
+      $row_brand=mysqli_fetch_assoc($result_brand);
+      $brand_title=$row_brand['brand_title'];
+      echo $brand_title;
    }
 ?>
 
