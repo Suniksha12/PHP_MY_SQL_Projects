@@ -3,7 +3,19 @@
    if(isset($_GET['edit_products'])){
       $edit_id=$_GET['edit_products'];
       //   echo $edit_id;
-      $get_
+      $get_data = "SELECT * FROM `products` WHERE product_id=$edit_id";
+      $result = mysqli_query($con,$get_data);
+      $row=mysqli_fetch_assoc($result);
+      $product_title = $row['product_title'];
+      $product_description = $row['product_description'];
+      $product_keywords = $row['product_keywords'];
+      $category_id = $row['category_id'];
+      $brand_id = $row['brand_id'];
+      $product_image1=$row['product_image1'];
+      $product_image2=$row['product_image2'];
+      $product_iamge3=$row['product_image3'];
+      $product_price=$row['product_price'];
+      
    }
 ?>
 
