@@ -51,7 +51,6 @@
             <?php
                }
             ?>
-            ?>
         </tbody>
     </table>
 </body>

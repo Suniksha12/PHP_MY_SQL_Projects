@@ -15,7 +15,7 @@
       $product_image2=$row['product_image2'];
       $product_iamge3=$row['product_image3'];
       $product_price=$row['product_price'];
-      
+
    }
 ?>
 
@@ -25,15 +25,15 @@
     <form action="" method="post" enctype="multipart/form-data">
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_title" class="form-label">Product Title</label>
-            <input type="text" id="product_title" name="product_title" class="form-control" required>
+            <input type="text" id="product_title" name="product_title" class="form-control" value="<?php echo $product_title; ?>" required>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_desc" class="form-label">Product Description</label>
-            <input type="text" id="product_desc" name="product_desc" class="form-control" required>
+            <input type="text" id="product_desc" name="product_desc" class="form-control" value="<?php echo $product_description; ?>" required>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_keywords" class="form-label">Product Keywords</label>
-            <input type="text" id="product_keywords" name="product_keywords" class="form-control" required>
+            <input type="text" id="product_keywords" name="product_keywords" class="form-control" value="<?php echo $product_keywords; ?>" required>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_category" class="form-label">Product Categories</label>
@@ -59,26 +59,26 @@
             <label for="product_image1" class="form-label">Product Image1</label>
             <div class="d-flex">
                 <input type="file" id="product_image1" name="product_image1" class="form-control w-90 m-auto" required>
-                <img src="../images/apple.png" alt="" class="product_img">
+                <img src="../images/<?php echo $product_image1; ?>" alt="" class="product_img">
             </div>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_image2" class="form-label">Product Image2</label>
             <div class="d-flex">
                 <input type="file" id="product_image2" name="product_image2" class="form-control w-90 m-auto" required>
-                <img src="../images/mango.jpg" alt="" class="product_img">
+                <img src="../images/<?php echo $product_image2; ?>" alt="" class="product_img">
             </div>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_image3" class="form-label">Product Image3</label>
             <div class="d-flex">
                 <input type="file" id="product_image3" name="product_image3" class="form-control w-90 m-auto" required>
-                <img src="../images/capsi1.webp" alt="" class="product_img">
+                <img src="../images/<?php echo $product_iamge3; ?>" alt="" class="product_img">
             </div>
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_price" class="form-label">Product Price</label>
-            <input type="text" id="product_price" name="product_price" class="form-control" required>
+            <input type="text" id="product_price" name="product_price" class="form-control"  value="<?php echo $product_price; ?>" required>
         </div>
         <div class="text-center">
             <input type="submit" name="edit_product" name="edit_product" value="Update product" class="btn btn-info px-3 mb-3">
