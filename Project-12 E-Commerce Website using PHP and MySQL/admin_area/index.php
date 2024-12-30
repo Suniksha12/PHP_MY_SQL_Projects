@@ -62,7 +62,7 @@
                         <a href="index.php?insert_category" class="nav-link text-light bg-info my-1 mx-3">Insert Categories</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1 mx-3">View Categories</a>
+                        <a href="index.php?view_categories" class="nav-link text-light bg-info my-1 mx-3">View Categories</a>
                     </button>
                     <button>
                         <a href="index.php?insert_brand" class="nav-link text-light bg-info my-1 mx-3">Insert Brands</a>
@@ -104,7 +104,9 @@
              if(isset($_GET['delete_product'])){
                 include('delete_product.php');
              }
-               
+             if(isset($_GET['view_categories'])){
+                include('view_categories.php');
+             }
             ?>
          </div>
 
