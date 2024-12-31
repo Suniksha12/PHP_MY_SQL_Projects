@@ -23,8 +23,8 @@
         <tr class="text-center">
             <th><?php echo $number; ?></th>
             <th><?php echo $category_title; ?></th>
-            <td><a href='' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
-            <td><a href='' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
+            <td><a href='index.php?edit_category=<?php echo $category_id; ?>' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
+            <td><a href='index.php?delete_category=<?php echo $category_id; ?>' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
         </tr>
     <?php
      } ?>

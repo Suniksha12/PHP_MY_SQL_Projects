@@ -107,9 +107,20 @@
              if(isset($_GET['view_categories'])){
                 include('view_categories.php');
              }
-
              if(isset($_GET['view_brands'])){
                 include('view_brands.php');
+             }
+             if(isset($_GET['edit_brand'])){
+                include('edit_brand.php');
+             }
+             if(isset($_GET['edit_category'])){
+                include('edit_category.php');
+             }
+             if(isset($_GET['delete_brand'])){
+                include('delete_brand.php');
+             }
+             if(isset($_GET['delete_category'])){
+                include('delete_category.php');
              }
             ?>
          </div>
