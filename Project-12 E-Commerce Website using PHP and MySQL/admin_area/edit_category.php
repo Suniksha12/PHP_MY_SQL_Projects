@@ -9,7 +9,12 @@
    if(isset($_POST['edit_cat'])){
        $cat_title=$_POST['category_title'];
        $update_query="UPDATE `categories` set category_title='$cat_title' where category_id=$edit_category";
-       
+       $result_cat=mysqli_query($con,$update_query);
+       if($result_cat){
+         echo "<script>alert('Category is been updated successfully')</script>";
+         echo "<script>window.open('./index.php?view_categories','_self')</script>";
+       }
+
    }
 ?>
 
