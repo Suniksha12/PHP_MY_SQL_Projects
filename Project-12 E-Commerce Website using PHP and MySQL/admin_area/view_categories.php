@@ -39,7 +39,7 @@
         <h4>Are your sure you want to delete this?</h4>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="./index.php?view_brands" class="text-light text-decoration-none">No</a></button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="./index.php?view_categories" class="text-light text-decoration-none">No</a></button>
         <button type="button" class="btn btn-primary"><a href='index.php?delete_category=<?php echo $category_id; ?>' class="table-light text-light text-decoration-none"> Yes </a></button>
       </div>
     </div>
