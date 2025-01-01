@@ -23,7 +23,7 @@
         <tr class="text-center">
             <th><?php echo $number; ?></th>
             <th><?php echo $brand_title; ?></th>
-            <td><a href='index.php?edit_brand=<?php echo $brand_id; ?>' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
+            <td><a href='index.php?edit_brands=<?php echo $brand_id; ?>' class='table-light'><i class='bi bi-pencil-square'></i></a></td>
             <td><a href='index.php?delete_brand=<?php echo $brand_id; ?>' class='table-light'><i class='bi bi-trash-fill'></i></a></td>
         </tr>
     <?php
