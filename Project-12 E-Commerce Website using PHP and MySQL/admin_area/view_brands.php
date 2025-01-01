@@ -32,11 +32,6 @@
     </tbody>
 </table>
 
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button> -->
-
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -44,8 +39,8 @@
         <h4>Are your sure you want to delete this?</h4>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="./index.php?view_brands" class="text-light text-decoration-none">No</a></button>
+        <button type="button" class="btn btn-primary"><a  href='index.php?delete_brand=<?php echo $brand_id; ?>' class="table-light text-light text-decoration-none"> Yes </a></button>
       </div>
     </div>
   </div>
