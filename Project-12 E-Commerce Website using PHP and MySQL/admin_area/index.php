@@ -74,7 +74,7 @@
                         <a href="index.php?list_orders" class="nav-link text-light bg-info my-1 mx-3">All Orders</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1 mx-3">All Payments</a>
+                        <a href="index.php?list_payments" class="nav-link text-light bg-info my-1 mx-3">All Payments</a>
                     </button>
                     <button>
                         <a href="" class="nav-link text-light bg-info my-1 mx-3">List Users</a>
@@ -124,6 +124,12 @@
              }
              if(isset($_GET['list_orders'])){
                 include('list_orders.php');
+             }
+             if(isset($_GET['delete_order'])){
+                include('delete_order.php');
+             }
+             if(isset($_GET['list_payments'])){
+                include('list_payments.php');
              }
             ?>
          </div>
