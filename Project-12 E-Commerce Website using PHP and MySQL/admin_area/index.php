@@ -71,7 +71,7 @@
                         <a href="index.php?view_brands" class="nav-link text-light bg-info my-1 mx-3">View Brands</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1 mx-3">All Orders</a>
+                        <a href="index.php?list_orders" class="nav-link text-light bg-info my-1 mx-3">All Orders</a>
                     </button>
                     <button>
                         <a href="" class="nav-link text-light bg-info my-1 mx-3">All Payments</a>
@@ -121,6 +121,9 @@
              }
              if(isset($_GET['delete_category'])){
                 include('delete_category.php');
+             }
+             if(isset($_GET['list_orders'])){
+                include('list_orders.php');
              }
             ?>
          </div>
