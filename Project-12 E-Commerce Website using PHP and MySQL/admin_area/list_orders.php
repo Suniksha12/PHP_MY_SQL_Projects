@@ -40,7 +40,7 @@
                         <td>$total_products</td>
                         <td>$order_date</td>
                         <td>$order_status</td>
-                        <td></td>
+                        <td><a href='' class='text-dark'><i class='bi bi-trash-fill'></i></a></td>
                      </tr>";
             }
         }
