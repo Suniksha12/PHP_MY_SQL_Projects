@@ -32,18 +32,18 @@
                 $total_products=$row_data['total_products'];
                 $order_date=$row_data['order_date'];
                 $order_status=$row_data['order_status'];
+                $number++;
+                echo "<tr>
+                        <td>$number</td>
+                        <td>$amount_due</td>
+                        <td>$invoice_number</td>
+                        <td>$total_products</td>
+                        <td>$order_date</td>
+                        <td>$order_status</td>
+                        <td></td>
+                     </tr>";
             }
         }
     ?>
-        
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-        </tr>
     </tbody>
 </table>
