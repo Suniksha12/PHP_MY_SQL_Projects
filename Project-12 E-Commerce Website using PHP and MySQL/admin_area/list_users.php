@@ -34,10 +34,11 @@
                 $number++;
                 echo "<tr>
                         <td>$number</td>
-                        <td>$invoice_number</td>
-                        <td>$amount</td>
-                        <td>$payment_mode</td>
-                        <td>$date</td>
+                        <td>$username</td>
+                        <td>$user_email</td>
+                        <td><img src='../users_area/user_images/$user_image' alt='$username' class='product_img'/></td>
+                        <td>$user_address</td>
+                        <td>$user_mobile</td>
                         <td><a href='./index.php?delete_order' class='text-dark'><i class='bi bi-trash-fill'></i></a></td>
                      </tr>";
             }
