@@ -77,7 +77,7 @@
                         <a href="index.php?list_payments" class="nav-link text-light bg-info my-1 mx-3">All Payments</a>
                     </button>
                     <button>
-                        <a href="" class="nav-link text-light bg-info my-1 mx-3">List Users</a>
+                        <a href="index.php?list_users" class="nav-link text-light bg-info my-1 mx-3">List Users</a>
                     </button>
                     <button>
                         <a href="" class="nav-link text-light bg-info my-1 mx-3">LogOut</a>
@@ -130,6 +130,9 @@
              }
              if(isset($_GET['list_payments'])){
                 include('list_payments.php');
+             }
+             if(isset($_GET['list_users'])){
+                include('list_users.php');
              }
             ?>
          </div>

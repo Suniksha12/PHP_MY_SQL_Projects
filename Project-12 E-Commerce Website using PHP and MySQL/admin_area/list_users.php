@@ -1,35 +1,36 @@
 <h3 class="text-center text-success">
-    All Payments
+    All Users
 </h3>
 <table class="table table-bordered mt-5">
     <thead class="table-info text-center">
 
     <?php 
-        $get_payments="SELECT * FROM `user_payments`";
+        $get_payments="SELECT * FROM `user_table`";
         $result=mysqli_query($con,$get_payments);
         $row_count=mysqli_num_rows($result);
         echo "<tr>
                 <th>Sl no</th>
-                <th>Invoice number</th>
-                <th>Amount</th>
-                <th>Payment Mode</th>
-                <th>Order Date</th>
+                <th>Username</th>
+                <th>User email</th>
+                <th>User Image</th>
+                <th>User address</th>
+                <th>User mobile</th>
                 <th>Delete</th>
               </tr>
             </thead>
             <tbody class='table-secondary text-light text-center'>";
 
         if($row_count==0){
-            echo "<h2 class='text-danger text-center mt-5'>No Payments Received Yet</h2>";
+            echo "<h2 class='text-danger text-center mt-5'>No Users Yet</h2>";
         } else {
             $number=0;
             while($row_data = mysqli_fetch_assoc($result)){
-                $order_id=$row_data['order_id'];
-                $payment_id=$row_data['payment_id'];
-                $amount=$row_data['amount'];
-                $invoice_number=$row_data['invoice_number'];
-                $payment_mode=$row_data['payment_mode'];
-                $date=$row_data['date'];
+                $user_id=$row_data['user_id'];
+                $username=$row_data['username'];
+                $user_email=$row_data['user_email'];
+                $user_image=$row_data['user_image'];
+                $user_address=$row_data['user_address'];
+                $user_mobile=$row_data['user_mobile'];
                 $number++;
                 echo "<tr>
                         <td>$number</td>
