@@ -40,7 +40,10 @@
                         <label for="confirm_password" class="form-label">Confirm Password</label>
                         <input type="password" id="confirm_password" name="confirm_password" placeholder="Enter your confirm_password" required class="form-control">
                     </div>
-                    
+                    <div>
+                        <input type="submit" class="bg-info py-2 px-3 border-0" name="admin_registration" value="Register">
+                        <p class="small fw-bold mt-2 pt-1"> Don't have an account? <a href="admin_login.php" class="link-danger">Login</a></p>
+                    </div>
                 </form>
             </div>
         </div>
