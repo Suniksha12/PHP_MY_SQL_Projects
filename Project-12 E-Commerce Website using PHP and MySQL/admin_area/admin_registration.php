@@ -18,12 +18,30 @@
         <h2 class="text-center mb-5">
             Admin Registration
         </h2>
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-lg-6">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 col-xl-5">
                 <img src="../images/apple1.avif" alt="Admin Registration" class="img-fluid">
             </div>
             <div class="col-lg-6 col-xl-5">
-                <img src="../images/apple1.avif" alt="Admin Registration" class="img-fluid">
+                <form action="" method="post">
+                    <div class="form-outline mb-4">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required class="form-control">
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required class="form-control">
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required class="form-control">
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label for="confirm_password" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Enter your confirm_password" required class="form-control">
+                    </div>
+                    
+                </form>
             </div>
         </div>
     </div>
